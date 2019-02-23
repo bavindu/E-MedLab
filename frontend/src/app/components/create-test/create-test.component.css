@@ -1,0 +1,17 @@
+.containor{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.observationField{
+    margin-bottom: 20px;
+}
+
+.formbutton{
+    margin: 10px;
+}
+
+#addNewObs{
+    margin-bottom: 25px;
+    margin-top: 5px
+}
