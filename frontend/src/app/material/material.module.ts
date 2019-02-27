@@ -28,7 +28,8 @@ import * as Material from '@angular/material';
     Material.MatFormFieldModule, 
     Material.MatProgressSpinnerModule, 
     Material.MatInputModule, 
-    Material.MatPaginatorModule
+    Material.MatPaginatorModule,
+    Material.MatListModule
   ],
   exports: [
     Material.MatToolbarModule,
@@ -53,7 +54,8 @@ import * as Material from '@angular/material';
     Material.MatFormFieldModule, 
     Material.MatProgressSpinnerModule, 
     Material.MatInputModule, 
-    Material.MatPaginatorModule
+    Material.MatPaginatorModule,
+    Material.MatListModule
   ]
 })
 export class MaterialModule { }

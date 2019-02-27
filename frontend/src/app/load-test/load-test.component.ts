@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {LoadTestService} from '../services/load-test.service'
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-load-test',
@@ -8,8 +10,9 @@ import {LoadTestService} from '../services/load-test.service'
 })
 export class LoadTestComponent implements OnInit {
 
-  constructor(private loadTestService:LoadTestService) { }
-  private testNames=[];
+  constructor(private loadTestService:LoadTestService,private router:Router) { }
+  private test=[];
+  private testNames=[]
 
   ngOnInit() {
     this.loadTestNames()
@@ -17,11 +20,15 @@ export class LoadTestComponent implements OnInit {
 
   loadTestNames(){
     this.loadTestService.loadTest().subscribe((res:any[])=>{
-      console.log(res);
-      this.testNames=res;
-      for(var i=0;i<this.testNames.length;i++){
-        console.log(this.testNames[i].testName)
+      
+      this.test=res;
+      for(var i=0;i<this.test.length;i++){
+        //console.log(this.test[i].testName)
+        this.testNames.push([this.test[i].testName,this.test[i]._id])
       }
     })
+  }
+  navigateCreateTestForm(i){
+    this.router.navigate(['/test-form'],{queryParams:{id:this.test[i]._id}})
   }
 }
