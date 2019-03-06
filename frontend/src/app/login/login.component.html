@@ -1,0 +1,29 @@
+<div class="login-containor">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Log in</mat-card-title>    
+        </mat-card-header>
+        <div class="login-form">
+            <form [formGroup]="loginform">
+                <div class="input-field">
+                    <mat-icon>person</mat-icon>
+                    <mat-form-field>
+                        <input matInput placeholder="Email" type="text" formControlName="email">
+                    </mat-form-field>
+                </div>
+                
+                <div class="input-field">
+                    <mat-icon>vpn_key</mat-icon>
+                    <mat-form-field>
+                        <input matInput placeholder="password" type="password" formControlName="password">
+                    </mat-form-field>
+                </div>
+                
+                <div class="button-containor">
+                    <button mat-button mat-raised-color="primary" (click)="login()">Login</button>
+                </div>
+            </form>
+        </div>
+    </mat-card>
+</div>
+{{this.errmessage|json}}

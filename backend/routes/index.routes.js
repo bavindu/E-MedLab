@@ -2,7 +2,9 @@ const express=require('express');
 const router=express.Router();
 
 const ctrlMetaObservation=require('../controllers/metaControllers/metaTest.controller')
-
+const ctrlTestRocord=require('../controllers/testRecord.controller')
+const ctrlUser=require('../controllers/user.controller');
+const jwtHelper=require('../config/jwtHelper')
 
 
 
@@ -11,5 +13,11 @@ const ctrlMetaObservation=require('../controllers/metaControllers/metaTest.contr
 
 
 router.post('/addMetaTest',ctrlMetaObservation.addMetaTest);
-router.get('/getresponse',ctrlMetaObservation.getResponse)
+router.post('/addTestResults',ctrlTestRocord.addTestRecord);
+router.post('/register',ctrlUser.addUser);
+router.post('/login',ctrlUser.authenticate);
+router.get('/getresponse',ctrlMetaObservation.getResponse);
+router.get('/load-test',ctrlMetaObservation.loadTest);
+router.get('/get-test',ctrlMetaObservation.getTest);
+router.get('/userProfile',jwtHelper.jwtVerify,ctrlUser.userProfile)
 module.exports.router=router;

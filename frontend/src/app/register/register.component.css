@@ -1,0 +1,27 @@
+.login-containor{
+    width: 50%;
+    margin: 0 auto;
+}
+.login-form{
+    width: 300px;
+    margin: 0 auto;
+}
+.button-containor{
+    width: max-content;
+    margin: 0 auto;
+}
+mat-card-header{
+    text-align: center;
+}
+input{
+    margin-left: 10px;
+}
+
+button{
+    background-color: rgb(32, 103, 209);
+    margin:0 auto;
+}
+mat-icon{
+    margin-right: 5px;
+    
+}

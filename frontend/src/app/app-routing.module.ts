@@ -3,11 +3,19 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoadTestComponent } from './load-test/load-test.component';
 import { CreateTestComponent } from './admin/components/create-test/create-test.component';
 import {TestFormComponent} from './test-form/test-form.component'
+import {LoginComponent} from './login/login.component'
+import { RegisterComponent } from './register/register.component';
+import {AdminProfileComponent} from './admin/components/admin-profile/admin-profile.component';
+import { AuthGuard } from './auth/auth.guard';
 
 const routes: Routes = [
   {path:"load-test", component:LoadTestComponent},
-  {path:"create-test", component:CreateTestComponent},
-  {path:"test-form", component:TestFormComponent}
+  {path:"create-test", component:CreateTestComponent,canActivate:[AuthGuard]},
+  {path:"test-form", component:TestFormComponent},
+  {path:"login", component:LoginComponent},
+  {path:"register", component:RegisterComponent},
+  {path:"admin-profile",component:AdminProfileComponent,canActivate:[AuthGuard]},
+  {path:'',redirectTo:'/login',pathMatch:'full'}
 ];
 
 @NgModule({

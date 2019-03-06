@@ -1,0 +1,14 @@
+.outer{
+    padding:100px;
+}
+.adminLinks{
+    margin:0 auto;
+    
+}
+
+button{
+    width: 150px;
+    height: 50px;
+    margin:50px;
+    background-color: darkorchid;
+}
