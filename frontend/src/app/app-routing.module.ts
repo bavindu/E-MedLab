@@ -6,6 +6,7 @@ import {TestFormComponent} from './test-form/test-form.component'
 import {LoginComponent} from './login/login.component'
 import { RegisterComponent } from './register/register.component';
 import {AdminProfileComponent} from './admin/components/admin-profile/admin-profile.component';
+import {PatientProfileComponent} from './patient/patient-profile/patient-profile.component';
 import { AuthGuard } from './auth/auth.guard';
 
 const routes: Routes = [
@@ -13,8 +14,9 @@ const routes: Routes = [
   {path:"create-test", component:CreateTestComponent,canActivate:[AuthGuard]},
   {path:"test-form", component:TestFormComponent},
   {path:"login", component:LoginComponent},
-  {path:"register", component:RegisterComponent},
+  {path:"register", component:RegisterComponent,canActivate:[AuthGuard]},
   {path:"admin-profile",component:AdminProfileComponent,canActivate:[AuthGuard]},
+  {path:"patient-profile",component:PatientProfileComponent,canActivate:[AuthGuard]},
   {path:'',redirectTo:'/login',pathMatch:'full'}
 ];
 

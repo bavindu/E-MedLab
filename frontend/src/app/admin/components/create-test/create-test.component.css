@@ -1,3 +1,6 @@
+.parent-containor{
+    margin-top: 50px;
+}
 .containor{
     width: 50%;
     margin: 0 auto;
@@ -14,4 +17,7 @@
 #addNewObs{
     margin-bottom: 25px;
     margin-top: 5px
+}
+.mat-card .observation-containor{
+    margin:20px;
 }

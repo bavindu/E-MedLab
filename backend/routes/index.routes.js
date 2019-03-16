@@ -12,8 +12,8 @@ const jwtHelper=require('../config/jwtHelper')
 
 
 
-router.post('/addMetaTest',ctrlMetaObservation.addMetaTest);
-router.post('/addTestResults',ctrlTestRocord.addTestRecord);
+router.post('/addMetaTest',jwtHelper.jwtVerify,ctrlMetaObservation.addMetaTest);
+router.post('/addTestResults',jwtHelper.jwtVerify,ctrlTestRocord.addTestRecord);
 router.post('/register',ctrlUser.addUser);
 router.post('/login',ctrlUser.authenticate);
 router.get('/getresponse',ctrlMetaObservation.getResponse);

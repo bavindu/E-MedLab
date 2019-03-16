@@ -9,6 +9,9 @@ const userSchema=mongoose.Schema({
     email:{
         type:String
     },
+    userType:{
+        type:String
+    },
     password:{
         type:String
     },
@@ -37,7 +40,7 @@ userSchema.methods.generateJWT=function(){
     return jwt.sign({_id:this._id},
        "SECTET#123",
        {
-           expiresIn:"2m"
+           expiresIn:"20m"
        }
        ); 
 }

@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { LoginService } from '../services/login.service';
 import {Router} from '@angular/router';
+import { AppLoginService } from '../services/app-login.service';
+
 
 @Component({
   selector: 'app-login',
@@ -12,9 +14,13 @@ export class LoginComponent implements OnInit {
 
   private loginform;
   private errmessage;
-  constructor(private fb:FormBuilder,private loginService:LoginService,private router:Router) { }
+  private isLoggedIn:boolean;
+  private user;
 
+  constructor(private fb:FormBuilder,private loginService:LoginService,private router:Router,private appLoginService:AppLoginService) { }
+  
   ngOnInit() {
+    this.appLoginService.isLoggedIN.subscribe(isLoggedIn=>this.isLoggedIn=isLoggedIn)
     this.loginform=this.fb.group({
       email:[''],
       password:['']
@@ -26,7 +32,19 @@ export class LoginComponent implements OnInit {
     this.loginService.login(this.loginform.value).subscribe(
       res=>{
         this.loginService.setToken(res['token']);
-        this.router.navigateByUrl('/admin-profile');
+        this.appLoginService.loginTrigger(true);
+        this.loginService.getUserProfile().subscribe((res:any)=>{
+          console.log(res);
+          this.user=res.user;
+          console.log(this.user.userType);
+          if(this.user.userType=='patient'){
+            console.log('patient true');
+            this.router.navigateByUrl('/patient-profile');
+          }
+          else if(this.user.userType=='admin'){
+            this.router.navigateByUrl('/admin-profile');
+          }
+        }); 
       },
       err=>{
         console.log(err);

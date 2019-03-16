@@ -1,10 +1,24 @@
-.login-containor{
-    width: 50%;
+.containor{
+    margin-top:100px;
+}
+.register-containor{
+    width:50%;
     margin: 0 auto;
 }
+mat-card-header{
+    background-color: aqua;
+    
+}
+mat-card-title{
+    margin: 0 auto;
+}
+
 .login-form{
     width: 300px;
     margin: 0 auto;
+}
+.input-field{
+    margin: 20px;
 }
 .button-containor{
     width: max-content;

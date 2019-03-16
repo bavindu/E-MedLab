@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormGroup,FormControl,FormArray,FormBuilder} from '@angular/forms';
 import {MetaTestService} from '../../../services/meta-test.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-test',
@@ -11,7 +12,7 @@ export class CreateTestComponent implements OnInit {
 
   createTest:FormGroup;
 
-  constructor(private fb:FormBuilder,private metaTestService:MetaTestService) { }
+  constructor(private fb:FormBuilder,private metaTestService:MetaTestService,private router:Router) { }
 
   ngOnInit() {
     this.createTest=this.fb.group({
@@ -25,9 +26,16 @@ export class CreateTestComponent implements OnInit {
   createNewObservation(){
       return this.fb.group({
         observationName:[''],
+        dataType:[],
         unit:[''],
-        referenceRange:['']
+        referenceRange:[''],
+        codedValues:this.fb.array([])
       });
+  }
+  createNewCodeValue(){
+    return this.fb.group({
+      codedValue:['']
+    })
   }
 
   addNewObsClick(){
@@ -36,8 +44,22 @@ export class CreateTestComponent implements OnInit {
   }
 
   addNewMetaTest(){
+    console.log(this.createTest.value);
     this.metaTestService.addTestTemplate(this.createTest.value).subscribe();
     console.log('on addnewTest');
     console.log(this.createTest.value);
+    this.router.navigateByUrl('/admin-profile');
   }
+  removeField(i){
+    (<FormArray>this.createTest.get('observations')).removeAt(i);
+  }
+
+  addCodedValues(i){
+    (<FormArray>((<FormArray>this.createTest.get('observations')).at(i)).get('codedValues')).push(this.createNewCodeValue());
+  }
+
+  deleteCodeValue(i,j){
+    (<FormArray>((<FormArray>this.createTest.get('observations')).at(i)).get('codedValues')).removeAt(j);
+  }
+
 }

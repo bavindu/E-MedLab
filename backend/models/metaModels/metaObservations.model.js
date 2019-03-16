@@ -1,11 +1,12 @@
 const mongoose=require('mongoose');
-
+const metaCodedValueSchema=require('./metaCodedValues.model').metaCodedValueSchema;
 
 const metaObservationSchema=mongoose.Schema(
     {
         observationName:{
             type:String
         },
+        codedValues:[metaCodedValueSchema],
         unit:{
             type:String
         },

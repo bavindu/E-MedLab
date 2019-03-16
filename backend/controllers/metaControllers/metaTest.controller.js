@@ -1,5 +1,6 @@
 const metaTestModel=require('../../models/metaModels/metaTest.model')
 const metaObservationSchema=require('../../models/metaModels/metaObservations.model');
+const metaCodeValueSchema=require('../../models/metaModels/metaCodedValues.model')
 const MetaTest=metaTestModel.MetaTest;
 
 
@@ -9,6 +10,9 @@ let addMetaTest=function(req,res){
     metaTest.testName=req.body.testName;
     metaTest.observations=[];
     for (var i=0;i<req.body.observations.length;i++){
+        // for (let j = 0; j < req.body.observations[i].codeValues; j++) {
+        //     var codeValue=new metaCodeValueSchema.MetaCodedValue(req.body.observations)
+        // }
         var observation=new metaObservationSchema.MetaObservation(req.body.observations[i]);
         metaTest.observations.push(observation);
     }

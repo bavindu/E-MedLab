@@ -1,47 +1,102 @@
-<div class="containor">
-    <mat-card>
-        <mat-card-header>
-          <mat-card-title>Create New Test</mat-card-title>
-        </mat-card-header>
-        <mat-card-content>
-          <form  [formGroup]='createTest'>
-              <mat-form-field>
-                <input type="text" matInput placeholder="Test Name" formControlName='testName'>
-              </mat-form-field>
-
-              <br>
-
+<div class="parent-containor">
+    <div class="containor">
+        <mat-card>
+            <mat-card-header >
+              <mat-card-title >
+                <span class="example-fill-remaining-space"></span>
+                <span>Create Test</span>
+              </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
               
-
-              <div formArrayName="observations" *ngFor="let observation of createTest.get('observations').controls; let i=index">
-                <div [formGroupName]="i">
-                    <mat-card class='observationField'>
-      
-                      <mat-form-field>
-                        <input type="text" matInput placeholder='Observation Name'formControlName="observationName">
-                      </mat-form-field>
-                      <br>
-      
-                      <mat-form-field>
-                          <input type="text" matInput placeholder='Unit' formControlName="unit">
-                      </mat-form-field>
-                      <br>
-      
-                      <mat-form-field>
-                          <input type="text" matInput placeholder='ReferenceRange'formControlName="referenceRange">
-                      </mat-form-field>
-      
-                    </mat-card>
-                </div>
-                
-              </div>
-
-              <button type="submit" mat-raised-button (click)="addNewMetaTest()" color='warn' class=formbutton>Submit</button>
-              <button id=addNewObs mat-raised-button (click)="addNewObsClick()" color='primary' class=formbutton>Add New Observation</button>
-
-            </form>
-        </mat-card-content>
-      </mat-card>
-      
+              <form  [formGroup]='createTest'>
+                  <mat-form-field>
+                    <input type="text" matInput placeholder="Test Name" formControlName='testName'>
+                  </mat-form-field>
+    
+                  <br>
+    
+                  
+    
+                  <div formArrayName="observations" *ngFor="let observation of createTest.get('observations').controls; let i=index">
+                    <div [formGroupName]="i">
+                        <mat-card class="observation-containor">
+                          <mat-card-content>
+                              
+                              <br>
+              
+                              <mat-form-field>
+                                <input type="text" matInput placeholder='Observation Name'formControlName="observationName">               
+                              </mat-form-field>
+                              <br>
+    
+                              <mat-form-field>
+                                
+                                <mat-select placeholder="Data Type" formControlName="dataType" (change)="addDatatype()">
+                                    <mat-option value='numaric'>Numeric</mat-option>
+                                    <mat-option value='coded'>Coded</mat-option>    
+                                </mat-select>
+                                <mat-icon 
+                                  matSuffix 
+                                  matTooltip="Info about the action"
+                                  >info</mat-icon>
+                              </mat-form-field>
+                              <br>
+              
+                              <mat-form-field *ngIf="createTest.value.observations[i].dataType==='numaric'">
+                                  <input type="text" matInput placeholder='Unit' formControlName="unit">
+                              </mat-form-field>
+                              <br *ngIf="createTest.value.observations[i].dataType==='numaric'">
+                              <mat-form-field *ngIf="createTest.value.observations[i].dataType==='numaric'">
+                                  <input type="text" matInput placeholder='Reference Range' formControlName="referenceRange">
+                              </mat-form-field>
+    
+    
+                              <mat-card *ngIf="createTest.value.observations[i].dataType==='coded'">
+                                <mat-card-header>       
+                                  <mat-card-title>Add coded values</mat-card-title>                             
+                                </mat-card-header>
+                                <mat-card-content>
+                                  <div formArrayName="codedValues" *ngFor="let coedValue of createTest.get('observations').at(i).get('codedValues').controls; let j=index">
+                                    <div [formGroupName]='j'>
+                                      <mat-form-field>
+                                        <input matInput placeholder="Value" formControlName="codedValue">
+                                        <button mat-icon-button matSuffix>
+                                          <mat-icon aria-label="label" (click)="deleteCodeValue(i,j)">cancel</mat-icon>
+                                        </button>
+                                      </mat-form-field>
+                                    </div>
+                                  </div>
+                                  
+                                </mat-card-content>
+                                <mat-card-actions>
+                                  <button mat-raised-button color="primary" (click)="addCodedValues(i)">Add value</button>
+                                </mat-card-actions>
+                              </mat-card>
+                              
+        
+                              <br>
+              
+          
+                            </mat-card-content>
+                             <mat-card-actions>
+                              <div class="flex-spacer"></div>
+                              <button mat-icon-button (click)="removeField(i)" matTooltip="Delete">
+                                  <mat-icon aria-label="label">delete</mat-icon>
+                              </button>
+                          </mat-card-actions>
+                        </mat-card>
+                    </div>
+                  </div>
+                  <button type="submit" mat-raised-button (click)="addNewMetaTest()" color='warn' class=formbutton
+                            matTooltip="Info about the action">Submit</button>
+                  <button id=addNewObs mat-raised-button (click)="addNewObsClick()" color='primary' class=formbutton>Add New Observation</button>
+                </form>
+            </mat-card-content>
+          </mat-card>
+          
+    </div>
 </div>
+{{this.createTest.value|json}}
+<!-- {{this.createTest.get('observation').controls|json}} -->
 

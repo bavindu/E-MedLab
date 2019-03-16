@@ -9,6 +9,7 @@ let addUser=function(req,res){
     const user=new User();
     user.userName=req.body.userName;
     user.email=req.body.email;
+    user.userType=req.body.userType;
     user.password=req.body.password;
     user.save((err,doc)=>{
         if(err){
@@ -34,14 +35,15 @@ let authenticate=function(req,res,next){
 };
 
 let userProfile=function(req,res,next){
- User.findOne({_id:req._id},(err,user)=>{
-     if(err){
-         return res.status(404).json({status:false,message:"No user record found"})
-     }
-     else{
-         return res.status(200).json({status:true,user:lodash.pick(user,["userName","email"])})
-     }
- })
+    console.log('inside user profile');
+    User.findOne({_id:req._id},(err,user)=>{
+        if(err){
+            return res.status(404).json({status:false,message:"No user record found"})
+        }
+        else{
+            return res.status(200).json({status:true,user:lodash.pick(user,["userName","email","userType"])})
+        }
+    })
 
 }
 

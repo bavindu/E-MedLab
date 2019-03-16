@@ -1,5 +1,16 @@
 <mat-toolbar color='primary' class='fixed-header'>
     <span>E-MedLab</span>
     <span class="example-fill-remaining-space"></span>
+    <span>
+        <button mat-fab [matMenuTriggerFor]="menu" *ngIf="isLoggedIn">
+            <mat-icon>person</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="logout()">Logout</button>
+            <button mat-menu-item>Item 2</button>
+        </mat-menu>
+    </span>
 </mat-toolbar>
 <router-outlet></router-outlet>
+
+

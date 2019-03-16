@@ -1,36 +1,55 @@
-<div class="login-containor">
-    <mat-card>
-        <mat-card-header>
-            <mat-card-title>Signup</mat-card-title>    
-        </mat-card-header>
-        <div class="login-form">
-            <form [formGroup]="registerForm">
-                <div class="input-field">
-                    <!-- <mat-icon>person</mat-icon> -->
-                    <mat-form-field>
-                        <input matInput placeholder="Username" type="text" formControlName="userName">
-                    </mat-form-field>
-                </div>
+<div class="containor">
+    <div class="register-containor">
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>Add user</mat-card-title>    
+            </mat-card-header>
+            <div class="login-form">
+                <form [formGroup]="registerForm">
+                    <div class="input-field">
+                        <!-- <mat-icon>person</mat-icon> -->
+                        <mat-form-field>
+                            <input matInput placeholder="Username" type="text" formControlName="userName">
+                        </mat-form-field>
+                    </div>
+    
+                    <div class="input-field">
+                        <!-- <mat-icon>email</mat-icon> -->
+                        <mat-form-field>
+                            <input matInput placeholder="Email" type="email" formControlName="email">
+                        </mat-form-field>
+                    </div>
+                    <div class="input-field">
+                        <!-- <mat-icon>email</mat-icon> -->
+                        <mat-form-field>
+                            <mat-select placeholder="User Type" formControlName="userType">
+                                <mat-option value='patient'>Patient</mat-option>
+                                <mat-option value='labEmployee'>Lab Employee</mat-option> 
+                                <mat-option value='admin'>Admin</mat-option>   
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    
+                    <div class="input-field">
+                        <!-- <mat-icon>vpn_key</mat-icon> -->
+                        <mat-form-field>
+                            <input matInput placeholder="Password" type="password" formControlName="password">
+                        </mat-form-field>
+                    </div>
 
-                <div class="input-field">
-                    <!-- <mat-icon>email</mat-icon> -->
-                    <mat-form-field>
-                        <input matInput placeholder="Email" type="email" formControlName="email">
-                    </mat-form-field>
-                </div>
-                
-                <div class="input-field">
-                    <!-- <mat-icon>vpn_key</mat-icon> -->
-                    <mat-form-field>
-                        <input matInput placeholder="password" type="password" formControlName="password">
-                    </mat-form-field>
-                </div>
-                
-                <div class="button-containor">
-                    <button mat-button mat-raised-color="primary" (click)='register()'>Sign Up</button>
-                </div>
-            </form>
-        </div>
-    </mat-card>
+                    <div class="input-field">
+                        <!-- <mat-icon>vpn_key</mat-icon> -->
+                        <mat-form-field>
+                            <input matInput placeholder="Confirm Password" type="password" formControlName="confirmPassword">
+                        </mat-form-field>
+                    </div>
+                    
+                    <div class="button-containor">
+                        <button mat-button mat-raised-color="primary" (click)='register()'>Sign Up</button>
+                    </div>
+                </form>
+            </div>
+        </mat-card>
+    </div>
 </div>
 {{this.registerForm.value|json}}
