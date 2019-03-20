@@ -10,8 +10,11 @@
             <form [formGroup]='testForm'>
 
                 <mat-form-field>
-                    <input type="text" matInput placeholder="Patient ID" formControlName='patientID'>
+                    <input type="text" matInput placeholder="Patient ID" formControlName='patientID' (keyup)="search($event)" [matAutocomplete]="auto">
                 </mat-form-field>
+                <mat-autocomplete #auto="matAutocomplete">
+                    <mat-option *ngFor="let names of searchResults" [value]="names">{{names}}</mat-option>
+                </mat-autocomplete>
 
                 <div formArrayName="inputobservations" *ngFor="let observation of observations;let i=index">
                     <div [formGroupName]="i">
@@ -26,5 +29,6 @@
         </mat-card-content>
     </mat-card>
 </div>
+{{searchResults|json}}
 
 

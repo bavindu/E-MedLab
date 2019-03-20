@@ -19,6 +19,7 @@ router.post('/login',ctrlUser.authenticate);
 router.get('/getresponse',ctrlMetaObservation.getResponse);
 router.get('/load-test',ctrlMetaObservation.loadTest);
 router.get('/get-test',ctrlMetaObservation.getTest);
+router.post('/search-patient',jwtHelper.jwtVerify,ctrlUser.searchPatient);
 router.get('/userProfile',jwtHelper.jwtVerify,ctrlUser.userProfile);
 router.post('/update-user',jwtHelper.jwtVerify,ctrlUser.updateUserDetails)
 module.exports.router=router;

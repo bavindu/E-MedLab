@@ -58,7 +58,24 @@ let updateUserDetails=function(req,res){
     })
 }
 
+let searchPatient=function(req,res){
+    console.log("this is request "+req.body.input);
+    const searchTerm=req.body.input;
+    User.find({userName:{$regex:new RegExp(searchTerm)}},"userName",(err,data)=>{
+        if(err){
+            res.json("error");
+        }
+        else{
+            console.log(data)
+            res.send(data);
+        }
+    }).limit(10);
+    
+    
+}
 
+
+module.exports.searchPatient=searchPatient;
 module.exports.updateUserDetails=updateUserDetails;
 module.exports.addUser=addUser;
 module.exports.authenticate=authenticate;

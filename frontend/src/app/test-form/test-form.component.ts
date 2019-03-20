@@ -16,6 +16,8 @@ export class TestFormComponent implements OnInit {
   private testForm:FormGroup;
   private testName;
   private observations=[];
+  private patientsname:[];
+  private searchResults=[];
   constructor(
     private route:ActivatedRoute,
     private createTestService:CreateTestService,
@@ -66,5 +68,21 @@ export class TestFormComponent implements OnInit {
   addTestResults(){
     console.log('inside addTstResults')
     this.testFromService.addTestResults(this.testForm.value).subscribe();
+  }
+
+
+  search(event:any){
+    console.log("key up!")
+    console.log(JSON.stringify(event.target.value));
+    this.testFromService.searchPatient({'input':event.target.value}).subscribe((data:any)=>{
+      this.searchResults=[];
+      console.log(data);
+      for (let index = 0; index < data.length; index++) {
+        let name=data[index].userName;
+        this.searchResults.push(name);
+        console.log(name)
+        // this.searchResults.push(data[index].userName)
+      }
+    });
   }
 }
