@@ -46,8 +46,20 @@ let userProfile=function(req,res,next){
     })
 
 }
+let updateUserDetails=function(req,res){
+    console.log('inside update user details');
+    console.log(req.body);
+    User.findByIdAndUpdate(req._id,req.body,(err,doc)=>{
+        if(err){
+            res.status(500).send('cant update');
+        }else{
+            res.status(200);
+        }
+    })
+}
 
 
+module.exports.updateUserDetails=updateUserDetails;
 module.exports.addUser=addUser;
 module.exports.authenticate=authenticate;
 module.exports.userProfile=userProfile;

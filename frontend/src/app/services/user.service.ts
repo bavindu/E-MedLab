@@ -44,4 +44,7 @@ export class UserService {
       return false;
     }
   }
+  updateUser(userDetails){
+    return this.http.post('http://localhost:3000/api/update-user',userDetails)
+  }
 }

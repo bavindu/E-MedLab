@@ -8,6 +8,7 @@ import {MaterialModule} from './material/material.module'
 import {ReactiveFormsModule} from '@angular/forms'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http';
+import {FlexLayoutModule} from '@angular/flex-layout';
 
 import {MetaTestService} from './services/meta-test.service';
 import {LoadTestService} from './services/load-test.service';
@@ -24,6 +25,9 @@ import { RegisterComponent } from './register/register.component';
 import { CreateTestComponent } from './admin/components/create-test/create-test.component';
 import {AdminProfileComponent} from './admin/components/admin-profile/admin-profile.component';
 import { PatientProfileComponent } from './patient/patient-profile/patient-profile.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
+import { EditProfileComponent } from './patient/edit-profile/edit-profile.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +39,8 @@ import { PatientProfileComponent } from './patient/patient-profile/patient-profi
     LoginComponent,
     RegisterComponent,
     AdminProfileComponent,
-    PatientProfileComponent
+    PatientProfileComponent,
+    EditProfileComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,7 +48,14 @@ import { PatientProfileComponent } from './patient/patient-profile/patient-profi
     MaterialModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    FlexLayoutModule
    
   ],
   providers: [MetaTestService,LoadTestService,LoginService,AuthGuard,AppLoginService,AuthInterceptor,{

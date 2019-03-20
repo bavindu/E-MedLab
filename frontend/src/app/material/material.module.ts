@@ -31,7 +31,8 @@ import * as Material from '@angular/material';
     Material.MatPaginatorModule,
     Material.MatListModule,
     Material.MatTooltipModule,
-    Material.MatMenuModule
+    Material.MatMenuModule,
+    Material.MatSidenavModule
   ],
   exports: [
     Material.MatToolbarModule,
@@ -59,7 +60,8 @@ import * as Material from '@angular/material';
     Material.MatPaginatorModule,
     Material.MatListModule,
     Material.MatTooltipModule,
-    Material.MatMenuModule
+    Material.MatMenuModule,
+    Material.MatSidenavModule
   ]
 })
 export class MaterialModule { }

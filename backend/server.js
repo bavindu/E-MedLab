@@ -14,7 +14,7 @@ const app=express();
 app.use(cors());
 app.use(bodybarser.json());
 app.use('/api',rtIndex.router);
-app.use(passport.initialize())
+app.use(passport.initialize());
 
 
 

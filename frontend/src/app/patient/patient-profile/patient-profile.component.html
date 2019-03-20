@@ -1,4 +1,28 @@
-<p>
-  {{this.userDetails|json}}
-  {{this.name|json}}
-</p>
+<!-- <mat-sidenav-container class="side-nav-containor">
+  <mat-sidenav #sidenav class="mat-elevation-z4" mode="side" opened="true">
+    <mat-nav-list>
+      <mat-list-item>
+        <mat-icon matListIcon>setting</mat-icon>
+        <h3 matLine>Hello</h3>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  <div class="container">
+  </div>
+</mat-sidenav-container> -->
+<mat-sidenav-container class="example-container" >
+  <mat-sidenav class="mat-elevation-z8" mode="side" opened>
+    <mat-nav-list>
+      <mat-list-item [routerLink]="[ '/path', routeParam ]">
+        <h4 matLine>Edit Profile</h4>
+      </mat-list-item>
+      <mat-list-item>
+        <h4 matLine>My Tests</h4>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-edit-profile></app-edit-profile>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+  
