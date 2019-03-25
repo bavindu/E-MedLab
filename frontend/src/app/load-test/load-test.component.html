@@ -1,5 +1,5 @@
 <mat-nav-list>
-  <mat-list-item *ngFor="let item of testNames;let i=index" >
-     <a (click)="navigateCreateTestForm(i)">{{ item[0] }}</a>
+  <mat-list-item *ngFor="let item of testNames;let i=index" (click)="navigateCreateTestForm(i)">
+      {{ item[0] }}
   </mat-list-item>
 </mat-nav-list>

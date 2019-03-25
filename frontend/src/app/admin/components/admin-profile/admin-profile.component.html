@@ -1,7 +1,56 @@
-<div class="outer">
-  <div class="adminLinks">
-    <button  mat-raised-button  color='primary' [routerLink]="['/create-test']">Create Test</button>
-    <button  mat-raised-button  color='primary' [routerLink]="['/load-test']">Find Test</button>
-    <button  mat-raised-button  color='primary' [routerLink]="['/register']">Add User</button>
+<div class="containor">
+  <div class="containor" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="5%" fxLayoutAlign="center center">
+    <div fxFlex="20%">
+      <a [routerLink]="[ '/register']" style="text-decoration:none">
+        <div class="mycard mat-elevation-z5">
+            <div class="my-img">
+              <img src="assets/images/team.png" alt="">
+            </div>
+            <div class="content">
+              <h4>Add User</h4>
+              </div>
+        </div>
+      </a>
+      
+    </div>
+    <div fxFlex="20%">
+      <a [routerLink]="[ '/create-test']" style="text-decoration:none">
+        <div class="mycard mat-elevation-z5">
+            <div class="my-img">
+              <img src="assets/images/test-tube.png" alt="">
+            </div>
+            <div class="content">
+              <h4>Create Test</h4>
+              </div>
+        </div>
+      </a>
+    </div>
+    <div fxFlex="20%">
+      <a [routerLink]="[ '/load-test']" style="text-decoration:none">
+        <div class="mycard mat-elevation-z5">
+            <div class="my-img">
+              <img src="assets/images/flask.png" alt="">
+            </div>
+            <div class="content">
+              <h4>Add Test Results</h4>
+              </div>
+        </div>
+      </a>
+    </div>
+    <div fxFlex="20%">
+      <a [routerLink]="[ '/create-observation']" style="text-decoration:none">
+        <div class="mycard mat-elevation-z5" >
+            <div class="my-img">
+              <img src="assets/images/petri-dish.png" alt="">
+            </div>
+            <div class="content">
+              <h4>Add New Observation</h4>
+              </div>
+        </div>
+      </a>
+    </div>
+    
   </div>
+  
+  
 </div>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CreateTestService } from '../services/create-test.service';
-import { FormGroup, FormBuilder, FormArray } from '@angular/forms';
+import { FormGroup, FormBuilder, FormArray, FormControl } from '@angular/forms';
 import { TestFormService } from '../services/test-form.service';
 
 @Component({
@@ -23,11 +23,13 @@ export class TestFormComponent implements OnInit {
     private createTestService:CreateTestService,
     private fb:FormBuilder,
     private testFromService:TestFormService) { }
+    private pid;
 
   ngOnInit() {
     
     this.testForm=this.fb.group({
-      patientID:[''],
+      testId:[],
+      patientId:[''],
       inputobservations:this.fb.array([
       ])
     });
@@ -37,6 +39,7 @@ export class TestFormComponent implements OnInit {
   createTestForm(){
     this.route.queryParams.subscribe(params=>{
       this.id=params.id;
+      (<FormControl>this.testForm.get('testId')).setValue(this.id);
       this.createTestService.getTest(this.id).subscribe((res)=>{
         this.testTemplate=res;
         this.testName=this.testTemplate.testName;
@@ -61,7 +64,8 @@ export class TestFormComponent implements OnInit {
     
     for (let index = 0; index < this.observations.length; index++) {
       (<FormArray>this.testForm.get('inputobservations')).push(this.createFormGroup(this.observations[index]._id));
-      console.log(this.observations[index]._id)   
+      console.log(this.observations[index]._id)
+      console.log(this.observations[index].observationName)   
     }
   }
 
@@ -79,10 +83,16 @@ export class TestFormComponent implements OnInit {
       console.log(data);
       for (let index = 0; index < data.length; index++) {
         let name=data[index].userName;
-        this.searchResults.push(name);
-        console.log(name)
+        let id=data[index]._id;
+        this.searchResults.push([name,id]);
+        console.log(this.searchResults)
         // this.searchResults.push(data[index].userName)
       }
     });
+
+  }
+  onPatientChange(value,id){
+    console.log("on patient name change");
+    console.log(id);
   }
 }

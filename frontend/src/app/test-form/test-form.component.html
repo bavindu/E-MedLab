@@ -10,25 +10,36 @@
             <form [formGroup]='testForm'>
 
                 <mat-form-field>
-                    <input type="text" matInput placeholder="Patient ID" formControlName='patientID' (keyup)="search($event)" [matAutocomplete]="auto">
+                    <input type="text" matInput placeholder="Patient Name" formControlName='patientId' (keyup)="search($event)" [matAutocomplete]="auto">
                 </mat-form-field>
-                <mat-autocomplete #auto="matAutocomplete">
-                    <mat-option *ngFor="let names of searchResults" [value]="names">{{names}}</mat-option>
+                <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onPatientChange($event.option.value)">
+                    <mat-option *ngFor="let item of searchResults" [value]="item[1]">{{item[0]}}</mat-option>
                 </mat-autocomplete>
 
                 <div formArrayName="inputobservations" *ngFor="let observation of observations;let i=index">
-                    <div [formGroupName]="i">
+                    <div [formGroupName]="i" *ngIf="observation.hasOwnProperty('unit') && observation.codedValues.length===0">
                         <mat-form-field>
                             <input type="text" matInput placeholder="{{observation.observationName}}" formControlName='observationValue'>
                         </mat-form-field>
                     </div>
-                </div>
+                    <div [formGroupName]="i" *ngIf="observation.hasOwnProperty('codedValues') && observation.codedValues.length!==0">
+                        <mat-form-field>
+                            <mat-label>{{observation.observationName}}</mat-label>
+                            <mat-select formControlName='observationValue'>
+                              <mat-option *ngFor="let codedValue of observation.codedValues" [value]="codedValue" >
+                                {{codedValue}}
+                              </mat-option>
+                            </mat-select>
+                          </mat-form-field>
+
+                    </div>
+                </div >
                 <button mat-raised-button (click)="addTestResults()" color="primary">Submit</button>
             </form>
             
         </mat-card-content>
     </mat-card>
 </div>
-{{searchResults|json}}
+{{this.testForm.value|json}}
 
 

@@ -3,14 +3,22 @@ const metaCodedValueSchema=require('./metaCodedValues.model').metaCodedValueSche
 
 const metaObservationSchema=mongoose.Schema(
     {
+        
         observationName:{
             type:String
         },
-        codedValues:[metaCodedValueSchema],
+        codedValues:[{
+            type:String,
+            default:undefined,
+            required: true
+        }],
         unit:{
             type:String
         },
         referenceRange:{
+            type:String
+        },
+        unit:{
             type:String
         }
     }

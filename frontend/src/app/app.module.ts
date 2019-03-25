@@ -25,9 +25,11 @@ import { RegisterComponent } from './register/register.component';
 import { CreateTestComponent } from './admin/components/create-test/create-test.component';
 import {AdminProfileComponent} from './admin/components/admin-profile/admin-profile.component';
 import { PatientProfileComponent } from './patient/patient-profile/patient-profile.component';
+import {CreateObservationComponent} from './admin/components/create-observation/create-observation.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 import { EditProfileComponent } from './patient/edit-profile/edit-profile.component';
+import { ViewTestComponent } from './view-test/view-test.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +43,8 @@ import { EditProfileComponent } from './patient/edit-profile/edit-profile.compon
     AdminProfileComponent,
     PatientProfileComponent,
     EditProfileComponent,
+    CreateObservationComponent,
+    ViewTestComponent
   ],
   imports: [
     BrowserModule,

@@ -1,11 +1,11 @@
 require('./models/metaModels/db');
-require('./config/passport.config')
+require('./config/passport.config');
 
 const express=require('express');
-const rtIndex=require('./routes/index.routes')
-const cors=require('cors')
-const bodybarser=require('body-parser')
-const passport=require('passport')
+const rtIndex=require('./routes/index.routes');
+const cors=require('cors');
+const bodybarser=require('body-parser');
+const passport=require('passport');
 
 
 

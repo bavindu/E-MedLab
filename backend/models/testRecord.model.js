@@ -3,10 +3,16 @@ const observationSchema=require('./observation.model').observationSchema
 
 const testRecordSchema=new mongoose.Schema(
     {
-        patientID:{
+        testId:{
             type:String
         },
-        observations:[observationSchema]
+        patientId:{
+            type:String
+        },
+        observations:[{
+            type:mongoose.Schema.Types.ObjectId,
+            ref:'MetaObservation'
+        }]
     }
 );
 

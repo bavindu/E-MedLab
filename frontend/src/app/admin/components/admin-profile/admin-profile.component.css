@@ -9,9 +9,35 @@
     
 }
 
-button{
-    width: 150px;
-    height: 150px;
-    margin:50px;
-    background-color: darkorchid;
+.mycard {
+    border: 1px solid #d3d3d3;
+    border-radius: 0rem;
+    background: linear-gradient(#BBBBBF,#E1E1E1)
+  }
+  
+.bg-img {
+    background-size: cover;
+    min-height: 180px;
+    background-position: center;
+    background-color: #ccc;
 }
+.my-img{
+    margin: 0 auto;
+    width: 128px;
+    height: 128px;
+}
+.my-img img{
+    margin:0 auto;
+}
+.content{
+    text-align: center;
+}
+h4{
+    color: black;
+    font-family: sans-serif;
+}
+.containor{
+    margin-top: 150px;
+    margin-bottom: auto;
+}
+

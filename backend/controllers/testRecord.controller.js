@@ -6,7 +6,9 @@ const Observation=require('../models/observation.model').Observation;
 
 let addTestRecord=function(req,res){
     const testRecord=new TestRecord();
-    testRecord.patientID=req.body.patientID;
+    testRecord.testId=req.body.testId;
+    testRecord.patientId=req.body.patientId;
+    console.log("this is patient id "+testRecord.patientID);
     const inputobservations=req.body.inputobservations;
     for (let index = 0; index < req.body.inputobservations.length; index++) {
 
@@ -21,10 +23,12 @@ let addTestRecord=function(req,res){
         if(!err){
             res.send(err)
         }else{
+            console.log('This is doc');
+            console.log(doc);
             res.json('Hello')
         }
     })
 
-}
+};
 
 module.exports.addTestRecord=addTestRecord;

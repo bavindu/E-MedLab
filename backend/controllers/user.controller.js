@@ -74,9 +74,22 @@ let searchPatient=function(req,res){
     
 }
 
+let getUserType=function(req,res){
+    console.log('inside get user type')
+    User.findById(req._id,"userType",(err,data)=>{
+        if(err){
+            res.send(err)
+        }
+        else{
+            res.send(data)
+        }
+    })
+}
+
 
 module.exports.searchPatient=searchPatient;
 module.exports.updateUserDetails=updateUserDetails;
 module.exports.addUser=addUser;
 module.exports.authenticate=authenticate;
 module.exports.userProfile=userProfile;
+module.exports.getUserType=getUserType;

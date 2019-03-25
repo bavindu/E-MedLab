@@ -1,0 +1,53 @@
+<div class="o-containor">
+  <form  [formGroup]="observationDetails">
+    <mat-form-field>
+      <input type="text" matInput placeholder='Observation Name' formControlName="observationName">               
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      
+      <mat-select placeholder="Data Type" formControlName="dataType" (change)="addDatatype()">
+          <mat-option value='numaric'>Numeric</mat-option>
+          <mat-option value='coded'>Coded</mat-option>    
+      </mat-select>
+      <mat-icon 
+        matSuffix 
+        matTooltip="Info about the action"
+        >info</mat-icon>
+    </mat-form-field>
+    <br>
+    
+    <mat-form-field *ngIf="observationDetails.value.dataType==='numaric'">
+        <input type="text" matInput placeholder='Unit' formControlName="unit">
+    </mat-form-field>
+    <br *ngIf="observationDetails.value.dataType==='numaric'">
+    <mat-form-field *ngIf="observationDetails.value.dataType==='numaric'">
+        <input type="text" matInput placeholder='Reference Range' formControlName="referenceRange">
+    </mat-form-field>
+    
+    
+    <mat-card *ngIf="observationDetails.value.dataType==='coded'">
+      <mat-card-header>       
+        <mat-card-title>Add coded values</mat-card-title>                             
+      </mat-card-header>
+      <mat-card-content>
+        <div formArrayName="codedValues" *ngFor="let coedValue of observationDetails.get('codedValues').controls; let j=index">
+          <div [formGroupName]='j'>
+            <mat-form-field>
+              <input matInput placeholder="Value" formControlName="codedValue">
+              <button mat-icon-button matSuffix>
+                <mat-icon aria-label="label" (click)="deleteCodeValue(j)">cancel</mat-icon>
+              </button>
+            </mat-form-field>
+          </div>
+        </div>
+        
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="addCodedValues(i)">Add value</button>
+      </mat-card-actions>
+    </mat-card>
+    <button mat-raised-button color="primary" (click)="addObservation(i)">Add Observation</button>
+  </form>
+</div>
+{{this.observationDetails.value|json}}

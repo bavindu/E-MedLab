@@ -24,5 +24,22 @@ export class AppComponent {
     this.router.navigateByUrl('/login');
   }
 
+  home(){
+    console.log("inside home click")
+    let gotData;
+    this.userService.getUserType().subscribe((data)=>{
+      gotData=data
+      console.log(gotData.userType);
+      if(gotData.userType==="patient"){
+        this.router.navigateByUrl('/patient-profile')
+      }
+      else if(gotData.userType==="admin"){
+        console.log("inside admin if")
+        this.router.navigateByUrl('/admin-profile')
+      }
+    });
+    
+  }
+
 
 }
