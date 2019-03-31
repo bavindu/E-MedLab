@@ -29,6 +29,7 @@ export class TestFormComponent implements OnInit {
     
     this.testForm=this.fb.group({
       testId:[],
+      testName:[],
       patientId:[''],
       inputobservations:this.fb.array([
       ])
@@ -41,8 +42,10 @@ export class TestFormComponent implements OnInit {
       this.id=params.id;
       (<FormControl>this.testForm.get('testId')).setValue(this.id);
       this.createTestService.getTest(this.id).subscribe((res)=>{
+        console.log('**************');
+        console.log(res);
         this.testTemplate=res;
-        this.testName=this.testTemplate.testName;
+        (<FormControl>this.testForm.get('testName')).setValue(this.testTemplate.testName);
         this.observations=this.testTemplate.observations
         console.log("in create Test form Observations length"+this.observations.length);
         this.addInputFields();

@@ -19,7 +19,6 @@ import {AppLoginService} from './services/app-login.service'
 
 import { TestFormComponent } from './test-form/test-form.component';
 import { LoadTestComponent } from './load-test/load-test.component';
-import { AddTestResultsComponent } from './add-test-results/add-test-results.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { CreateTestComponent } from './admin/components/create-test/create-test.component';
@@ -30,6 +29,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 import { EditProfileComponent } from './patient/edit-profile/edit-profile.component';
 import { ViewTestComponent } from './view-test/view-test.component';
+import { ViewPatientTestlistComponent } from './view-patient-testlist/view-patient-testlist.component';
 
 @NgModule({
   declarations: [
@@ -37,14 +37,14 @@ import { ViewTestComponent } from './view-test/view-test.component';
     CreateTestComponent,
     TestFormComponent,
     LoadTestComponent,
-    AddTestResultsComponent,
     LoginComponent,
     RegisterComponent,
     AdminProfileComponent,
     PatientProfileComponent,
     EditProfileComponent,
     CreateObservationComponent,
-    ViewTestComponent
+    ViewTestComponent,
+    ViewPatientTestlistComponent
   ],
   imports: [
     BrowserModule,

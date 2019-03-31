@@ -17,6 +17,8 @@ router.get('/load-test',ctrlMetaTest.loadTest);
 router.get('/get-test',ctrlMetaTest.getTest);
 router.get('/userProfile',jwtHelper.jwtVerify,ctrlUser.userProfile);
 router.get('/getUserType',jwtHelper.jwtVerify,ctrlUser.getUserType);
+router.get('/getTestRecordName',jwtHelper.jwtVerify,ctrlTestRocord.getTestRecordName);
+router.get('/getTestRecord',jwtHelper.jwtVerify,ctrlTestRocord.getTestRecord);
 router.post('/addMetaTest',jwtHelper.jwtVerify,ctrlMetaTest.addMetaTest);
 router.post('/addTestResults',jwtHelper.jwtVerify,ctrlTestRocord.addTestRecord);
 router.post('/register',ctrlUser.addUser);

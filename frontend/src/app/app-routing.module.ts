@@ -9,6 +9,9 @@ import {AdminProfileComponent} from './admin/components/admin-profile/admin-prof
 import {PatientProfileComponent} from './patient/patient-profile/patient-profile.component';
 import { AuthGuard } from './auth/auth.guard';
 import { CreateObservationComponent } from './admin/components/create-observation/create-observation.component';
+import {EditProfileComponent} from './patient/edit-profile/edit-profile.component';
+import {ViewPatientTestlistComponent} from './view-patient-testlist/view-patient-testlist.component';
+import {ViewTestComponent} from './view-test/view-test.component';
 
 const routes: Routes = [
   {path:"test-form", component:TestFormComponent},
@@ -18,7 +21,12 @@ const routes: Routes = [
   {path:"admin-profile",component:AdminProfileComponent,canActivate:[AuthGuard],children:[]},
   {path:"load-test", component:LoadTestComponent},
   {path:"create-observation",component:CreateObservationComponent,canActivate:[AuthGuard]},
-  {path:"patient-profile",component:PatientProfileComponent,canActivate:[AuthGuard]},
+  {path:"patient-profile",component:PatientProfileComponent,canActivate:[AuthGuard],children:[
+    {path:"edit-profile",component:EditProfileComponent,canActivate:[AuthGuard]},
+    {path:"view-testList",component:ViewPatientTestlistComponent,canActivate:[AuthGuard]},
+    {path:"view-myTest",component:ViewTestComponent,canActivate:[AuthGuard]},
+    {path:'',redirectTo:'edit-profile',pathMatch:'full'}
+  ]},
   {path:'',redirectTo:'/login',pathMatch:'full'}
 ];
 

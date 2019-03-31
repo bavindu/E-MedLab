@@ -5,8 +5,7 @@ const MetaTest=metaTestModel.MetaTest;
 
 
 
-let addMetaTest= function(req,res){
-    //res.send(req.body.observations);
+let addMetaTest= async function(req,res){
     const metaTest=new MetaTest();
     metaTest.testName=req.body.testName;
     metaTest.observations=[];
@@ -28,29 +27,32 @@ let addMetaTest= function(req,res){
             });
             console.log(observation.codedValues)
         }
-        observation.save((err,doc)=>{
-            if(err){
-                console.log(err)
-                res.send(err)
-            }
-            else{
-                console.log('inside observation save '+doc._id)
-                metaTest.observations.push(doc._id);
-                console.log(metaTest.observations)
-            }
-        });
+        
+        
+        try{
+            let doc =  await observation.save();
+            metaTest.observations.push(doc._id);
+        }catch(e){
+            console.log(e);
+            res.send(e);
+        }
+    
 
     }
+
     metaTest.save((err,doc)=>{
          if(!err){
              console.log('metaObservation added successfull!');
-             console.log(doc);
+            //  console.log(doc);
          }
          else{
              console.log(err)
              res.send(err);
          }
     });
+   
+    
+    
     
 }
 
@@ -62,6 +64,7 @@ let loadTest=function(req,res){
     console.log('inside load test');
     MetaTest.find((err,doc)=>{
         if(!err){
+            console.log('***********************')
             console.log(doc);
             res.send(doc);
         }else{
@@ -71,14 +74,29 @@ let loadTest=function(req,res){
 }
 let getTest=function(req,res){
     var id=req.query.id;
-    MetaTest.findById(id,(err,doc)=>{
+    MetaTest.findById(id).populate('observations').exec(function(err,doc){
         if(!err){
-            res.send(doc);
-        }else{
-            res.send(err)
+            res.send(doc)
+            console.log(doc)
+        }
+        else{
+            console.log(err)
         }
     })
 }
+
+function saveModel(model){
+    model.save((err,doc)=>{
+        if(!err){
+            console.log('metaObservation added successfull!');
+            console.log(doc);
+        }
+        else{
+            console.log(err)
+            res.send(err);
+        }
+   });
+};
 
 
 module.exports.addMetaTest=addMetaTest;

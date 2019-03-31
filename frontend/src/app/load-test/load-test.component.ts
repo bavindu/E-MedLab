@@ -28,7 +28,7 @@ export class LoadTestComponent implements OnInit {
       }
     })
   }
-  navigateCreateTestForm(i){
-    this.router.navigate(['/test-form'],{queryParams:{id:this.test[i]._id}})
+  navigateAddTestResults(i){
+    this.router.navigate(['/test-form'],{queryParams:{id:this.test[i]._id,testName:this.test[i].testName}})
   }
 }

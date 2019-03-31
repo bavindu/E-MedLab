@@ -11,6 +11,9 @@ export class LoadTestService {
   loadTest(){
     return this.http.get('http://localhost:3000/api/load-test');
   }
+  loadTestofPatient(){
+    return this.http.get('http://localhost:3000/api/getTestRecordName');
+  }
 
 
 }

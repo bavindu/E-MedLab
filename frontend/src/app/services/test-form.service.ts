@@ -15,6 +15,9 @@ export class TestFormService {
   searchPatient(name){
     return this.http.post('http://localhost:3000/api/search-patient',name);
   }
+  getTestResults(testId){
+    return this.http.get('http://localhost:3000/api/getTestRecord',{params:{Id:testId}})
+  }
 
 }
 

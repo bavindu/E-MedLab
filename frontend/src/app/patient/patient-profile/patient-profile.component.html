@@ -13,16 +13,16 @@
 <mat-sidenav-container class="example-container" >
   <mat-sidenav class="mat-elevation-z8" mode="side" opened>
     <mat-nav-list>
-      <mat-list-item [routerLink]="[ '/path', routeParam ]">
+      <mat-list-item [routerLink]="[ 'edit-profile']">
         <h4 matLine>Edit Profile</h4>
       </mat-list-item>
-      <mat-list-item>
+      <mat-list-item [routerLink]="[ 'view-testList']">
         <h4 matLine>My Tests</h4>
       </mat-list-item>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <app-edit-profile></app-edit-profile>
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
   

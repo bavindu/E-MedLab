@@ -6,8 +6,10 @@ const observationSchema=new mongoose.Schema({
     observationValue:{
         type:String
     },
-    observationID:{
-        type:String
+    _id:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'MetaObservation'
+        
     }
 
 })

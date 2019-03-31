@@ -8,7 +8,10 @@ const metaTestSchema=new mongoose.Schema(
         testName:{
             type:String
         },
-        observations:[{type: mongoose.Schema.Types.ObjectId,ref:'MetaObservation'}]
+        observations:[{
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'MetaObservation'
+        }]
         
     }
 );
