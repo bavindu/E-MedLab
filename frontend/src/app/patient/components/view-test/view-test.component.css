@@ -1,0 +1,31 @@
+table {
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+.containor{
+  margin-bottom: 10px;
+}
+.header{
+  padding-left: 15px;
+  margin-bottom: 20px;
+}
+
+.field label{
+  width: 100px;
+  display: inline-block;
+  font-weight: 500;
+}
+
+.field span{
+  margin-left: 10px;
+}
+.header-row th{
+  font-size: medium;
+  font-weight: bold;
+  color: black;
+  font-family: sans-serif;
+}

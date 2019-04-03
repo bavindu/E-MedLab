@@ -31,5 +31,18 @@ let addObservation=function(req,res){
     })
 };
 
+let getObservationList=function(req,res){
+    metaObservationSchema.MetaObservation.find((err,doc)=>{
+        if(!err){
+            console.log(doc);
+            res.send(doc)
+        }
+        else{
+            console.log(err);
+        }
+    }).select('observationName');
+}
+
 
 module.exports.addObservation=addObservation;
+module.exports.getObservationList=getObservationList;

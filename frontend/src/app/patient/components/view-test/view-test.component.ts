@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { TestFormService } from '../services/test-form.service';
+import { TestFormService } from '../../../services/test-form.service';
 import { MatTableDataSource } from '@angular/material';
+import { UserDataService } from '../../services/user-data.service';
+import { User } from 'src/app/models/user.model';
 
 export interface TestForm {
   observationName: string ;
@@ -21,16 +23,21 @@ export interface TestForm {
 export class ViewTestComponent implements OnInit {
 
   private testId;
+  private testName;
+  private date:Date;
+  private user=new User();
   private testResults;
   private displayedColums:string[]=['tests','value','unit','referenceRange'];
   private testValueData=[]
   private datasource;
 
-  constructor(private route:ActivatedRoute,private testFormServise:TestFormService) { }
+  constructor(private route:ActivatedRoute,private testFormServise:TestFormService,private data:UserDataService) { }
 
   ngOnInit() {
+    this.data.currentData.subscribe(user=>this.user=user)
     this.datasource=new MatTableDataSource()
     this.oninitfunction();
+
     
   }
 
@@ -39,14 +46,7 @@ export class ViewTestComponent implements OnInit {
     await this.createTestResults();
 
   }
-  addTestValueToArray(){
-    console.log("Observations");
-    // this.testResults.observations.forEach(element => {
-    //   const jobj={test:element.observationName,observation:element.observationValue,unit:element.unit,ReferenceRange:element.referenceRange}
-    //   console.log(jobj);
-    //   // this.testValueData.push(jobj)
-    // });
-  }
+  
 
   createTestResults(){
     this.route.queryParams.subscribe(params=>{
@@ -55,7 +55,10 @@ export class ViewTestComponent implements OnInit {
     })
     this.testFormServise.getTestResults(this.testId).subscribe((data:any)=>{
       this.testResults=data;
-      console.log('this is data  '+data.observations);
+      this.testName=data.testName;
+      this.date=new Date(data.date);
+      console.log("this is date "+this.date)
+      console.log('this is data  '+data.testName);
       data.observations.forEach(element => {
         let tunit;
         let trrange;

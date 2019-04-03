@@ -6,12 +6,12 @@ import {TestFormComponent} from './test-form/test-form.component'
 import {LoginComponent} from './login/login.component'
 import { RegisterComponent } from './register/register.component';
 import {AdminProfileComponent} from './admin/components/admin-profile/admin-profile.component';
-import {PatientProfileComponent} from './patient/patient-profile/patient-profile.component';
+import {PatientProfileComponent} from './patient/components/patient-profile/patient-profile.component';
 import { AuthGuard } from './auth/auth.guard';
 import { CreateObservationComponent } from './admin/components/create-observation/create-observation.component';
-import {EditProfileComponent} from './patient/edit-profile/edit-profile.component';
-import {ViewPatientTestlistComponent} from './view-patient-testlist/view-patient-testlist.component';
-import {ViewTestComponent} from './view-test/view-test.component';
+import {EditProfileComponent} from './patient/components/edit-profile/edit-profile.component';
+import {ViewPatientTestlistComponent} from './patient/components/view-patient-testlist/view-patient-testlist.component';
+import {ViewTestComponent} from './patient/components/view-test/view-test.component';
 
 const routes: Routes = [
   {path:"test-form", component:TestFormComponent},

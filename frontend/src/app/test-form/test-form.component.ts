@@ -31,6 +31,7 @@ export class TestFormComponent implements OnInit {
       testId:[],
       testName:[],
       patientId:[''],
+      date:[''],
       inputobservations:this.fb.array([
       ])
     });

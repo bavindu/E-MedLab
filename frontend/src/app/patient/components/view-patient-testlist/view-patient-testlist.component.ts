@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LoadTestService } from '../services/load-test.service';
+import { LoadTestService } from '../../../services/load-test.service';
 import { Router } from '@angular/router';
 
 @Component({

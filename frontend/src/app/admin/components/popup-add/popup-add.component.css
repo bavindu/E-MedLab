@@ -1,0 +1,12 @@
+button {
+    outline: none !important;
+    box-shadow: none;
+ }
+
+.spacefill {
+    flex: 1 1 auto;
+  }
+
+.containor{
+    width: 500px;
+}

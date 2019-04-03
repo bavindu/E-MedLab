@@ -16,6 +16,16 @@
                     <mat-option *ngFor="let item of searchResults" [value]="item[1]">{{item[0]}}</mat-option>
                 </mat-autocomplete>
 
+                <br>
+
+                <mat-form-field>
+                        <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="date">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+  
+                <br>
+
                 <div formArrayName="inputobservations" *ngFor="let observation of observations;let i=index">
                     <div [formGroupName]="i" *ngIf="observation.hasOwnProperty('unit') && observation.codedValues.length===0">
                         <mat-form-field>

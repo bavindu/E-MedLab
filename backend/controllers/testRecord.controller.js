@@ -9,6 +9,7 @@ let addTestRecord=function(req,res){
     testRecord.testId=req.body.testId;
     testRecord.testName=req.body.testName;
     testRecord.patientId=req.body.patientId;
+    testRecord.date=req.body.date;
     console.log("request patient id   "+req.body.patientId);
     console.log("this is patient id "+testRecord.patientID);
     const inputobservations=req.body.inputobservations;

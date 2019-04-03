@@ -11,3 +11,6 @@
 img{
   width: 200px;
 }
+button{
+  outline: none !important;
+}

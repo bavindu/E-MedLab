@@ -8,33 +8,40 @@ const MetaTest=metaTestModel.MetaTest;
 let addMetaTest= async function(req,res){
     const metaTest=new MetaTest();
     metaTest.testName=req.body.testName;
+    metaTest.date=req.body.date;
     metaTest.observations=[];
     for (var i=0;i<req.body.observations.length;i++){
-        var observation=new metaObservationSchema.MetaObservation();
-        if(req.body.observations[i].unit.length!==0){
-            observation.codedValues=undefined;
-            observation.observationName=req.body.observations[i].observationName;
-            observation.unit=req.body.observations[i].unit;
-            observation.referenceRange=req.body.observations[i].referenceRange;
+        if(req.body.observations[i].hasOwnProperty("observationName")){
+            var observation=new metaObservationSchema.MetaObservation();
+            if(req.body.observations[i].unit.length!==0){
+                observation.codedValues=undefined;
+                observation.observationName=req.body.observations[i].observationName;
+                observation.unit=req.body.observations[i].unit;
+                observation.referenceRange=req.body.observations[i].referenceRange;
+                
+                
+            }
+            else{
+                console.log(req.body.observations[i].unit.length);
+                observation.observationName=req.body.observations[i].observationName;
+                req.body.observations[i].codedValues.forEach(element => {
+                    observation.codedValues.push(element.codedValue)
+                });
+                console.log(observation.codedValues)
+            }
             
             
+            try{
+                let doc =  await observation.save();
+                metaTest.observations.push(doc._id);
+            }catch(e){
+                console.log(e);
+                res.send(e);
+            }
         }
-        else{
-            console.log(req.body.observations[i].unit.length);
-            observation.observationName=req.body.observations[i].observationName;
-            req.body.observations[i].codedValues.forEach(element => {
-                observation.codedValues.push(element.codedValue)
-            });
-            console.log(observation.codedValues)
-        }
+        else if(req.body.observations[i].hasOwnProperty("existingObservation")){
+            metaTest.observations.push(req.body.observations[i].existingObservation._id);
         
-        
-        try{
-            let doc =  await observation.save();
-            metaTest.observations.push(doc._id);
-        }catch(e){
-            console.log(e);
-            res.send(e);
         }
     
 
@@ -43,7 +50,7 @@ let addMetaTest= async function(req,res){
     metaTest.save((err,doc)=>{
          if(!err){
              console.log('metaObservation added successfull!');
-            //  console.log(doc);
+             console.log(doc);
          }
          else{
              console.log(err)

@@ -1,0 +1,28 @@
+<div class="containor">
+  <div class="header">
+    <span>Hello</span>
+    <span class="spacefill"></span>
+    <span>
+      <button mat-icon-button>
+        <mat-icon (click)="close()">cancel</mat-icon>
+      </button>
+    </span>
+  </div>
+  <div class="filterx">
+    <mat-form-field>
+      <input matInput placeholder="Filter" [(ngModel)]="searchText">
+    </mat-form-field>
+  </div>
+  <div class="list">
+    <mat-selection-list #observations [(ngModel)]="selectedOptions">
+      <mat-list-option *ngFor="let element of observationList | filter:searchText" [value]="element">
+        {{element.observationName}}
+      </mat-list-option>
+    </mat-selection-list>
+    
+  </div>
+  <div class="action">
+    <button mat-raised-button color="primary"  (click)="addObservation()">Add Observation</button>
+  </div>
+</div>
+{{selectedOptions|json}}
