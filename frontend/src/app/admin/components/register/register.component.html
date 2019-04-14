@@ -7,6 +7,18 @@
             <div class="login-form">
                 <form [formGroup]="registerForm">
                     <div class="input-field">
+                      <!-- <mat-icon>person</mat-icon> -->
+                      <mat-form-field>
+                        <input matInput placeholder="First Name" type="text" formControlName="firstName">
+                      </mat-form-field>
+                    </div>
+                    <div class="input-field">
+                      <!-- <mat-icon>person</mat-icon> -->
+                      <mat-form-field>
+                        <input matInput placeholder="Last Name" type="text" formControlName="lastName">
+                      </mat-form-field>
+                    </div>
+                    <div class="input-field">
                         <!-- <mat-icon>person</mat-icon> -->
                         <mat-form-field>
                             <input matInput placeholder="Username" type="text" formControlName="userName">
@@ -29,6 +41,14 @@
                             </mat-select>
                         </mat-form-field>
                     </div>
+                    <div class="input-field" >
+                      <mat-form-field>
+                        <mat-select  placeholder="Sex" formControlName="sex">
+                          <mat-option value='male'>Male</mat-option>
+                          <mat-option value='female'>Female</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    </div>
                     
                     <div class="input-field">
                         <!-- <mat-icon>vpn_key</mat-icon> -->
@@ -45,7 +65,7 @@
                     </div>
                     
                     <div class="button-containor">
-                        <button mat-button mat-raised-color="primary" (click)='register()'>Sign Up</button>
+                        <button mat-button mat-raised-color="primary" (click)='register()'>Add</button>
                     </div>
                 </form>
             </div>

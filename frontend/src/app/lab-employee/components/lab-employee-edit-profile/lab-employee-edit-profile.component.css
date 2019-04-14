@@ -1,0 +1,15 @@
+form{
+  width: 80%;
+  margin:0 auto;
+}
+button{
+  margin: 10px;
+}
+.form-control{
+  width: 80%;
+}
+.containor{
+  width: 80%;
+  margin:0 auto;
+  padding: 20px;
+}

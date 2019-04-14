@@ -36,6 +36,8 @@ export class PopupAddComponent implements OnInit {
         this.observationList.push(element);
       });
     });
+    console.log(this.observationList)
+    
 
   }
 

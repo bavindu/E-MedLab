@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder} from '@angular/forms'
-import {RegisterService} from '../services/register.service'
+import {RegisterService} from '../../../services/register.service'
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,21 +10,21 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent implements OnInit {
   private registerForm;
-  constructor(private fb:FormBuilder,private registerService:RegisterService,private router:Router) { 
+  constructor(private fb:FormBuilder,private registerService:RegisterService,private router:Router) {}
+
+  ngOnInit() {
     this.registerForm=this.fb.group(
       {
         email:[''],
+        firstName:[''],
+        lastName:[''],
         userName:[''],
         password:[''],
         userType:[''],
+        sex:[''],
         confirmPassword:['']
-  
-      }
-    )
-  }
 
-  ngOnInit() {
-  
+      })
   }
 
   register(){

@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material';
 import { PopupAddComponent } from '../popup-add/popup-add.component';
 import { EventEmitterService } from 'src/app/services/event-emitter.service';
+import { observable } from 'rxjs';
 
 @Component({
   selector: 'app-create-test',
@@ -13,7 +14,7 @@ import { EventEmitterService } from 'src/app/services/event-emitter.service';
 })
 export class CreateTestComponent implements OnInit {
 
-  createTest:FormGroup;
+  private createTest:FormGroup;
 
   constructor(
     private fb:FormBuilder,
@@ -53,9 +54,10 @@ export class CreateTestComponent implements OnInit {
       codedValue:['']
     })
   }
-  createExistingObservation(id){
+  createExistingObservation(element){
+    console.log("pushed")
     return this.fb.group({
-      existingObservation:[id]   
+      existingObservation:[element]   
     })
   }
 
@@ -64,8 +66,12 @@ export class CreateTestComponent implements OnInit {
     console.log(this.createTest.value);
   }
   addExistingObs(obsid:any){
+    console.log('addExistingObs');
+    console.log(obsid)
     obsid.forEach(element => {
+      console.log("element "+element);
       (<FormArray>this.createTest.get('observations')).push(this.createExistingObservation(element));
+      console.log(this.createTest.value)
     });
     
   }

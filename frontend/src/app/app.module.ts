@@ -25,7 +25,7 @@ import {CreateTestService} from './services/create-test.service';
 import { TestFormComponent } from './test-form/test-form.component';
 import { LoadTestComponent } from './load-test/load-test.component';
 import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
+import { RegisterComponent } from './admin/components/register/register.component';
 import { CreateTestComponent } from './admin/components/create-test/create-test.component';
 import {AdminProfileComponent} from './admin/components/admin-profile/admin-profile.component';
 import { PatientProfileComponent } from './patient/components/patient-profile/patient-profile.component';
@@ -35,7 +35,10 @@ import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, Mat
 import { EditProfileComponent } from './patient/components/edit-profile/edit-profile.component';
 import { ViewTestComponent } from './patient/components/view-test/view-test.component';
 import { ViewPatientTestlistComponent } from './patient/components/view-patient-testlist/view-patient-testlist.component';
-import {PopupAddComponent} from './admin/components/popup-add/popup-add.component'
+import {PopupAddComponent} from './admin/components/popup-add/popup-add.component';
+import { LabEmployeeProfileComponent } from './lab-employee/components/lab-employee-profile/lab-employee-profile.component';
+import { LabEmployeeEditProfileComponent } from './lab-employee/components/lab-employee-edit-profile/lab-employee-edit-profile.component'
+import {AdminEditProfileComponent} from './admin/components/admin-edit-profile/admin-edit-profile.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +55,10 @@ import {PopupAddComponent} from './admin/components/popup-add/popup-add.componen
     ViewTestComponent,
     ViewPatientTestlistComponent,
     PopupAddComponent,
-    FilterPipe
+    FilterPipe,
+    LabEmployeeProfileComponent,
+    LabEmployeeEditProfileComponent,
+    AdminEditProfileComponent
   ],
   imports: [
     BrowserModule,

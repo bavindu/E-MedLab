@@ -13,7 +13,7 @@
       <input matInput placeholder="Filter" [(ngModel)]="searchText">
     </mat-form-field>
   </div>
-  <div class="list">
+  <div class="list" *ngIf="observationList.length!=0">
     <mat-selection-list #observations [(ngModel)]="selectedOptions">
       <mat-list-option *ngFor="let element of observationList | filter:searchText" [value]="element">
         {{element.observationName}}
@@ -21,8 +21,11 @@
     </mat-selection-list>
     
   </div>
+  <!-- <div class="empty">
+    <img src="src/assets/images/404-error.png" alt="">
+  </div> -->
   <div class="action">
     <button mat-raised-button color="primary"  (click)="addObservation()">Add Observation</button>
   </div>
 </div>
-{{selectedOptions|json}}
+

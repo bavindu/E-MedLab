@@ -29,7 +29,7 @@ export class ViewPatientTestlistComponent implements OnInit {
 
   navigateTest(i){
     console.log(this.testList[i]._id);
-    this.router.navigate(['/patient-profile/view-myTest'],{queryParams:{id:this.testList[i]._id}});
+    this.router.navigate(['/view-myTest'],{queryParams:{id:this.testList[i]._id}});
   }
 
 }

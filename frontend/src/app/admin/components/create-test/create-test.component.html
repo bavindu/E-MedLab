@@ -85,15 +85,23 @@
                               </button>
                           </mat-card-actions>
                         </mat-card>
+                        
                         <div *ngIf="createTest.value.observations[i].hasOwnProperty('existingObservation')">
-                          <span>{{createTest.value.observations[i].existingObservation.observationName}}</span>
+                          <mat-card>
+                            <div>
+                              <p>{{createTest.value.observations[i].existingObservation.observationName}}</p>
+                              <button mat-icon-button>
+                                <mat-icon aria-label="label" (click)="removeField(i)">delete</mat-icon>
+                              </button>
+                            </div>
+                          </mat-card>
                         </div>
                     </div>
                     
                   </div>
                   
           
-                  <button type="submit" mat-raised-button (click)="addNewMetaTest()" color='warn' class=formbutton
+                  <button type="button" mat-raised-button (click)="addNewMetaTest()" color='warn' class=formbutton
                             matTooltip="Info about the action">Submit</button>
                   <button id=addNewObs mat-raised-button (click)="addNewObsClick()" color='primary' class=formbutton>Add New Observation</button>
                   <button id=addNewObs mat-raised-button (click)="addExistingObsClick()" color='primary' class=formbutton>Add Existing Observation</button>
