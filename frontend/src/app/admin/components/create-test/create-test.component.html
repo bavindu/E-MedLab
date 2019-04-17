@@ -13,6 +13,12 @@
                   <mat-form-field>
                     <input type="text" matInput placeholder="Test Name" formControlName='testName'>
                   </mat-form-field>
+                  <div *ngIf="testName.invalid && (testName.dirty || testName.touched)"
+                       class="alert alert-danger">
+                    <div *ngIf="testName.errors.required">
+                      Test Name is required.
+                    </div>
+                  </div>
     
                   <br>
     
@@ -27,6 +33,12 @@
                               <mat-form-field>
                                 <input type="text" matInput placeholder='Observation Name'formControlName="observationName">               
                               </mat-form-field>
+                            <div *ngIf="getobservationName(i).invalid && (getobservationName(i).dirty || getobservationName(i).touched)"
+                                 class="alert alert-danger">
+                              <div *ngIf="getobservationName(i).errors.required">
+                                Observation Name is required.
+                              </div>
+                            </div>
                               <br>
     
                               <mat-form-field>
@@ -45,10 +57,22 @@
                               <mat-form-field *ngIf="createTest.value.observations[i].dataType==='numaric'">
                                   <input type="text" matInput placeholder='Unit' formControlName="unit">
                               </mat-form-field>
+                            <div *ngIf="getunit(i).invalid && (getunit(i).dirty || getunit(i).touched) && createTest.value.observations[i].dataType==='numaric'"
+                                 class="alert alert-danger">
+                              <div *ngIf="getunit(i).errors.required">
+                                Unit Name is required.
+                              </div>
+                            </div>
                               <br *ngIf="createTest.value.observations[i].dataType==='numaric'">
                               <mat-form-field *ngIf="createTest.value.observations[i].dataType==='numaric'">
                                   <input type="text" matInput placeholder='Reference Range' formControlName="referenceRange">
                               </mat-form-field>
+                              <div *ngIf="getreferenceRange(i).invalid && (getreferenceRange(i).dirty || getreferenceRange(i).touched) && createTest.value.observations[i].dataType==='numaric'"
+                                   class="alert alert-danger">
+                                <div *ngIf="getreferenceRange(i).errors.required">
+                                  Refference Range is required.
+                                </div>
+                              </div>
     
     
                               <mat-card *ngIf="createTest.value.observations[i].dataType==='coded'">
@@ -64,6 +88,14 @@
                                           <mat-icon aria-label="label" (click)="deleteCodeValue(i,j)">cancel</mat-icon>
                                         </button>
                                       </mat-form-field>
+                                      <div *ngIf="getcodedValue(i,j).invalid && (getcodedValue(i,j).dirty || getcodedValue(i,j).touched)"
+                                           class="alert alert-danger">
+                                        <div *ngIf="getcodedValue(i,j).errors?.required">
+                                          Refference Range is required.
+                                        </div>
+                                        <p>Coded Value Name is required.</p>
+
+                                      </div>
                                     </div>
                                   </div>
                                   
@@ -104,7 +136,7 @@
                   <button type="button" mat-raised-button (click)="addNewMetaTest()" color='warn' class=formbutton
                             matTooltip="Info about the action">Submit</button>
                   <button id=addNewObs mat-raised-button (click)="addNewObsClick()" color='primary' class=formbutton>Add New Observation</button>
-                  <button id=addNewObs mat-raised-button (click)="addExistingObsClick()" color='primary' class=formbutton>Add Existing Observation</button>
+                  <button  mat-raised-button (click)="addExistingObsClick()" color='primary' class=formbutton>Add Existing Observation</button>
                 </form>
             </mat-card-content>
           </mat-card>
