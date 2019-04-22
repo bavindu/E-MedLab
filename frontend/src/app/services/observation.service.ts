@@ -16,4 +16,7 @@ export class ObservationService {
   getObservationList(){
     return this.http.get('http://localhost:3000/api/getobservationList');
   }
+  deleteObservation(observationId){
+    return this.http.post('http://localhost:3000/api/deleteMetaObservation',{'observationId':observationId});
+  }
 }

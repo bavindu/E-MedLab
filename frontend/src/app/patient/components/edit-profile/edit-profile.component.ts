@@ -1,8 +1,8 @@
 import { Component, OnInit,Input } from '@angular/core';
-import {FormBuilder, FormGroup, FormControl} from '@angular/forms';
+import {FormBuilder, FormGroup, FormControl, Validators} from '@angular/forms';
 import { UserService } from 'src/app/services/user.service';
-import { resolve } from 'url';
 import { UserDataService } from '../../services/user-data.service';
+import {MustMatch} from "../../../helpers/must-match.validator";
 
 @Component({
   selector: 'app-edit-profile',
@@ -11,18 +11,24 @@ import { UserDataService } from '../../services/user-data.service';
 })
 export class EditProfileComponent implements OnInit {
   private user;
-  private userDetails:FormGroup;
   private readOnly=true;
   private userDetailsFrom;
+  private passwordDisplay=false;
   constructor(private fb:FormBuilder,private userService:UserService,private data:UserDataService) {
-    this.userDetailsFrom=this.fb.group({
-      userName:[],
-      email:[''],
 
-    })
    }
 
   ngOnInit() {
+    this.userDetailsFrom=this.fb.group({
+      userName:['',Validators.required],
+      email:['',Validators.required],
+      newPassword:[],
+      confirmPassword:[]
+
+    },
+      {
+        validator: MustMatch('password', 'confirmPassword')
+      });
     this.getUserProfile();
   }
 
@@ -35,31 +41,18 @@ export class EditProfileComponent implements OnInit {
       (<FormControl>this.userDetailsFrom.get('userName')).setValue(this.user.username);
       (<FormControl>this.userDetailsFrom.get('email')).setValue(this.user.email);
     });
-    
-    // this.userService.getUserProfile().subscribe(
-    //   res=>{
-    //     this.userDetails=res['user'];
-    //     this.stringName=this.userDetails['userName'];
-    //     console.log("inside getUserProfile")
-    //     this.name=this.userDetails['userName'];
-    //     console.log(this.emailaddress)
-    //     this.emailaddress=this.userDetails['email'];
-    //     (<FormControl>this.userDetailsFrom.get('userName')).setValue(this.user.username);
-    //     (<FormControl>this.userDetailsFrom.get('email')).setValue(this.user.email);
-        
-    //   }
-    // )
-    
-    
+
   }
  
   edit(){
-    console.log('edit clicked')
+    console.log('edit clicked');
     this.readOnly=false;
   }
   updateUserDetails(){
 
     this.userService.updateUser(this.userDetailsFrom.value).subscribe();
   }
+
+  get newPassword(){return this.userDetailsFrom.get('newPassword')}
 
 }

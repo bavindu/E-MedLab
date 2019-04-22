@@ -23,7 +23,10 @@ const testRecordSchema=new mongoose.Schema(
                 type:mongoose.Schema.Types.ObjectId,
                 ref:'MetaObservation'
             }
-        }]
+        }],
+        comments:{
+            type:String
+        }
     }
 );
 

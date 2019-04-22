@@ -14,7 +14,8 @@ export class AppComponent {
   isLoggedIn=false;
 
   ngOnInit(){
-    this.appLoginService.isLoggedIN.subscribe(isLoggedIn=>this.isLoggedIn=isLoggedIn);
+    // this.appLoginService.isLoggedIN.subscribe(isLoggedIn=>this.isLoggedIn=isLoggedIn);
+    this.userService.isUserLoggedIn()
     
   }
 

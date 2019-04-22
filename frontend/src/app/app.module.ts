@@ -39,6 +39,11 @@ import {PopupAddComponent} from './admin/components/popup-add/popup-add.componen
 import { LabEmployeeProfileComponent } from './lab-employee/components/lab-employee-profile/lab-employee-profile.component';
 import { LabEmployeeEditProfileComponent } from './lab-employee/components/lab-employee-edit-profile/lab-employee-edit-profile.component'
 import {AdminEditProfileComponent} from './admin/components/admin-edit-profile/admin-edit-profile.component';
+import { PopupError } from './login/login.component';
+import {EditTestComponent} from './admin/components/edit-test/edit-test.component';
+import  {DeleteConfirmationDialog}  from './admin/components/edit-test/edit-test.component';
+import  {EditObservationComponent} from './admin/components/edit-observation/edit-observation.component'
+import {DeleteObservationConfirmationDialog} from './admin/components/edit-observation/edit-observation.component'
 
 @NgModule({
   declarations: [
@@ -58,7 +63,12 @@ import {AdminEditProfileComponent} from './admin/components/admin-edit-profile/a
     FilterPipe,
     LabEmployeeProfileComponent,
     LabEmployeeEditProfileComponent,
-    AdminEditProfileComponent
+    AdminEditProfileComponent,
+    PopupError,
+    EditTestComponent,
+    DeleteConfirmationDialog,
+    EditObservationComponent,
+    DeleteObservationConfirmationDialog
   ],
   imports: [
     BrowserModule,
@@ -82,7 +92,7 @@ import {AdminEditProfileComponent} from './admin/components/admin-edit-profile/a
     useClass:AuthInterceptor,
     multi:true
   }],
-  entryComponents:[PopupAddComponent],
+  entryComponents:[PopupAddComponent,PopupError,DeleteConfirmationDialog,DeleteObservationConfirmationDialog],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

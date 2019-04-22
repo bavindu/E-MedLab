@@ -1,0 +1,15 @@
+
+<div mat-dialog-content>
+  <mat-selection-list #shoes>
+    <mat-list-option *ngFor="let element of data.datalist">
+      {{element.testName}}
+    </mat-list-option>
+  </mat-selection-list>
+
+  <p>{{data.datalist|json}}}</p>
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="true" >Yes</button>
+  <button mat-button [mat-dialog-close]="false"  >No</button>
+</div>

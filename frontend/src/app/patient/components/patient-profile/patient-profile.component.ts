@@ -25,9 +25,13 @@ export class PatientProfileComponent implements OnInit {
     await this.userService.getUserProfile().subscribe(
       res=>{
         this.userDetails=res['user'];
+        this.user.firstName=this.userDetails['firstName'];
+        this.user.lastName=this.userDetails['lastName'];
         this.user.username=this.userDetails['userName'];
+        this.user.birthDay=this.userDetails['birthDay'];
         this.user.email=this.userDetails['email'];
-        console.log("User Name  "+this.user.username)
+        this.user.sex=this.userDetails['sex'];
+        console.log("User Name  "+this.user.username);
         this.data.changeData(this.user)
         
       }

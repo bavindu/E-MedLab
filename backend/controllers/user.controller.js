@@ -12,11 +12,16 @@ let addUser=function(req,res){
     user.sex=req.body.sex;
     user.userName=req.body.userName;
     user.email=req.body.email;
+    user.birthDay=req.body.birthDay;
     user.userType=req.body.userType;
     user.password=req.body.password;
     user.save((err,doc)=>{
         if(err){
-            res.send(doc);
+            console.log(err);
+            res.send(err);
+        }
+        else{
+            console.log('User added successfully')
         }
     });
 }
@@ -45,9 +50,10 @@ let userProfile=function(req,res){
         }
         else{
             console.log(user);
-            return res.status(200).json({status:true,user:lodash.pick(user,["userName","email","userType"])})
+            return res.status(200).json({status:true,user:lodash.pick(user,["userName","email","userType","firstName","lastName","birthDay","sex"])})
         }
     })
+
 
 }
 let updateUserDetails=function(req,res){

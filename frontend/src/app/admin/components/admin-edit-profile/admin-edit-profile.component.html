@@ -1,30 +1,48 @@
 <div class="outercontainor">
   <div class="containor">
-  <form [formGroup]="userDetailsFrom">
-    <div class="form-group row">
-        <label  class="col-sm-2 col-form-label">First Name</label>
+    <form [formGroup]="userDetailsFrom">
+      <div class="form-group row">
+        <label  class="col-sm-2 col-form-label">User Name</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" formControlName="userName"  [readonly]="readOnly">
+          <input type="text" class="form-control" formControlName="userName" [readOnly]="readOnly">
         </div>
       </div>
-      
+
       <div class="form-group row">
-          <label  class="col-sm-2 col-form-label">Email</label>
+        <label  class="col-sm-2 col-form-label">Email</label>
           <div class="col-sm-10">
-            <input type="email" class="form-control" formControlName="email" [readonly]="readOnly">
+            <input type="text" class="form-control" formControlName="email" [readOnly]="readOnly">
           </div>
       </div>
-      <div class="form-group row">
-          <label  class="col-sm-2 col-form-label">Password</label>
+      <button mat-raised-button color="warn" (click)="onPasswordChangeClick()">Change Password</button>
+      <br>
+      <div class="password-containor" *ngIf="passwordDisplay">
+        <div class="form-group row">
+          <label  class="col-sm-2 col-form-label">New Password</label>
           <div class="col-sm-10">
-            <input type="password" class="form-control" [readonly]="readOnly">
+            <input type="text" class="form-control" formControlName="newPassword" >
           </div>
+        </div>
+        <div class="form-group row">
+          <label  class="col-sm-2 col-form-label">Confirm Password</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" formControlName="confirmPassword" >
+          </div>
+        </div>
+        <div *ngIf="confirmPassword.invalid && (confirmPassword.dirty || confirmPassword.touched)"
+             class="alert alert-danger">
+          <div *ngIf="confirmPassword.errors.required">
+            Confirm Password required.
+          </div>
+          <div *ngIf="confirmPassword.errors.mustMatch">Passwords must match</div>
+        </div>
       </div>
-      <button mat-raised-button color='primary' (click)="updateUserDetails()">Save Changes</button>
-      <button mat-raised-button color='primary' (click)="edit()">Edit</button>
-  </form>
-</div>
+
+        <button mat-raised-button color='primary' (click)="updateUserDetails()">Save Changes</button>
+        <button mat-raised-button color='primary' (click)="edit()">Edit</button>
+        <button mat-raised-button color='primary' (click)="reset()">Reset</button>
+    </form>
+  </div>
 </div>
 {{userDetails|json}}
 {{userDetailsFrom.value|json}}
-  

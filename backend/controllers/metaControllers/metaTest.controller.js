@@ -92,6 +92,30 @@ let getTest=function(req,res){
     })
 }
 
+let getAllMetaTestName=function (req,res) {
+    MetaTest.find({},'testName',(err,doc)=>{
+        if(err){
+            res.json('error while retreving tests')
+        }
+        else{
+            res.send(doc);
+        }
+    })
+}
+
+let deleteMetaTest=function(req,res){
+    console.log('inside delete meta test');
+    console.log('test id '+req.body.id);
+    MetaTest.deleteOne({_id:req.body.id},(err)=>{
+        if(err){
+            res.status(501).json('Cant delete');
+        }
+        else{
+            res.status(202).json('deleted successful');
+        }
+    });
+}
+
 function saveModel(model){
     model.save((err,doc)=>{
         if(!err){
@@ -110,3 +134,5 @@ module.exports.addMetaTest=addMetaTest;
 module.exports.getResponse=getResponse;
 module.exports.loadTest=loadTest;
 module.exports.getTest=getTest;
+module.exports.getAllMetaTestName=getAllMetaTestName;
+module.exports.deleteMetaTest=deleteMetaTest;

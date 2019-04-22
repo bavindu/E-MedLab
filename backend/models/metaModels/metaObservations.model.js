@@ -18,11 +18,12 @@ const metaObservationSchema=mongoose.Schema(
         referenceRange:{
             type:String
         },
-        unit:{
-            type:String
-        }
+
     }
-)
+);
+
+
+
 
 const MetaObservation=mongoose.model('MetaObservation',metaObservationSchema);
 module.exports.MetaObservation=MetaObservation;

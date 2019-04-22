@@ -1,5 +1,6 @@
 const metaObservationSchema=require('../../models/metaModels/metaObservations.model');
-
+const metaTestModel=require('../../models/metaModels/metaTest.model');
+const MetaTest=metaTestModel.MetaTest;
 
 
 let addObservation=function(req,res){
@@ -39,10 +40,26 @@ let getObservationList=function(req,res){
         }
         else{
             console.log(err);
+            res.send(err);
         }
     }).select('observationName');
 }
 
+let deleteObservation=function(req,res){
+    console.log("Inside delete observation");
+    console.log(req.body.observationId);
+    const observationId=req.body.observationId;
+    MetaTest.find({observations:{$in:[observationId]}},(err,doc)=>{
+        if(!err){
+            res.send(doc);
+            console.log("doc "+doc.length);
+        }else{
+            console.log("Error "+err);
+            res.send(err);
+        }
+    })
+}
 
+module.exports.deleteObservation=deleteObservation;
 module.exports.addObservation=addObservation;
 module.exports.getObservationList=getObservationList;

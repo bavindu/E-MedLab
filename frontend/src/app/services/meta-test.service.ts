@@ -15,4 +15,12 @@ export class MetaTestService {
     return this.http.post('http://localhost:3000/api/addMetaTest',metaTest);
     
   }
+
+  getMetaTestName(){
+    return this.http.get('http://localhost:3000/api/getAllMetaTestName');
+  }
+  deleteMetaTest(id){
+    console.log("inside service "+id);
+    return this.http.post('http://localhost:3000/api/deleteMetaTest',{'id':id});
+  }
 }

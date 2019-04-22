@@ -44,9 +44,7 @@ export class PopupAddComponent implements OnInit {
   addObservation(){
     this.eventEmitterService.onCreateComponentButtonClick(this.selectedOptions);
     this.dialogRef.close();
-    // this.selectedOptions.forEach(element => {
-      
-    // });
+
   }
 
 }

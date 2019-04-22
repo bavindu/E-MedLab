@@ -8,7 +8,7 @@ import { User } from 'src/app/models/user.model';
 export class UserDataService {
 
   private datasource= new BehaviorSubject<User>(new User());
-  currentData= this.datasource.asObservable()
+  currentData= this.datasource.asObservable();
   constructor() { }
 
   changeData(user:User){

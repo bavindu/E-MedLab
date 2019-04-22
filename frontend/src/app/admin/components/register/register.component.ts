@@ -22,6 +22,7 @@ export class RegisterComponent implements OnInit {
         userName:['',Validators.required],
         password:['',Validators.required],
         userType:['',Validators.required],
+        birthDay:['',Validators.required],
         sex:['',Validators.required],
         confirmPassword:['',Validators.required]
 
@@ -49,6 +50,7 @@ export class RegisterComponent implements OnInit {
   get userType() { return this.registerForm.get('userType'); }
   get email() { return this.registerForm.get('email'); }
   get sex() { return this.registerForm.get('sex'); }
+  get birthDay(){return this.registerForm.get('birthDay')}
   get confirmPassword() { return this.registerForm.get('confirmPassword'); }
 
 }

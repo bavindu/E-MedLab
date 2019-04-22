@@ -16,6 +16,8 @@ import {LabEmployeeProfileComponent} from './lab-employee/components/lab-employe
 import {ViewTestComponent} from './patient/components/view-test/view-test.component';
 import {LabEmployeeEditProfileComponent} from './lab-employee/components/lab-employee-edit-profile/lab-employee-edit-profile.component'
 import {AdminEditProfileComponent} from './admin/components/admin-edit-profile/admin-edit-profile.component';
+import {EditTestComponent} from './admin/components/edit-test/edit-test.component';
+import {EditObservationComponent} from './admin/components/edit-observation/edit-observation.component';
 
 const routes: Routes = [
   {path:"test-form", component:TestFormComponent},
@@ -24,6 +26,8 @@ const routes: Routes = [
   {path:"create-test", component:CreateTestComponent,canActivate:[AuthAdminGuard]},
   {path:"admin-profile",component:AdminProfileComponent,canActivate:[AuthAdminGuard]},
   {path:"admin-edit-profile",component:AdminEditProfileComponent,canActivate:[AuthAdminGuard]},
+  {path:"edit-test",component:EditTestComponent,canActivate:[AuthAdminGuard]},
+  {path:"edit-observation",component:EditObservationComponent,canActivate:[AuthAdminGuard]},
   {path:"lab-empolyee-profile",component:LabEmployeeProfileComponent,canActivate:[AuthGuard],children:[]},
   {path:"lab-empolyee-edit-profile",component:LabEmployeeEditProfileComponent,canActivate:[AuthGuard],children:[]},
   {path:"load-test", component:LoadTestComponent},

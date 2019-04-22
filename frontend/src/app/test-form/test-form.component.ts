@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import { CreateTestService } from '../services/create-test.service';
-import { FormGroup, FormBuilder, FormArray, FormControl } from '@angular/forms';
+import {FormGroup, FormBuilder, FormArray, FormControl, Validators} from '@angular/forms';
 import { TestFormService } from '../services/test-form.service';
 
 @Component({
@@ -14,7 +14,6 @@ export class TestFormComponent implements OnInit {
   private id;
   private testTemplate;
   private testForm:FormGroup;
-  private testName;
   private observations=[];
   private patientsname:[];
   private searchResults=[];
@@ -22,6 +21,7 @@ export class TestFormComponent implements OnInit {
     private route:ActivatedRoute,
     private createTestService:CreateTestService,
     private fb:FormBuilder,
+    private router:Router,
     private testFromService:TestFormService) { }
     private pid;
 
@@ -30,8 +30,9 @@ export class TestFormComponent implements OnInit {
     this.testForm=this.fb.group({
       testId:[],
       testName:[],
-      patientId:[''],
-      date:[''],
+      patientId:['',Validators.required],
+      date:['',Validators.required],
+      comments:[''],
       inputobservations:this.fb.array([
       ])
     });
@@ -57,7 +58,7 @@ export class TestFormComponent implements OnInit {
 
   createFormGroup(id){
     return this.fb.group({
-      observationValue:[''],
+      observationValue:['',Validators.required],
       observationId:[id]
     })
   }
@@ -74,8 +75,15 @@ export class TestFormComponent implements OnInit {
   }
 
   addTestResults(){
-    console.log('inside addTstResults')
-    this.testFromService.addTestResults(this.testForm.value).subscribe();
+    if(this.testForm.invalid){
+      alert("Please enter correct values");
+      return
+    }
+    else{
+      console.log('inside addTstResults')
+      this.testFromService.addTestResults(this.testForm.value).subscribe();
+      this.router.navigateByUrl('/lab-empolyee-profile');
+    }
   }
 
 
@@ -99,4 +107,9 @@ export class TestFormComponent implements OnInit {
     console.log("on patient name change");
     console.log(id);
   }
+
+
+  get patientId(){return this.testForm.get('patientId')}
+  get date(){return this.testForm.get('date')}
+  getObservationName(i){ return (<FormArray>this.testForm.get('inputobservations')).at(i).get('observationValue')}
 }
