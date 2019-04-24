@@ -22,6 +22,7 @@ router.get('/getTestRecord',jwtHelper.jwtVerify,ctrlTestRocord.getTestRecord);
 router.get('/getobservationList',jwtHelper.jwtVerify,ctrlMetaObservation.getObservationList);
 router.get('/getAllMetaTestName',jwtHelper.jwtVerify,ctrlMetaTest.getAllMetaTestName);
 router.post('/deleteMetaTest',jwtHelper.jwtVerify,ctrlMetaTest.deleteMetaTest);
+router.post('/deleteClickMetaObservation',jwtHelper.jwtVerify,ctrlMetaObservation.deleteClickObservation);
 router.post('/deleteMetaObservation',jwtHelper.jwtVerify,ctrlMetaObservation.deleteObservation);
 router.post('/addMetaTest',jwtHelper.jwtVerify,ctrlMetaTest.addMetaTest);
 router.post('/addTestResults',jwtHelper.jwtVerify,ctrlTestRocord.addTestRecord);

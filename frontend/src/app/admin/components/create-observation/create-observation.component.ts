@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormArray, Validators} from '@angular/forms';
 import { ObservationService } from 'src/app/services/observation.service';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-create-observation',
@@ -9,7 +10,7 @@ import { ObservationService } from 'src/app/services/observation.service';
 })
 export class CreateObservationComponent implements OnInit {
   private observationDetails;
-  constructor(private fb:FormBuilder,private observationService:ObservationService) { }
+  constructor(private fb:FormBuilder,private observationService:ObservationService,private router:Router) { }
 
   ngOnInit() {
     this.observationDetails=this.fb.group({
@@ -42,6 +43,7 @@ export class CreateObservationComponent implements OnInit {
     }
     else{
       this.observationService.addObservations(this.observationDetails.value).subscribe();
+      this.router.navigateByUrl('/admin-profile');
     }
 
   }

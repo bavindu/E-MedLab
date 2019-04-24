@@ -71,7 +71,7 @@ let loadTest=function(req,res){
     console.log('inside load test');
     MetaTest.find((err,doc)=>{
         if(!err){
-            console.log('***********************')
+            console.log('***********************');
             console.log(doc);
             res.send(doc);
         }else{

@@ -45,7 +45,7 @@ let getObservationList=function(req,res){
     }).select('observationName');
 }
 
-let deleteObservation=function(req,res){
+let deleteClickObservation=function(req,res){
     console.log("Inside delete observation");
     console.log(req.body.observationId);
     const observationId=req.body.observationId;
@@ -58,8 +58,32 @@ let deleteObservation=function(req,res){
             res.send(err);
         }
     })
-}
+};
+
+let deleteObservation=function(req,res){
+    console.log("req "+JSON.stringify(req.body));
+    console.log("Observation id "+req.body.observationId);
+    const observationId=req.body.observationId;
+    console.log('Observation id '+observationId);
+    metaObservationSchema.MetaObservation.deleteOne({_id:observationId},(err,doc)=>{
+        if(!err){
+            console.log('observation deleted');
+            MetaTest.deleteMany({observations:{$in:[observationId]}},(err,doc)=>{
+                if(!err){
+                    console.log('Test Delete')
+                }
+                else{
+                    console.log(err)
+                }
+            })
+        }
+        else{
+            console.log(err)
+        }
+    })
+};
 
 module.exports.deleteObservation=deleteObservation;
+module.exports.deleteClickObservation=deleteClickObservation;
 module.exports.addObservation=addObservation;
 module.exports.getObservationList=getObservationList;

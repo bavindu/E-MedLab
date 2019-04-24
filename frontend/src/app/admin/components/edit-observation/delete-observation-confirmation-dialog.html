@@ -1,12 +1,21 @@
 
 <div mat-dialog-content>
-  <mat-selection-list #shoes>
-    <mat-list-option *ngFor="let element of data.datalist">
-      {{element.testName}}
-    </mat-list-option>
-  </mat-selection-list>
 
-  <p>{{data.datalist|json}}}</p>
+  <div *ngIf="data.datalist.length!==0">
+    <mat-list >
+      <mat-list-item *ngFor="let item of data.datalist">
+        {{item.testName}}
+      </mat-list-item>
+    </mat-list>
+    <h5>Above tests has this observation</h5>
+    <h5>Do you want to delete this with them</h5>
+  </div>
+  <div *ngIf="data.datalist.length===0">
+    <h5>Do you want to delete this</h5>
+  </div>
+
+
+
 
 </div>
 <div mat-dialog-actions>

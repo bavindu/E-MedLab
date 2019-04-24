@@ -30,7 +30,7 @@ export class EditObservationComponent implements OnInit {
 
   deleteObservation(id,i){
     console.log(id);
-    this.observationService.deleteObservation(id).subscribe((res:any)=>{
+    this.observationService.deleteClickObservation(id).subscribe((res:any)=>{
       console.log("response "+JSON.stringify(res));
       if(res.length !== 0){
         this.testWithObservations.length=0;
@@ -39,20 +39,36 @@ export class EditObservationComponent implements OnInit {
           this.testWithObservations.push({'testName':res[j].testName,'id':res[j]._id})
         }
         console.log(this.testWithObservations);
-        this.openConfirmationDialog();
+        this.openConfirmationDialog().afterClosed().subscribe(result=>{
+          if(result===true){
+            this.observationService.deleteObservation(id).subscribe();
+            this.observationNames.splice(i,1);
+          }
+          else{
+
+          }
+        })
+      }
+      else{
+        this.openConfirmationDialog().afterClosed().subscribe(result=>{
+          if(result===true){
+            this.observationService.deleteObservation(id).subscribe();
+            console.log("length "+this.observationNames.length);
+            this.observationNames.splice(i,1);
+            console.log("length "+this.observationNames.length);
+          }
+        })
+
       }
     });
   }
   openConfirmationDialog() {
-    const dialogRef=this.dialog.open(DeleteObservationConfirmationDialog, {
+    return this.dialog.open(DeleteObservationConfirmationDialog, {
       width: '400px',
       data:{'datalist':this.testWithObservations}
 
     });
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
 
-    });
   }
 
 }
