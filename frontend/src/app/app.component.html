@@ -2,8 +2,8 @@
     <span><img src="assets/images/logo.jpg" alt=""></span>
     <span class="example-fill-remaining-space"></span>
     <span>
-      <button mat-button [matMenuTriggerFor]="menu">Menu</button>
-        <mat-menu #menu="matMenu">
+      <button mat-button [matMenuTriggerFor]="menu1">Menu</button>
+        <mat-menu #menu1="matMenu">
           <button mat-menu-item>Item 1</button>
           <button mat-menu-item>Item 2</button>
         </mat-menu>
@@ -12,10 +12,10 @@
         <mat-icon aria-label="label">home</mat-icon>
     </button></span>
     <span>
-        <button mat-fab [matMenuTriggerFor]="menu" *ngIf="isLoggedIn">
+        <button mat-fab [matMenuTriggerFor]="menu2" *ngIf="isLoggedIn">
             <mat-icon>person</mat-icon>
         </button>
-        <mat-menu #menu="matMenu">
+        <mat-menu #menu2="matMenu">
             <button mat-menu-item (click)="logout()">Logout</button>
         </mat-menu>
     </span>
