@@ -45,6 +45,9 @@ userSchema.pre('save',function(next){
     })
 })
 
+
+
+
 userSchema.methods.verifyPassword=function(enteredPW){
     return bcrypt.compareSync(enteredPW,this.password);
 

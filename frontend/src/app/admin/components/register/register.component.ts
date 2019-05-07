@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder,  Validators} from '@angular/forms'
 import {RegisterService} from '../../../services/register.service'
-import { Router } from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {MustMatch} from "../../../helpers/must-match.validator";
 
 @Component({
@@ -11,7 +11,7 @@ import {MustMatch} from "../../../helpers/must-match.validator";
 })
 export class RegisterComponent implements OnInit {
   private registerForm;
-  constructor(private fb:FormBuilder,private registerService:RegisterService,private router:Router) {}
+  constructor(private fb:FormBuilder,private registerService:RegisterService,private router:Router,private ar:ActivatedRoute) {}
 
   ngOnInit() {
     this.registerForm=this.fb.group(
@@ -39,7 +39,7 @@ export class RegisterComponent implements OnInit {
     }
     else{
       this.registerService.register(this.registerForm.value).subscribe();
-      this.router.navigateByUrl('/admin-profile');
+      this.router.navigate(['../admin-profile'],{relativeTo:this.ar});
     }
 
   }

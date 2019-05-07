@@ -44,6 +44,9 @@ import {EditTestComponent} from './admin/components/edit-test/edit-test.componen
 import  {DeleteConfirmationDialog}  from './admin/components/edit-test/edit-test.component';
 import  {EditObservationComponent} from './admin/components/edit-observation/edit-observation.component'
 import {DeleteObservationConfirmationDialog} from './admin/components/edit-observation/edit-observation.component'
+import {AdminToolbarComponent} from "./admin/components/admin-toolbar/admin-toolbar.component";
+import { LabEmployeeToolbarComponent } from './lab-employee/components/lab-employee-toolbar/lab-employee-toolbar.component';
+import { PatientToolbarComponent } from './patient/components/patient-toolbar/patient-toolbar.component';
 
 @NgModule({
   declarations: [
@@ -68,7 +71,10 @@ import {DeleteObservationConfirmationDialog} from './admin/components/edit-obser
     EditTestComponent,
     DeleteConfirmationDialog,
     EditObservationComponent,
-    DeleteObservationConfirmationDialog
+    DeleteObservationConfirmationDialog,
+    AdminToolbarComponent,
+    LabEmployeeToolbarComponent,
+    PatientToolbarComponent
   ],
   imports: [
     BrowserModule,

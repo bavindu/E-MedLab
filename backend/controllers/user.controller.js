@@ -59,11 +59,30 @@ let userProfile=function(req,res){
 let updateUserDetails=function(req,res){
     console.log('inside update user details');
     console.log(req.body);
-    User.findByIdAndUpdate(req._id,req.body,(err,doc)=>{
-        if(err){
-            res.status(500).send('cant update');
-        }else{
-            res.status(200);
+    User.findById(req._id,(err,doc)=>{
+        if(!err){
+            if(req.body.newPassword!==null){
+                doc.firstName=req.body.firstName;
+                doc.lastName=req.body.lastName;
+                doc.userName=req.body.userName;
+                doc.email=req.body.email;
+                doc.password=req.body.newPassword;
+            }
+            else{
+                doc.firstName=req.body.firstName;
+                doc.lastName=req.body.lastName;
+                doc.userName=req.body.userName;
+                doc.email=req.body.email;
+            }
+            doc.save((err,sdoc)=>{
+                if(err){
+                    console.log(err);
+                    res.send(err);
+                }
+                else{
+                    console.log('User added successfully')
+                }
+            });
         }
     })
 }

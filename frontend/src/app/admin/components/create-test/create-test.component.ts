@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormGroup, FormControl, FormArray, FormBuilder, Validators} from '@angular/forms';
 import {MetaTestService} from '../../../services/meta-test.service';
-import { Router } from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import { MatDialog } from '@angular/material';
 import { PopupAddComponent } from '../popup-add/popup-add.component';
 import { EventEmitterService } from 'src/app/services/event-emitter.service';
@@ -22,7 +22,8 @@ export class CreateTestComponent implements OnInit {
     private metaTestService:MetaTestService,
     private router:Router,
     private dialog:MatDialog,
-    private eventEmitterService:EventEmitterService
+    private eventEmitterService:EventEmitterService,
+    private ar:ActivatedRoute
     ) { }
 
   ngOnInit() {
@@ -86,7 +87,7 @@ export class CreateTestComponent implements OnInit {
       this.metaTestService.addTestTemplate(this.createTest.value).subscribe();
       console.log('on addnewTest');
       console.log(this.createTest.value);
-      this.router.navigateByUrl('/admin-profile');
+      this.router.navigate(["../admin-profile"],{relativeTo:this.ar});
     }
   }
   removeField(i){

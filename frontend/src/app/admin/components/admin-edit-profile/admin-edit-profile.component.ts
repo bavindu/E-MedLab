@@ -19,6 +19,8 @@ export class AdminEditProfileComponent implements OnInit {
 
   constructor(private fb:FormBuilder,private userService:UserService) {
     this.userDetailsFrom=this.fb.group({
+      firstName:['',Validators.required],
+      lastName:['',Validators.required],
       userName:['',Validators.required],
       email:['',Validators.required],
       newPassword:[''],
@@ -47,6 +49,8 @@ export class AdminEditProfileComponent implements OnInit {
   setvalues(data){
     (<FormControl>this.userDetailsFrom.get('userName')).setValue(data.user.userName);
     (<FormControl>this.userDetailsFrom.get('email')).setValue(data.user.email);
+    (<FormControl>this.userDetailsFrom.get('firstName')).setValue(data.user.firstName);
+    (<FormControl>this.userDetailsFrom.get('lastName')).setValue(data.user.lastName);
   }
 
   edit(){

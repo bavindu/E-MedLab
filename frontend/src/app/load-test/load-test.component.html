@@ -1,5 +1,10 @@
-<mat-nav-list>
-  <mat-list-item *ngFor="let item of testNames;let i=index" (click)="navigateAddTestResults(i)">
+<div *ngIf="testNames.length!==0">
+  <mat-nav-list>
+    <mat-list-item *ngFor="let item of testNames;let i=index" (click)="navigateAddTestResults(i)">
       {{ item[0] }}
-  </mat-list-item>
-</mat-nav-list>
+    </mat-list-item>
+  </mat-nav-list>
+</div>
+<div *ngIf="testNames.length===0">
+  <h3>No Tests</h3>
+</div>

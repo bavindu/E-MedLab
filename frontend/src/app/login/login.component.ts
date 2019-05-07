@@ -46,13 +46,13 @@ export class LoginComponent implements OnInit {
           console.log(this.user.userType);
           if(this.user.userType=='patient'){
             console.log('patient true');
-            this.router.navigateByUrl('/patient-profile');
+            this.router.navigateByUrl('/patient-home');
           }
           else if(this.user.userType=='admin'){
-            this.router.navigateByUrl('/admin-profile');
+            this.router.navigateByUrl('/admin-home');
           }
           else if(this.user.userType=='labEmployee'){
-            this.router.navigateByUrl('/lab-empolyee-profile');
+            this.router.navigateByUrl('/labemployee-home');
           }
         }); 
       },

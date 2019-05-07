@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {LoadTestService} from '../services/load-test.service'
-import { Router } from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 
 
 @Component({
@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class LoadTestComponent implements OnInit {
 
-  constructor(private loadTestService:LoadTestService,private router:Router) { }
+  constructor(private loadTestService:LoadTestService,private router:Router,private ar:ActivatedRoute) { }
   private test=[];
   private testNames=[]
 
@@ -29,6 +29,6 @@ export class LoadTestComponent implements OnInit {
     })
   }
   navigateAddTestResults(i){
-    this.router.navigate(['/test-form'],{queryParams:{id:this.test[i]._id,testName:this.test[i].testName}})
+    this.router.navigate(['../test-form'],{queryParams:{id:this.test[i]._id,testName:this.test[i].testName},relativeTo:this.ar})
   }
 }
