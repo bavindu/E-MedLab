@@ -6,7 +6,8 @@ const metaObservationSchema=require('./metaObservations.model').metaObservationS
 const metaTestSchema=new mongoose.Schema(
     {
         testName:{
-            type:String
+            type:String,
+            unique:true
         },
         observations:[{
             type: mongoose.Schema.Types.ObjectId,

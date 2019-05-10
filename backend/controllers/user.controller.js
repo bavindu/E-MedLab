@@ -1,6 +1,6 @@
 const User=require('../models/user.model').User;
 const passport=require('passport');
-const lodash=require('lodash')
+const lodash=require('lodash');
 
 
 

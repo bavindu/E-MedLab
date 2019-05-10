@@ -11,6 +11,7 @@ import {MustMatch} from "../../../helpers/must-match.validator";
 })
 export class EditProfileComponent implements OnInit {
   private user;
+  private userDetails:FormGroup;
   private readOnly=true;
   private userDetailsFrom;
   private passwordDisplay=false;
@@ -19,40 +20,76 @@ export class EditProfileComponent implements OnInit {
    }
 
   ngOnInit() {
-    this.userDetailsFrom=this.fb.group({
-      userName:['',Validators.required],
-      email:['',Validators.required],
-      newPassword:[],
-      confirmPassword:[]
-
-    },
-      {
-        validator: MustMatch('password', 'confirmPassword')
-      });
     this.getUserProfile();
+    this.userDetailsFrom=this.fb.group({
+        firstName:['',Validators.required],
+        lastName:['',Validators.required],
+        userName:['',Validators.required],
+        email:['',Validators.required],
+        newPassword:[''],
+        confirmPassword:['']
+
+      },
+      {
+        validator: MustMatch('newPassword', 'confirmPassword')
+      })
+
   }
 
 
-  getUserProfile(){
-    this.data.currentData.subscribe(user=>{
-      this.user=user;
-      console.log(user);
-      console.log('ttt');
-      (<FormControl>this.userDetailsFrom.get('userName')).setValue(this.user.username);
-      (<FormControl>this.userDetailsFrom.get('email')).setValue(this.user.email);
+  getUserProfile() {
+    this.userService.getUserProfile().subscribe(data=>{
+      this.user=data;
+      console.log(this.user.user);
+      this.setvalues(this.user);
     });
 
+
   }
- 
+
+  setvalues(data){
+    (<FormControl>this.userDetailsFrom.get('userName')).setValue(data.user.userName);
+    (<FormControl>this.userDetailsFrom.get('email')).setValue(data.user.email);
+    (<FormControl>this.userDetailsFrom.get('firstName')).setValue(data.user.firstName);
+    (<FormControl>this.userDetailsFrom.get('lastName')).setValue(data.user.lastName);
+  }
+
   edit(){
     console.log('edit clicked');
-    this.readOnly=false;
+    if(this.readOnly===true){
+      this.readOnly=false;
+    }
+    else{
+      this.readOnly=true;
+    }
   }
-  updateUserDetails(){
 
-    this.userService.updateUser(this.userDetailsFrom.value).subscribe();
+  onPasswordChangeClick(){
+    if(this.passwordDisplay===false){
+      this.passwordDisplay=true;
+    }
+    else{
+      this.passwordDisplay=false;
+      this.newPassword.reset();
+      this.confirmPassword.reset();
+    }
+  }
+
+  reset(){
+    this.setvalues(this.user);
+    this.readOnly=true;
   }
 
   get newPassword(){return this.userDetailsFrom.get('newPassword')}
+  get confirmPassword(){return this.userDetailsFrom.get('confirmPassword')}
+
+  updateUserDetails(){
+    if(this.readOnly===false){
+      if(this.passwordDisplay===false && !this.userDetailsFrom.invalid){
+        this.userService.updateUser(this.userDetailsFrom.value).subscribe();
+      }
+    }
+    this.userService.updateUser(this.userDetailsFrom.value).subscribe();
+  }
 
 }

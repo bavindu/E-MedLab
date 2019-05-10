@@ -32,7 +32,7 @@ const userSchema=mongoose.Schema({
     saltSecret:{
         type:String
     }
-})
+});
 
 
 userSchema.pre('save',function(next){
@@ -43,7 +43,7 @@ userSchema.pre('save',function(next){
             next();
         })
     })
-})
+});
 
 
 

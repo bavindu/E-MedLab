@@ -138,14 +138,18 @@ export class CreateTestComponent implements OnInit {
           }
           else{
             console.log('coded');
-            this.getunit(i).clearValidators();
-            this.getreferenceRange(i).clearValidators();
-            console.log("coded value length "+typeofdata[i].codedValues.length);
+            if(this.getunit(i)!==null && this.getreferenceRange(i)!== null){
+              this.getunit(i).clearValidators();
+              this.getreferenceRange(i).clearValidators();
+              this.getunit(i).updateValueAndValidity({onlySelf : true});
+              this.getreferenceRange(i).updateValueAndValidity({onlySelf : true});
+            }
+
+
 
 
           }
-          this.getunit(i).updateValueAndValidity({onlySelf : true});
-          this.getreferenceRange(i).updateValueAndValidity({onlySelf : true});
+
         }
 
       }

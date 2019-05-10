@@ -29,7 +29,10 @@ import { RegisterComponent } from './admin/components/register/register.componen
 import { CreateTestComponent } from './admin/components/create-test/create-test.component';
 import {AdminProfileComponent} from './admin/components/admin-profile/admin-profile.component';
 import { PatientProfileComponent } from './patient/components/patient-profile/patient-profile.component';
-import {CreateObservationComponent} from './admin/components/create-observation/create-observation.component';
+import {
+  CreateObservationComponent,
+  ErrorDialog
+} from './admin/components/create-observation/create-observation.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 import { EditProfileComponent } from './patient/components/edit-profile/edit-profile.component';
@@ -74,7 +77,8 @@ import { PatientToolbarComponent } from './patient/components/patient-toolbar/pa
     DeleteObservationConfirmationDialog,
     AdminToolbarComponent,
     LabEmployeeToolbarComponent,
-    PatientToolbarComponent
+    PatientToolbarComponent,
+    ErrorDialog
   ],
   imports: [
     BrowserModule,
@@ -98,7 +102,7 @@ import { PatientToolbarComponent } from './patient/components/patient-toolbar/pa
     useClass:AuthInterceptor,
     multi:true
   }],
-  entryComponents:[PopupAddComponent,PopupError,DeleteConfirmationDialog,DeleteObservationConfirmationDialog],
+  entryComponents:[PopupAddComponent,PopupError,DeleteConfirmationDialog,DeleteObservationConfirmationDialog,ErrorDialog],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

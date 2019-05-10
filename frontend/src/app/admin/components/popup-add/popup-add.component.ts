@@ -22,7 +22,7 @@ export class PopupAddComponent implements OnInit {
     ) { }
 
   ngOnInit() {
-    console.log("popUP")
+    console.log("popUP");
     this.loadObservationList();
   }
 

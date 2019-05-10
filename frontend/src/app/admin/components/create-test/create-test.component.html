@@ -15,7 +15,7 @@
                   </mat-form-field>
                   <div *ngIf="testName.invalid && (testName.dirty || testName.touched)"
                        class="alert alert-danger">
-                    <div *ngIf="testName.errors.required">
+                    <div *ngIf="testName.errors?.required">
                       Test Name is required.
                     </div>
                   </div>
@@ -35,7 +35,7 @@
                               </mat-form-field>
                             <div *ngIf="getobservationName(i).invalid && (getobservationName(i).dirty || getobservationName(i).touched)"
                                  class="alert alert-danger">
-                              <div *ngIf="getobservationName(i).errors.required">
+                              <div *ngIf="getobservationName(i).errors?.required">
                                 Observation Name is required.
                               </div>
                             </div>
@@ -59,7 +59,7 @@
                               </mat-form-field>
                             <div *ngIf="getunit(i).invalid && (getunit(i).dirty || getunit(i).touched) && createTest.value.observations[i].dataType==='numaric'"
                                  class="alert alert-danger">
-                              <div *ngIf="getunit(i).errors.required">
+                              <div *ngIf="getunit(i).errors?.required">
                                 Unit Name is required.
                               </div>
                             </div>
@@ -69,7 +69,7 @@
                               </mat-form-field>
                               <div *ngIf="getreferenceRange(i).invalid && (getreferenceRange(i).dirty || getreferenceRange(i).touched) && createTest.value.observations[i].dataType==='numaric'"
                                    class="alert alert-danger">
-                                <div *ngIf="getreferenceRange(i).errors.required">
+                                <div *ngIf="getreferenceRange(i).errors?.required">
                                   Refference Range is required.
                                 </div>
                               </div>
@@ -119,7 +119,7 @@
                         </mat-card>
                         
                         <div *ngIf="createTest.value.observations[i].hasOwnProperty('existingObservation')">
-                          <mat-card>
+                          <mat-card class="existing-observation">
                             <div>
                               <p>{{createTest.value.observations[i].existingObservation.observationName}}</p>
                               <button mat-icon-button>

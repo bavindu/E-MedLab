@@ -42,6 +42,7 @@ const routes: Routes = [
       {path:"lab-empolyee-profile",component:LabEmployeeProfileComponent,canActivate:[AuthGuard]},
       {path:"lab-empolyee-edit-profile",component:LabEmployeeEditProfileComponent,canActivate:[AuthGuard]},
       {path:"load-test", component:LoadTestComponent},
+      {path:"test-form", component:TestFormComponent},
 
     ]},
   {path:"patient-home",component:PatientToolbarComponent,canActivate:[AuthGuard],children:[

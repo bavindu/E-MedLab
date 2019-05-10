@@ -12,7 +12,7 @@ export class LoadTestComponent implements OnInit {
 
   constructor(private loadTestService:LoadTestService,private router:Router,private ar:ActivatedRoute) { }
   private test=[];
-  private testNames=[]
+  private testNames=[];
 
   ngOnInit() {
     this.loadTestNames()

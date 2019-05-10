@@ -1,5 +1,11 @@
+.containor{
+  margin-top: 10%;
+}
 .o-containor{
+    width: 50%;
+    margin: auto;
     padding: 50px;
+    background-color: #eaf3ee;
 }
 .mycard {
     text-align: center;

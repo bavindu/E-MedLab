@@ -4,8 +4,13 @@
   <span>
       <button mat-button [matMenuTriggerFor]="menu1">Menu</button>
         <mat-menu #menu1="matMenu">
-          <button mat-menu-item>Item 1</button>
-          <button mat-menu-item>Item 2</button>
+          <button mat-menu-item routerLink="register">Add User</button>
+          <button mat-menu-item routerLink="create-test">Create Test</button>
+          <button mat-menu-item routerLink="load-test">Add Test Results</button>
+          <button mat-menu-item routerLink="create-observation">Add New Observation</button>
+          <button mat-menu-item routerLink="admin-edit-profile">Edit Profile</button>
+          <button mat-menu-item routerLink="edit-test">EditTest</button>
+          <button mat-menu-item routerLink="edit-observation">Edit Observation</button>
         </mat-menu>
     </span>
   <span><button mat-icon-button [routerLink]="['admin-profile']">
