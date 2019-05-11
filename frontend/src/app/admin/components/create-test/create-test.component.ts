@@ -1,12 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {FormGroup, FormControl, FormArray, FormBuilder, Validators} from '@angular/forms';
 import {MetaTestService} from '../../../services/meta-test.service';
 import {ActivatedRoute, Router} from '@angular/router';
-import { MatDialog } from '@angular/material';
-import { PopupAddComponent } from '../popup-add/popup-add.component';
+import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material';
 import { EventEmitterService } from 'src/app/services/event-emitter.service';
 import { observable } from 'rxjs';
 import {hasRequiredField} from "../../../helpers/check-validator";
+import {ObservationService} from "../../../services/observation.service";
 
 @Component({
   selector: 'app-create-test',
@@ -16,6 +16,8 @@ import {hasRequiredField} from "../../../helpers/check-validator";
 export class CreateTestComponent implements OnInit {
 
   private createTest:FormGroup;
+  private observationList= [];
+  private selectedOptions=[];
 
   constructor(
     private fb:FormBuilder,
@@ -23,7 +25,8 @@ export class CreateTestComponent implements OnInit {
     private router:Router,
     private dialog:MatDialog,
     private eventEmitterService:EventEmitterService,
-    private ar:ActivatedRoute
+    private ar:ActivatedRoute,
+    private observationService:ObservationService
     ) { }
 
   ngOnInit() {
@@ -33,12 +36,12 @@ export class CreateTestComponent implements OnInit {
         this.createNewObservation()
       ])
     });
-    if (this.eventEmitterService.subsVar==undefined) {    
-      this.eventEmitterService.subsVar = this.eventEmitterService.    
-      invokeCreateTestComponentFunction.subscribe((selectedOptions) => {    
-        this.addExistingObs(selectedOptions);    
-      });    
-    }
+    // if (this.eventEmitterService.subsVar==undefined) {
+    //   this.eventEmitterService.subsVar = this.eventEmitterService.
+    //   invokeCreateTestComponentFunction.subscribe((selectedOptions) => {
+    //     this.addExistingObs(selectedOptions);
+    //   });
+    // }
     this.dataTypeValueChanges();
   }
 
@@ -69,12 +72,14 @@ export class CreateTestComponent implements OnInit {
   }
   addExistingObs(obsid:any){
     console.log('addExistingObs');
-    console.log(obsid)
-    obsid.forEach(element => {
-      console.log("element "+element);
-      (<FormArray>this.createTest.get('observations')).push(this.createExistingObservation(element));
-      console.log(this.createTest.value)
-    });
+    console.log(obsid);
+    if(obsid!==undefined){
+      obsid.forEach(element => {
+        console.log("element "+element);
+        (<FormArray>this.createTest.get('observations')).push(this.createExistingObservation(element));
+        console.log(this.createTest.value)
+      });
+    }
     
   }
 
@@ -103,7 +108,8 @@ export class CreateTestComponent implements OnInit {
   }
 
   addExistingObsClick(){
-    this.dialog.open(PopupAddComponent);
+    // this.dialog.open(PopupAddComponent);
+    this.openDialog();
 
   }
   get testName(){return this.createTest.get('testName');}
@@ -121,7 +127,6 @@ export class CreateTestComponent implements OnInit {
   dataTypeValueChanges(){
     (<FormArray>this.createTest.get('observations')).valueChanges.subscribe(
       typeofdata=>{
-
         console.log("array value change "+JSON.stringify(typeofdata));
         console.log(typeofdata.length);
         for (let i = 0; i < typeofdata.length; i++) {
@@ -132,9 +137,6 @@ export class CreateTestComponent implements OnInit {
             while ((<FormArray>this.getcodedValueArray(i)).length!==0){
               (<FormArray>this.getcodedValueArray(i)).removeAt(0);
             }
-
-
-
           }
           else{
             console.log('coded');
@@ -144,16 +146,56 @@ export class CreateTestComponent implements OnInit {
               this.getunit(i).updateValueAndValidity({onlySelf : true});
               this.getreferenceRange(i).updateValueAndValidity({onlySelf : true});
             }
-
-
-
-
           }
-
         }
-
       }
     )
+  }
+
+  loadObservationList(){
+    this.observationList.length=0;
+    this.observationService.getObservationList().subscribe((data:any)=>{
+      data.forEach(element => {
+        this.observationList.push(element);
+      });
+    });
+    console.log(this.observationList)
+
+
+  }
+
+
+  openDialog(): void {
+    this.loadObservationList();
+    this.selectedOptions.length=0;
+    const dialogRef = this.dialog.open(AddObservationDialog, {
+      data: {observationList: this.observationList, selectedOptions: this.selectedOptions}
+
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      this.addExistingObs(result);
+    });
+  }
+
+}
+
+@Component({
+  selector: 'popup-add.component',
+  templateUrl: 'popup-add.component.html',
+  styleUrls: ['./popup-add.component.css']
+})
+export class AddObservationDialog {
+
+  private searchText:string;
+
+  constructor(
+    public dialogRef: MatDialogRef<AddObservationDialog>,
+    @Inject(MAT_DIALOG_DATA) public data) {}
+
+  onNoClick(): void {
+    this.dialogRef.close();
   }
 
 }

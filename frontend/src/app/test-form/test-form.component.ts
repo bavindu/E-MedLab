@@ -3,6 +3,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 import { CreateTestService } from '../services/create-test.service';
 import {FormGroup, FormBuilder, FormArray, FormControl, Validators} from '@angular/forms';
 import { TestFormService } from '../services/test-form.service';
+import {LoginService} from "../services/login.service";
 
 @Component({
   selector: 'app-test-form',
@@ -17,12 +18,15 @@ export class TestFormComponent implements OnInit {
   private observations=[];
   private patientsname:[];
   private searchResults=[];
+  private userType;
   constructor(
     private route:ActivatedRoute,
     private createTestService:CreateTestService,
     private fb:FormBuilder,
     private router:Router,
-    private testFromService:TestFormService) { }
+    private testFromService:TestFormService,
+    private ar:ActivatedRoute,
+    private loginService:LoginService) { }
     private pid;
 
   ngOnInit() {
@@ -37,7 +41,16 @@ export class TestFormComponent implements OnInit {
       ])
     });
     this.createTestForm();
+    this.getUserType();
     
+  }
+
+  getUserType(){
+    this.loginService.getUserProfile().subscribe((res:any)=>{
+      console.log("inside get user Type "+JSON.stringify(res));
+      this.userType=res.user.userType
+    });
+
   }
   createTestForm(){
     this.route.queryParams.subscribe(params=>{
@@ -82,7 +95,15 @@ export class TestFormComponent implements OnInit {
     else{
       console.log('inside addTstResults')
       this.testFromService.addTestResults(this.testForm.value).subscribe();
-      this.router.navigateByUrl('/lab-empolyee-profile');
+      if(this.userType==='admin'){
+        this.router.navigate(['../admin-profile'],{relativeTo:this.ar});
+      }
+      else if(this.userType==="labEmployee"){
+        this.router.navigate(['../lab-empolyee-profile'],{relativeTo:this.ar});
+      }
+      else{
+        console.log("user type "+this.userType)
+      }
     }
   }
 

@@ -2,13 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TestFormService } from '../../../services/test-form.service';
 import { MatTableDataSource } from '@angular/material';
-import { UserDataService } from '../../services/user-data.service';
 import { User } from 'src/app/models/user.model';
 import { DatePipe } from '@angular/common';
 import * as jsPDF from 'jspdf';
 import * as html2canvas from 'html2canvas';
 import * as domtoimg from 'dom-to-image';
 import {element} from "protractor";
+import {UserService} from "../../../services/user.service";
 
 export interface TestForm {
   observationName: string ;
@@ -31,17 +31,24 @@ export class ViewTestComponent implements OnInit {
   private testId;
   private testName;
   private date: Date;
-  private user = new User();
+  private user;
   private testResults;
   private userAge;
   private displayedColums: string[] = ['tests', 'value', 'unit', 'referenceRange'];
   private testValueData = [];
   private datasource;
 
-  constructor(private route: ActivatedRoute, private testFormServise: TestFormService, private userDataService: UserDataService,private datepipe:DatePipe) { }
+  constructor(
+    private route: ActivatedRoute,
+    private testFormServise: TestFormService,
+    private userService: UserService,
+    private datepipe:DatePipe) { }
 
   ngOnInit() {
-    this.userDataService.currentData.subscribe(user => this.user = user);
+    this.userService.getUserProfile().subscribe((user:any) => {
+      this.user = user.user;
+      console.log('user '+JSON.stringify(user))
+    });
     this.datasource = new MatTableDataSource();
     this.oninitfunction();
 

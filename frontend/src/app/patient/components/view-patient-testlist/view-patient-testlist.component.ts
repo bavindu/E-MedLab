@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LoadTestService } from '../../../services/load-test.service';
-import { Router } from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-view-patient-testlist',
@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class ViewPatientTestlistComponent implements OnInit {
 
-  constructor(private loadTestService:LoadTestService,private router:Router) { }
+  constructor(private loadTestService:LoadTestService,private router:Router,private ar:ActivatedRoute) { }
 
   private testList=[];
 
@@ -29,7 +29,7 @@ export class ViewPatientTestlistComponent implements OnInit {
 
   navigateTest(i){
     console.log(this.testList[i]._id);
-    this.router.navigate(['/view-myTest'],{queryParams:{id:this.testList[i]._id}});
+    this.router.navigate(['../view-myTest'],{queryParams:{id:this.testList[i]._id},relativeTo:this.ar});
   }
 
 }

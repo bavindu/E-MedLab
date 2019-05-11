@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {LoadTestService} from '../services/load-test.service'
 import {ActivatedRoute, Router} from '@angular/router';
+import {LoginService} from "../services/login.service";
 
 
 @Component({
@@ -10,13 +11,19 @@ import {ActivatedRoute, Router} from '@angular/router';
 })
 export class LoadTestComponent implements OnInit {
 
-  constructor(private loadTestService:LoadTestService,private router:Router,private ar:ActivatedRoute) { }
+  constructor(private loadTestService:LoadTestService,
+              private router:Router,
+              private ar:ActivatedRoute,
+              ) { }
   private test=[];
   private testNames=[];
+
 
   ngOnInit() {
     this.loadTestNames()
   }
+
+
 
   loadTestNames(){
     this.loadTestService.loadTest().subscribe((res:any[])=>{
