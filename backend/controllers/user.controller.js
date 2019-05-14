@@ -61,28 +61,51 @@ let updateUserDetails=function(req,res){
     console.log(req.body);
     User.findById(req._id,(err,doc)=>{
         if(!err){
-            if(req.body.newPassword!==null){
+            if(req.body.newPassword){
+                console.log("new password is not null");
                 doc.firstName=req.body.firstName;
                 doc.lastName=req.body.lastName;
                 doc.userName=req.body.userName;
                 doc.email=req.body.email;
                 doc.password=req.body.newPassword;
+                doc.save((err,sdoc)=>{
+                    if(err){
+                        console.log(err);
+                        res.send(err);
+                    }
+                    else{
+                        console.log('User added successfully')
+                    }
+                });
             }
             else{
-                doc.firstName=req.body.firstName;
-                doc.lastName=req.body.lastName;
-                doc.userName=req.body.userName;
-                doc.email=req.body.email;
+                console.log("new password is null");
+                // doc.firstName=req.body.firstName;
+                // doc.lastName=req.body.lastName;
+                // doc.userName=req.body.userName;
+                // doc.email=req.body.email;
+                User.update({
+                    _id:doc._id
+                    },
+                    {
+                        $set:{
+                            firstName:req.body.firstName,
+                            lastName:req.body.lastName,
+                            userName:req.body.userName,
+                            email:req.body.email
+                        }
+                    },
+                    (err,doc)=>{
+                    if(err){
+                        console.log(err);
+                        res.send(err);
+                    }
+                    else{
+                        console.log('User added successfully')
+                    }
+                })
             }
-            doc.save((err,sdoc)=>{
-                if(err){
-                    console.log(err);
-                    res.send(err);
-                }
-                else{
-                    console.log('User added successfully')
-                }
-            });
+
         }
     })
 }
@@ -90,7 +113,7 @@ let updateUserDetails=function(req,res){
 let searchPatient=function(req,res){
     console.log("this is request "+req.body.input);
     const searchTerm=req.body.input;
-    User.find({userName:{$regex:new RegExp(searchTerm)}},"userName",(err,data)=>{
+    User.find({userName:{$regex:new RegExp(searchTerm)},userType:'patient'},"userName",(err,data)=>{
         if(err){
             res.json("error");
         }

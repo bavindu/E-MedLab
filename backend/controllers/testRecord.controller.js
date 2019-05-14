@@ -41,7 +41,7 @@ let addTestRecord=function(req,res){
 };
 
 let getTestRecordName=function(req,res){
-    TestRecord.find({patientId:req._id},"testName",(err,data)=>{
+    TestRecord.find({patientId:req._id},"testName date",(err,data)=>{
         if(err){
             res.json("error getiing data")
         }
@@ -55,15 +55,6 @@ let getTestRecordName=function(req,res){
 let getTestRecord=function(req,res){
     console.log('get test data');
     console.log(req.query.Id);
-    // TestRecord.findById(req.query.Id).exec(function(err,doc){
-    //     if(err){
-    //         res.json("error")
-    //     }
-    //     else{
-    //         console.log(doc);
-    //         res.send(doc);
-    //     }
-    // })
     TestRecord.findById(req.query.Id).populate('observations.observationId','unit referenceRange observationName').exec(function(err,doc){
         if(err){
             res.json("error")
@@ -75,6 +66,21 @@ let getTestRecord=function(req,res){
     })
 }
 
+let getManyTestRecords=function(req,res){
+    console.log("query params "+req.query.IdList);
+    TestRecord.find({_id:{$in:req.query.IdList}}).populate('observations.observationId','unit referenceRange observationName').exec(function(err,doc){
+        if(err){
+            res.json("error");
+            console.log(err);
+        }
+        else{
+            console.log("get many test doc "+doc);
+            res.send(doc);
+        }
+    })
+}
+
 module.exports.getTestRecord=getTestRecord;
+module.exports.getManyTestRecords=getManyTestRecords;
 module.exports.addTestRecord=addTestRecord;
 module.exports.getTestRecordName=getTestRecordName;

@@ -21,6 +21,7 @@ import {EditObservationComponent} from './admin/components/edit-observation/edit
 import {AdminToolbarComponent} from "./admin/components/admin-toolbar/admin-toolbar.component";
 import { LabEmployeeToolbarComponent } from './lab-employee/components/lab-employee-toolbar/lab-employee-toolbar.component';
 import { PatientToolbarComponent } from './patient/components/patient-toolbar/patient-toolbar.component';
+import {DownloadMultiplePdfComponent} from "./patient/components/download-multiple-pdf/download-multiple-pdf.component";
 
 const routes: Routes = [
 
@@ -51,6 +52,7 @@ const routes: Routes = [
       {path:"view-testList",component:ViewPatientTestlistComponent,canActivate:[AuthGuard]},
       {path:"view-myTest",component:ViewTestComponent,canActivate:[AuthGuard]},
       {path:"edit-profile",component:EditProfileComponent,canActivate:[AuthGuard]},
+      {path:"download-multiple",component:DownloadMultiplePdfComponent,canActivate:[AuthGuard]},
     ]},
   
 

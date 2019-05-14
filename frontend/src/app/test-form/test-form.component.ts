@@ -27,7 +27,7 @@ export class TestFormComponent implements OnInit {
     private testFromService:TestFormService,
     private ar:ActivatedRoute,
     private loginService:LoginService) { }
-    private pid;
+
 
   ngOnInit() {
     

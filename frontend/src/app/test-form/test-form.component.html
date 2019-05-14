@@ -2,7 +2,7 @@
 <div >
     <mat-card>
         <mat-card-header>
-            <mat-card-title>{{testName}}</mat-card-title>
+            <mat-card-title>{{testTemplate.testName}}</mat-card-title>
         </mat-card-header>
         
         <mat-card-content>
@@ -12,7 +12,7 @@
                 <mat-form-field>
                     <input type="text" matInput placeholder="Patient Name" formControlName='patientId' (keyup)="search($event)" [matAutocomplete]="auto">
                 </mat-form-field>
-                <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onPatientChange($event.option.value)">
+                <mat-autocomplete #auto="matAutocomplete" >
                     <mat-option *ngFor="let item of searchResults" [value]="item[1]">{{item[0]}}</mat-option>
                 </mat-autocomplete>
               <div *ngIf="patientId.invalid && (patientId.dirty || patientId.touched)"
@@ -78,6 +78,7 @@
         </mat-card-content>
     </mat-card>
 </div>
+{{testForm.value|json}}
 
 
 

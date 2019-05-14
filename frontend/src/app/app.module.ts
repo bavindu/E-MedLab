@@ -49,6 +49,7 @@ import {DeleteObservationConfirmationDialog} from './admin/components/edit-obser
 import {AdminToolbarComponent} from "./admin/components/admin-toolbar/admin-toolbar.component";
 import { LabEmployeeToolbarComponent } from './lab-employee/components/lab-employee-toolbar/lab-employee-toolbar.component';
 import { PatientToolbarComponent } from './patient/components/patient-toolbar/patient-toolbar.component';
+import { DownloadMultiplePdfComponent } from './patient/components/download-multiple-pdf/download-multiple-pdf.component';
 
 
 @NgModule({
@@ -78,7 +79,8 @@ import { PatientToolbarComponent } from './patient/components/patient-toolbar/pa
     LabEmployeeToolbarComponent,
     PatientToolbarComponent,
     ErrorDialog,
-    AddObservationDialog
+    AddObservationDialog,
+    DownloadMultiplePdfComponent
   ],
   imports: [
     BrowserModule,

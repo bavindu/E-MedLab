@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import {UserService} from "../../../services/user.service";
 import {MustMatch} from "../../../helpers/must-match.validator";
+import {ActivatedRoute, Router} from "@angular/router";
 
 
 @Component({
@@ -17,7 +18,7 @@ export class AdminEditProfileComponent implements OnInit {
   private userDetailsFrom;
   private passwordDisplay=false;
 
-  constructor(private fb:FormBuilder,private userService:UserService) {
+  constructor(private fb:FormBuilder,private userService:UserService,private router:Router,private ar:ActivatedRoute) {
     this.userDetailsFrom=this.fb.group({
       firstName:['',Validators.required],
       lastName:['',Validators.required],
@@ -89,5 +90,6 @@ export class AdminEditProfileComponent implements OnInit {
       }
     }
     this.userService.updateUser(this.userDetailsFrom.value).subscribe();
+    this.router.navigate(['../admin-profile'],{relativeTo:this.ar})
   }
 }

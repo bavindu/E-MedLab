@@ -1,6 +1,7 @@
 
 <div class="containor">
   <div class="containor" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="5%" fxLayoutAlign="center center">
+
     <div fxFlex="20%">
       <a [routerLink]="[ '../edit-profile']" style="text-decoration:none">
         <div class="mycard mat-elevation-z5">
@@ -12,8 +13,8 @@
               </div>
         </div>
       </a>
-      
     </div>
+
     <div fxFlex="20%">
       <a [routerLink]="[ '../view-testList']" style="text-decoration:none">
         <div class="mycard mat-elevation-z5">
@@ -26,7 +27,19 @@
         </div>
       </a>
     </div>
-    
+
+    <div fxFlex="20%">
+      <a [routerLink]="[ '../download-multiple']" style="text-decoration:none">
+        <div class="mycard mat-elevation-z5">
+          <div class="my-img">
+            <img src="assets/images/file.png" alt="">
+          </div>
+          <div class="content">
+            <h4>Download test reports</h4>
+          </div>
+        </div>
+      </a>
+    </div>
     
   </div>
   

@@ -19,5 +19,9 @@ export class TestFormService {
     return this.http.get('http://localhost:3000/api/getTestRecord',{params:{Id:testId}})
   }
 
+  getManyTest(testidlist){
+    return this.http.get('http://localhost:3000/api/getManyTestRecord',{params:{IdList:testidlist}})
+  }
+
 }
 

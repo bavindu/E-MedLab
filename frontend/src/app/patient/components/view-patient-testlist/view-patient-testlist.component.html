@@ -1,6 +1,12 @@
-<mat-nav-list>
-  <mat-list-item *ngFor="let item of testList;let i=index" (click)="navigateTest(i)">
-      {{ item.testName }}
-  </mat-list-item>
-</mat-nav-list>
+<div class="containor">
+  <mat-nav-list>
+    <mat-list-item *ngFor="let item of testList;let i=index" (click)="navigateTest(i)">
+      <p>{{i+1}}</p>
+      <p>{{ item.testName }}</p>
+      <p>   </p>
+      <p>({{item.date|date}})</p>
+      <mat-divider></mat-divider>
+    </mat-list-item>
+  </mat-nav-list>
+</div>
 {{testList|json}}

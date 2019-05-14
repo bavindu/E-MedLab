@@ -36,6 +36,8 @@ const userSchema=mongoose.Schema({
 
 
 userSchema.pre('save',function(next){
+    console.log("*****password is hashing");
+    console.log("This is password "+this.password);
     bcrypt.genSalt(10,(err,salt)=>{
         bcrypt.hash(this.password,salt,(err,hash)=>{
             this.password=hash;

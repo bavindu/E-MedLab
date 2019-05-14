@@ -19,6 +19,7 @@ router.get('/userProfile',jwtHelper.jwtVerify,ctrlUser.userProfile);
 router.get('/getUserType',jwtHelper.jwtVerify,ctrlUser.getUserType);
 router.get('/getTestRecordName',jwtHelper.jwtVerify,ctrlTestRocord.getTestRecordName);
 router.get('/getTestRecord',jwtHelper.jwtVerify,ctrlTestRocord.getTestRecord);
+router.get('/getManyTestRecord',jwtHelper.jwtVerify,ctrlTestRocord.getManyTestRecords);
 router.get('/getobservationList',jwtHelper.jwtVerify,ctrlMetaObservation.getObservationList);
 router.get('/getAllMetaTestName',jwtHelper.jwtVerify,ctrlMetaTest.getAllMetaTestName);
 router.post('/deleteMetaTest',jwtHelper.jwtVerify,ctrlMetaTest.deleteMetaTest);
