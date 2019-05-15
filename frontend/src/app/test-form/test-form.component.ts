@@ -50,7 +50,6 @@ export class TestFormComponent implements OnInit {
       console.log("inside get user Type "+JSON.stringify(res));
       this.userType=res.user.userType
     });
-
   }
   createTestForm(){
     this.route.queryParams.subscribe(params=>{
