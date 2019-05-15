@@ -9,6 +9,6 @@ export class CreateTestService {
   constructor(private http:HttpClient) { }
 
   getTest(_id){
-    return this.http.get('http://localhost:3000/api/get-test',{params:{id:_id}})
+    return this.http.get('api/get-test',{params:{id:_id}})
   }
 }

@@ -10,17 +10,17 @@ export class TestFormService {
   constructor(private http:HttpClient) { }
 
   addTestResults(testFormValue){
-    return this.http.post('http://localhost:3000/api/addTestResults',testFormValue);
+    return this.http.post('api/addTestResults',testFormValue);
   }
   searchPatient(name){
-    return this.http.post('http://localhost:3000/api/search-patient',name);
+    return this.http.post('api/search-patient',name);
   }
   getTestResults(testId){
-    return this.http.get('http://localhost:3000/api/getTestRecord',{params:{Id:testId}})
+    return this.http.get('api/getTestRecord',{params:{Id:testId}})
   }
 
   getManyTest(testidlist){
-    return this.http.get('http://localhost:3000/api/getManyTestRecord',{params:{IdList:testidlist}})
+    return this.http.get('api/getManyTestRecord',{params:{IdList:testidlist}})
   }
 
 }

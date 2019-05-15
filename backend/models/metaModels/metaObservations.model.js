@@ -7,7 +7,8 @@ const metaObservationSchema=mongoose.Schema(
         
         observationName:{
             type:String,
-            unique:true
+            unique:true,
+            required: true
         },
         codedValues:[{
             type:String,

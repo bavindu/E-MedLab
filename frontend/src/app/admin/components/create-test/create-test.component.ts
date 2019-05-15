@@ -84,15 +84,27 @@ export class CreateTestComponent implements OnInit {
   }
 
   addNewMetaTest(){
-    if(this.createTest.invalid){
+    if(this.createTest.invalid || (<FormArray>this.createTest.get('observations')).length===0){
       alert("Please Fill the form");
       return
-    }else{
-      console.log(this.createTest.value);
-      this.metaTestService.addTestTemplate(this.createTest.value).subscribe();
+    }
+    else{
+      console.log("observation length "+(<FormArray>this.createTest.get('observations')).length);
+      this.metaTestService.addTestTemplate(this.createTest.value).subscribe((res:any)=>{
+        console.log("test save "+JSON.stringify(res));
+        if(res.code===11000){
+          alert("Name of the test is allready exist!")
+        }
+        else if (res.code===11001){
+          alert(res.dupObsName+" is allready exist");
+        }
+        else{
+          this.router.navigate(["../admin-profile"],{relativeTo:this.ar});
+        }
+      });
       console.log('on addnewTest');
       console.log(this.createTest.value);
-      this.router.navigate(["../admin-profile"],{relativeTo:this.ar});
+
     }
   }
   removeField(i){

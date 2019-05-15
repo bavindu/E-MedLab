@@ -12,15 +12,15 @@ export class MetaTestService {
   addTestTemplate(metaTest:MetaTest){
     console.log('on Add Test Template');
     console.log(metaTest);
-    return this.http.post('http://localhost:3000/api/addMetaTest',metaTest);
+    return this.http.post('api/addMetaTest',metaTest);
     
   }
 
   getMetaTestName(){
-    return this.http.get('http://localhost:3000/api/getAllMetaTestName');
+    return this.http.get('api/getAllMetaTestName');
   }
   deleteMetaTest(id){
     console.log("inside service "+id);
-    return this.http.post('http://localhost:3000/api/deleteMetaTest',{'id':id});
+    return this.http.post('api/deleteMetaTest',{'id':id});
   }
 }

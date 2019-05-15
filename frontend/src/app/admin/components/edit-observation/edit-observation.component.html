@@ -8,9 +8,6 @@
       <mat-list-item *ngFor="let item of observationNames|filter:searchText;let i=index ">
         <span>{{item.observationName}}</span>
         <span class="example-fill-remaining-space"></span>
-        <button mat-icon-button (click)="openConfirmationDialog()">
-          <mat-icon class="mat-18">edit</mat-icon>
-        </button>
         <button mat-icon-button (click)="deleteObservation(item._id,i)">
           <mat-icon class="mat-18">delete</mat-icon>
         </button>

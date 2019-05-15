@@ -30,7 +30,7 @@ export class UserService {
   }
 
   getUserProfile(){
-    return this.http.get('http://localhost:3000/api/userProfile');
+    return this.http.get('api/userProfile');
   }
 
   isUserLoggedIn(){
@@ -45,9 +45,9 @@ export class UserService {
     }
   }
   updateUser(userDetails){
-    return this.http.post('http://localhost:3000/api/update-user',userDetails)
+    return this.http.post('api/update-user',userDetails)
   }
   getUserType(){
-    return this.http.get('http://localhost:3000/api/getUserType');
+    return this.http.get('api/getUserType');
   }
 }

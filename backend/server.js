@@ -19,8 +19,8 @@ app.use(passport.initialize());
 
 
 
-
-app.listen('3000',(err)=>{
+const port=process.env.PORT ||8080;
+app.listen(port,(err)=>{
     if(!err){
         console.log('listening to port 3000')
     }

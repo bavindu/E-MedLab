@@ -10,6 +10,6 @@ export class RegisterService {
   constructor(private http:HttpClient) { }
 
   register(userinfo){
-    return this.http.post('http://localhost:3000/api/register',userinfo);
+    return this.http.post('api/register',userinfo);
   }
 }

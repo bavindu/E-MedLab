@@ -13,7 +13,7 @@ export class LoginService {
   noAuthHeader={headers:new HttpHeaders({'noauth':'true'})};
 
   login(info:LoginInfo){
-    return this.http.post('http://localhost:3000/api/login',info,this.noAuthHeader);
+    return this.http.post('api/login',info,this.noAuthHeader);
   }
 
   setToken(token:string){
@@ -22,7 +22,7 @@ export class LoginService {
 
   getUserProfile(){
     console.log('inside frontend grtUserProfile');
-    return this.http.get('http://localhost:3000/api/userProfile');
+    return this.http.get('api/userProfile');
   }
 
 

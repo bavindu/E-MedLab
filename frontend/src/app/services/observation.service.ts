@@ -9,17 +9,17 @@ export class ObservationService {
   constructor(private http:HttpClient) { }
 
   addObservations(observation){
-    return this.http.post('http://localhost:3000/api/addObservation',observation);
+    return this.http.post('api/addObservation',observation);
     
   }
 
   getObservationList(){
-    return this.http.get('http://localhost:3000/api/getobservationList');
+    return this.http.get('api/getobservationList');
   }
   deleteClickObservation(observationId){
-    return this.http.post('http://localhost:3000/api/deleteClickMetaObservation',{'observationId':observationId});
+    return this.http.post('api/deleteClickMetaObservation',{'observationId':observationId});
   }
   deleteObservation(observationId){
-    return this.http.post('http://localhost:3000/api/deleteMetaObservation',{'observationId':observationId});
+    return this.http.post('api/deleteMetaObservation',{'observationId':observationId});
   }
 }

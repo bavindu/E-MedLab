@@ -7,7 +7,7 @@ const metaTestSchema=new mongoose.Schema(
     {
         testName:{
             type:String,
-            unique:true
+            unique:true,
         },
         observations:[{
             type: mongoose.Schema.Types.ObjectId,

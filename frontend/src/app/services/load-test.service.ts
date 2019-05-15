@@ -9,10 +9,10 @@ export class LoadTestService {
   constructor(private http:HttpClient) { }
 
   loadTest(){
-    return this.http.get('http://localhost:3000/api/load-test');
+    return this.http.get('api/load-test');
   }
   loadTestofPatient(){
-    return this.http.get('http://localhost:3000/api/getTestRecordName');
+    return this.http.get('api/getTestRecordName');
   }
 
 
