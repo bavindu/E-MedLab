@@ -11,7 +11,7 @@ const path=require('path');
 
 
 const app=express();
-var distDir = __dirname + "/frontend/dist/";
+var distDir = __dirname + "/frontend/dist/frontend";
 
 app.use(express.static(distDir));
 app.use(cors());
