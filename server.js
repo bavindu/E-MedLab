@@ -32,6 +32,6 @@ var server=app.listen(port,(err)=>{
     }
 });
 
-app.get('/*',function(req,res)=>{
+app.get('/*',function(req,res){
     res.sendFile(path.join(_dirname+'frontend/dist/index.html'));
 })
