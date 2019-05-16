@@ -10,7 +10,9 @@ const passport=require('passport');
 
 
 const app=express();
+var distDir = __dirname + "/frontend/dist/";
 
+app.use(express.static(distDir));
 app.use(cors());
 app.use(bodyParser.json());
 app.use('/api',rtIndex.router);
@@ -27,4 +29,4 @@ app.listen(port,(err)=>{
     else{
         console.log("erro "+err)
     }
-})
+});
