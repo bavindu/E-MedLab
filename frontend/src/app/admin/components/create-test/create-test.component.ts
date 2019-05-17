@@ -99,6 +99,7 @@ export class CreateTestComponent implements OnInit {
           alert(res.dupObsName+" is allready exist");
         }
         else{
+          console.log("Test Added");
           this.router.navigate(["../admin-profile"],{relativeTo:this.ar});
         }
       });
