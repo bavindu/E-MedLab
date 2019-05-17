@@ -48,6 +48,7 @@ let addMetaTest= async function(req,res){
         try {
             let savedoc=await metaTest.save();
             console.log("****************Saved doc"+savedoc);
+            res.json({"code":11002})
         }catch (e) {
             console.log("&&&&&&&test save error "+e);
             res.send(e)
