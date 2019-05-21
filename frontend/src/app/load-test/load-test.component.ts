@@ -10,7 +10,7 @@ import {LoginService} from "../services/login.service";
   styleUrls: ['./load-test.component.css']
 })
 export class LoadTestComponent implements OnInit {
-
+  private searchText;
   constructor(private loadTestService:LoadTestService,
               private router:Router,
               private ar:ActivatedRoute,

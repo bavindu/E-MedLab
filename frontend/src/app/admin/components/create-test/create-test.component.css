@@ -2,8 +2,9 @@
     margin-top: 50px;
 }
 .containor{
-    width: 50%;
+    width: 60%;
     margin: 0 auto;
+  background-color: #ebebeb;
 }
 
 .observationField{
@@ -12,6 +13,7 @@
 
 .formbutton{
     margin: 10px;
+    max-width: 400px;
 }
 
 #addNewObs{

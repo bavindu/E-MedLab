@@ -50,6 +50,7 @@ import {AdminToolbarComponent} from "./admin/components/admin-toolbar/admin-tool
 import { LabEmployeeToolbarComponent } from './lab-employee/components/lab-employee-toolbar/lab-employee-toolbar.component';
 import { PatientToolbarComponent } from './patient/components/patient-toolbar/patient-toolbar.component';
 import { DownloadMultiplePdfComponent } from './patient/components/download-multiple-pdf/download-multiple-pdf.component';
+import {DatePipe} from "@angular/common";
 
 
 @NgModule({
@@ -99,7 +100,7 @@ import { DownloadMultiplePdfComponent } from './patient/components/download-mult
     FormsModule
    
   ],
-  providers: [EventEmitterService,LoginService,CreateTestService,MetaTestService,LoadTestService,LoginService,AuthGuard,AppLoginService,AuthInterceptor,{
+  providers: [DatePipe,EventEmitterService,LoginService,CreateTestService,MetaTestService,LoadTestService,LoginService,AuthGuard,AppLoginService,AuthInterceptor,{
     provide:HTTP_INTERCEPTORS,
     useClass:AuthInterceptor,
     multi:true

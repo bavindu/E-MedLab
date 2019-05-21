@@ -4,8 +4,8 @@
         <h4>Add User</h4>
       </div>
       <div class="login-form">
-        <form [formGroup]="registerForm">
-          <div class="input-field">
+        <form fxLayout="column" [formGroup]="registerForm">
+          <div class="input-row" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="20px" fxLayoutGap.lt-md="0px">
             <!-- <mat-icon>person</mat-icon> -->
             <mat-form-field>
               <input matInput placeholder="First Name" type="text" formControlName="firstName">
@@ -18,7 +18,7 @@
             </div>
 
           </div>
-          <div class="input-field">
+          <div  class="input-row" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="20px" fxLayoutGap.lt-md="0px">
             <!-- <mat-icon>person</mat-icon> -->
             <mat-form-field>
               <input matInput placeholder="Last Name" type="text" formControlName="lastName">
@@ -30,7 +30,7 @@
               </div>
             </div>
           </div>
-          <div class="input-field">
+          <div  class="input-row" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="20px" fxLayoutGap.lt-md="0px">
             <!-- <mat-icon>person</mat-icon> -->
             <mat-form-field>
               <input matInput placeholder="Username" type="text" formControlName="userName">
@@ -43,7 +43,7 @@
             </div>
           </div>
 
-          <div class="input-field">
+          <div  class="input-row" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="20px" fxLayoutGap.lt-md="0px">
             <!-- <mat-icon>email</mat-icon> -->
             <mat-form-field>
               <input matInput placeholder="Email" type="email" formControlName="email">
@@ -55,7 +55,7 @@
               </div>
             </div>
           </div>
-          <div class="input-field">
+          <div  class="input-row" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="20px" fxLayoutGap.lt-md="0px">
             <!-- <mat-icon>email</mat-icon> -->
             <mat-form-field>
               <mat-select placeholder="User Type" formControlName="userType">
@@ -65,7 +65,7 @@
               </mat-select>
             </mat-form-field>
           </div>
-          <div class="input-field" >
+          <div  class="input-row" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="20px" fxLayoutGap.lt-md="0px">
             <mat-form-field>
               <mat-select  placeholder="Sex" formControlName="sex">
                 <mat-option value='male'>Male</mat-option>
@@ -73,7 +73,7 @@
               </mat-select>
             </mat-form-field>
           </div>
-          <div class="input-field">
+          <div  class="input-row" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="20px" fxLayoutGap.lt-md="0px">
             <!-- <mat-icon>email</mat-icon> -->
             <mat-form-field>
               <input matInput [matDatepicker]="picker" placeholder="Date of Birth" formControlName="birthDay">
@@ -88,7 +88,7 @@
             </div>
           </div>
 
-          <div class="input-field">
+          <div  class="input-row" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="20px" fxLayoutGap.lt-md="0px">
             <!-- <mat-icon>vpn_key</mat-icon> -->
             <mat-form-field>
               <input matInput placeholder="Password" type="password" formControlName="password">
@@ -101,7 +101,7 @@
             </div>
           </div>
 
-          <div class="input-field">
+          <div  class="input-row" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="20px" fxLayoutGap.lt-md="0px">
             <!-- <mat-icon>vpn_key</mat-icon> -->
             <mat-form-field>
               <input matInput placeholder="Confirm Password" type="password" formControlName="confirmPassword">

@@ -41,7 +41,7 @@
                 <div formArrayName="inputobservations" *ngFor="let observation of observations;let i=index">
                     <div [formGroupName]="i" *ngIf="observation.hasOwnProperty('unit') && observation.codedValues.length===0">
                         <mat-form-field>
-                            <input type="text" matInput placeholder="{{observation.observationName}}" formControlName='observationValue'>
+                            <input type="number" matInput placeholder="{{observation.observationName}}" formControlName='observationValue'>
                         </mat-form-field>
                       <div *ngIf="getObservationName(i).invalid && (getObservationName(i).dirty || getObservationName(i).touched)"
                            class="alert alert-danger">

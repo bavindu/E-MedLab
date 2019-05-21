@@ -1,7 +1,11 @@
 <div class="containor">
+  <mat-form-field>
+    <input matInput [(ngModel)]="searchText"
+           placeholder="Filter">
+  </mat-form-field>
   <div *ngIf="testNames.length!==0">
     <mat-nav-list>
-      <mat-list-item *ngFor="let item of testNames;let i=index" (click)="navigateAddTestResults(i)">
+      <mat-list-item *ngFor="let item of testNames|filter:searchText;let i=index" (click)="navigateAddTestResults(i)">
         {{ item[0] }}
         <mat-divider></mat-divider>
       </mat-list-item>

@@ -9,10 +9,13 @@
             </mat-card-header>
             <mat-card-content>
               
-              <form  [formGroup]='createTest'>
+              <form fxLayout="column" [formGroup]='createTest'>
+                <div class="input-row" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="20px" fxLayoutGap.lt-md="0px">
                   <mat-form-field>
                     <input type="text" matInput placeholder="Test Name" formControlName='testName'>
                   </mat-form-field>
+                </div>
+
                   <div *ngIf="testName.invalid && (testName.dirty || testName.touched)"
                        class="alert alert-danger">
                     <div *ngIf="testName.errors?.required">
@@ -29,10 +32,12 @@
                           <mat-card-content>
                               
                               <br>
-              
-                              <mat-form-field>
-                                <input type="text" matInput placeholder='Observation Name'formControlName="observationName">               
-                              </mat-form-field>
+                              <div class="input-row" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="20px" fxLayoutGap.lt-md="0px">
+                                <mat-form-field>
+                                  <input type="text" matInput placeholder='Observation Name'formControlName="observationName">
+                                </mat-form-field>
+                              </div>
+
                             <div *ngIf="getobservationName(i).invalid && (getobservationName(i).dirty || getobservationName(i).touched)"
                                  class="alert alert-danger">
                               <div *ngIf="getobservationName(i).errors?.required">
@@ -40,33 +45,40 @@
                               </div>
                             </div>
                               <br>
-    
-                              <mat-form-field>
-                                
-                                <mat-select placeholder="Data Type" formControlName="dataType" (change)="addDatatype()">
+                              <div class="input-row" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="20px" fxLayoutGap.lt-md="0px">
+                                <mat-form-field>
+                                  <mat-select placeholder="Data Type" formControlName="dataType" (change)="addDatatype()">
                                     <mat-option value='numaric'>Numeric</mat-option>
-                                    <mat-option value='coded'>Coded</mat-option>    
-                                </mat-select>
-                                <mat-icon 
-                                  matSuffix 
-                                  matTooltip="Info about the action"
+                                    <mat-option value='coded'>Coded</mat-option>
+                                  </mat-select>
+                                  <mat-icon
+                                    matSuffix
+                                    matTooltip="Info about the action"
                                   >info</mat-icon>
-                              </mat-form-field>
-                              <br>
-              
-                              <mat-form-field *ngIf="createTest.value.observations[i].dataType==='numaric'">
-                                  <input type="text" matInput placeholder='Unit' formControlName="unit">
-                              </mat-form-field>
-                            <div *ngIf="getunit(i).invalid && (getunit(i).dirty || getunit(i).touched) && createTest.value.observations[i].dataType==='numaric'"
-                                 class="alert alert-danger">
-                              <div *ngIf="getunit(i).errors?.required">
-                                Unit Name is required.
+                                </mat-form-field>
                               </div>
-                            </div>
+
+                              <br>
+
+                              <div class="input-row" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="20px" fxLayoutGap.lt-md="0px">
+                                <mat-form-field *ngIf="createTest.value.observations[i].dataType==='numaric'">
+                                  <input type="text" matInput placeholder='Unit' formControlName="unit">
+                                </mat-form-field>
+                              </div>
+
+                              <div *ngIf="getunit(i).invalid && (getunit(i).dirty || getunit(i).touched) && createTest.value.observations[i].dataType==='numaric'"
+                                   class="alert alert-danger">
+                                <div *ngIf="getunit(i).errors?.required">
+                                  Unit Name is required.
+                                </div>
+                              </div>
                               <br *ngIf="createTest.value.observations[i].dataType==='numaric'">
-                              <mat-form-field *ngIf="createTest.value.observations[i].dataType==='numaric'">
+                              <div class="input-row" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="20px" fxLayoutGap.lt-md="0px">
+                                <mat-form-field *ngIf="createTest.value.observations[i].dataType==='numaric'">
                                   <input type="text" matInput placeholder='Reference Range' formControlName="referenceRange">
-                              </mat-form-field>
+                                </mat-form-field>
+                              </div>
+
                               <div *ngIf="getreferenceRange(i).invalid && (getreferenceRange(i).dirty || getreferenceRange(i).touched) && createTest.value.observations[i].dataType==='numaric'"
                                    class="alert alert-danger">
                                 <div *ngIf="getreferenceRange(i).errors?.required">
@@ -82,12 +94,15 @@
                                 <mat-card-content>
                                   <div formArrayName="codedValues" *ngFor="let coedValue of createTest.get('observations').at(i).get('codedValues').controls; let j=index">
                                     <div [formGroupName]='j'>
-                                      <mat-form-field>
-                                        <input matInput placeholder="Value" formControlName="codedValue">
-                                        <button mat-icon-button matSuffix>
-                                          <mat-icon aria-label="label" (click)="deleteCodeValue(i,j)">cancel</mat-icon>
-                                        </button>
-                                      </mat-form-field>
+                                      <div class="input-row" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="20px" fxLayoutGap.lt-md="0px">
+                                        <mat-form-field>
+                                          <input matInput placeholder="Value" formControlName="codedValue">
+                                          <button mat-icon-button matSuffix>
+                                            <mat-icon aria-label="label" (click)="deleteCodeValue(i,j)">cancel</mat-icon>
+                                          </button>
+                                        </mat-form-field>
+                                      </div>
+
                                       <div *ngIf="getcodedValue(i,j).invalid && (getcodedValue(i,j).dirty || getcodedValue(i,j).touched)"
                                            class="alert alert-danger">
                                         <div *ngIf="getcodedValue(i,j).errors?.required">
