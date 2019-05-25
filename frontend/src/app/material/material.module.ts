@@ -33,7 +33,8 @@ import * as Material from '@angular/material';
     Material.MatTooltipModule,
     Material.MatMenuModule,
     Material.MatSidenavModule,
-    Material.MatAutocompleteModule
+    Material.MatAutocompleteModule,
+    Material.MatGridListModule
   ],
   exports: [
     Material.MatToolbarModule,
@@ -63,7 +64,8 @@ import * as Material from '@angular/material';
     Material.MatTooltipModule,
     Material.MatMenuModule,
     Material.MatSidenavModule,
-    Material.MatAutocompleteModule
+    Material.MatAutocompleteModule,
+    Material.MatGridListModule
 
   ]
 })

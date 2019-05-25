@@ -1,0 +1,58 @@
+.field label{
+  width: 100px;
+  display: inline-block;
+  font-weight: 500;
+}
+
+.field span{
+  margin-left: 10px;
+}
+
+
+.field{
+  margin: 20px;
+}
+
+.testList{
+  width: 100%;
+}
+
+.split {
+  margin-top: 50px;
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+
+}
+.containor{
+  height:100%;
+}
+.col{
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+.tests{
+  max-height: 90vh;
+}
+.header{
+  background-color: #dedede;
+}
+.clearfix{
+  overflow: auto;
+}

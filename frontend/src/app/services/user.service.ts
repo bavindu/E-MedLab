@@ -50,4 +50,11 @@ export class UserService {
   getUserType(){
     return this.http.get('api/getUserType');
   }
+
+  getAllPatients(){
+    return this.http.get('api/getAllPatients');
+  }
+  getPatient(id){
+    return this.http.post('api/getPatient',{_id:id})
+  }
 }

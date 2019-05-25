@@ -3,6 +3,6 @@ export class User{
     firstName:string;
     lastName:string;
     email:string;
-    birthDay:Date;
+    birthDay:string;
     sex:string;
 }

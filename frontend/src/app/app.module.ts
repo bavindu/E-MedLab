@@ -51,6 +51,10 @@ import { LabEmployeeToolbarComponent } from './lab-employee/components/lab-emplo
 import { PatientToolbarComponent } from './patient/components/patient-toolbar/patient-toolbar.component';
 import { DownloadMultiplePdfComponent } from './patient/components/download-multiple-pdf/download-multiple-pdf.component';
 import {DatePipe} from "@angular/common";
+import { ViewAddedTestResultsListComponent } from './view-added-test-results-list/view-added-test-results-list.component';
+import { ViewPatientTestComponent } from './view-patient-test/view-patient-test.component';
+import { ViewPatientsComponent } from './admin/components/view-patients/view-patients.component';
+import { ViewPatientinfoComponent } from './admin/components/view-patientinfo/view-patientinfo.component';
 
 
 @NgModule({
@@ -81,7 +85,11 @@ import {DatePipe} from "@angular/common";
     PatientToolbarComponent,
     ErrorDialog,
     AddObservationDialog,
-    DownloadMultiplePdfComponent
+    DownloadMultiplePdfComponent,
+    ViewAddedTestResultsListComponent,
+    ViewPatientTestComponent,
+    ViewPatientsComponent,
+    ViewPatientinfoComponent
   ],
   imports: [
     BrowserModule,

@@ -9,7 +9,7 @@ let jwtVerify=function(req,res,next){
         console.log('no header')
     }
     if(!token){
-        console.log('no token provided')
+        console.log('no token provided');
         return res.status(403).send({auth:false,message:'no token provided'})
     }
     else{

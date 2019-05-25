@@ -1,0 +1,16 @@
+<div class="containor">
+  <div class="list" *ngIf="testList.length>0">
+    <mat-nav-list dense>
+      <mat-list-item *ngFor="let item of testList;let i=index" (click)="navigateTest(i)">
+        <h3 matLine> {{item?.testName}} </h3>
+        <p matLine> {{item?.patientId.userName}} </p>
+        <p matLine class="demo-2"> {{item?.date|date}} </p>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+    </mat-nav-list>
+  </div>
+  <div class="empty" *ngIf="testList.length===0">
+    <h3>No Tests</h3>
+  </div>
+</div>
+

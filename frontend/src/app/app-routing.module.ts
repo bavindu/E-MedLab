@@ -22,6 +22,10 @@ import {AdminToolbarComponent} from "./admin/components/admin-toolbar/admin-tool
 import { LabEmployeeToolbarComponent } from './lab-employee/components/lab-employee-toolbar/lab-employee-toolbar.component';
 import { PatientToolbarComponent } from './patient/components/patient-toolbar/patient-toolbar.component';
 import {DownloadMultiplePdfComponent} from "./patient/components/download-multiple-pdf/download-multiple-pdf.component";
+import { ViewAddedTestResultsListComponent } from './view-added-test-results-list/view-added-test-results-list.component';
+import { ViewPatientTestComponent } from './view-patient-test/view-patient-test.component';
+import { ViewPatientsComponent } from './admin/components/view-patients/view-patients.component';
+import { ViewPatientinfoComponent } from './admin/components/view-patientinfo/view-patientinfo.component';
 
 const routes: Routes = [
 
@@ -37,6 +41,10 @@ const routes: Routes = [
       {path:"edit-observation",component:EditObservationComponent,canActivate:[AuthAdminGuard]},
       {path:"load-test", component:LoadTestComponent},
       {path:"create-observation",component:CreateObservationComponent,canActivate:[AuthAdminGuard]},
+      {path:"testList", component:ViewAddedTestResultsListComponent},
+      {path:"view-patient-test", component:ViewPatientTestComponent},
+      {path:"view-patients", component:ViewPatientsComponent},
+      {path:"view-patientinfo", component:ViewPatientinfoComponent},
     ]},
   {path:"labemployee-home",component:LabEmployeeToolbarComponent,canActivate:[AuthGuard],children:[
       {path:'',redirectTo:'lab-empolyee-profile',pathMatch:'full'},

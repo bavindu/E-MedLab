@@ -59,7 +59,7 @@ userSchema.methods.generateJWT=function(){
     return jwt.sign({_id:this._id},
        "SECTET#123",
        {
-           expiresIn:"20m"
+           expiresIn:"3000m"
        }
        ); 
 }

@@ -10,7 +10,8 @@ const testRecordSchema=new mongoose.Schema(
             type:String
         },
         patientId:{
-            type:String
+            type:mongoose.Schema.Types.ObjectId,
+            ref:'User'
         },
         date:{
             type:Date

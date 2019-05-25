@@ -16,12 +16,6 @@ let addTestRecord=function(req,res){
     const inputobservations=req.body.inputobservations;
     console.log(req.body.inputobservations.length)
     for (let index = 0; index < req.body.inputobservations.length; index++) {
-
-        // const observation=new Observation();
-        // observation.observationValue=inputobservations[index].observationValue;
-        // observation._id=inputobservations[index].observationId;
-        // testRecord.observations.push(observation)
-
         testRecord.observations.push({
             observationValue:inputobservations[index].observationValue,
             observationId:inputobservations[index].observationId
@@ -66,6 +60,20 @@ let getTestRecord=function(req,res){
     })
 }
 
+let getAllTestRecord=function(req,res){
+    console.log('Inside get all test record');
+    TestRecord.find({},'testName patientId date').populate('patientId','userName').exec(function (err,doc) {
+        if(err){
+            console.log(err);
+            res.json("error")
+        }
+        else{
+            res.send(doc);
+        }
+    })
+
+};
+
 let getManyTestRecords=function(req,res){
     console.log("query params "+req.query.IdList);
     TestRecord.find({_id:{$in:req.query.IdList}}).populate('observations.observationId','unit referenceRange observationName').exec(function(err,doc){
@@ -78,9 +86,39 @@ let getManyTestRecords=function(req,res){
             res.send(doc);
         }
     })
-}
+};
+let deleteTestRecord=function(req,res){
+    TestRecord.deleteOne({_id:req.body._id},(err,doc)=>{
+        if(!err){
+            console.log("doc "+doc);
+            res.send('ok');
+        }
+        else{
+            console.log('error '+err);
+            res.send('error');
+        }
+    })
+};
+
+let getPatientsTestRecords=function(req,res){
+    console.log("*******get patients test record");
+    console.log("id "+req.body._id);
+    //{patientId:req.body._id}
+    TestRecord.find({patientId:req.body._id},'testName date',(err,doc)=>{
+        if(!err){
+            console.log("doc  "+JSON.stringify(doc));
+            res.send(doc);
+        }
+        else{
+            res.send('err');
+        }
+    })
+};
 
 module.exports.getTestRecord=getTestRecord;
 module.exports.getManyTestRecords=getManyTestRecords;
 module.exports.addTestRecord=addTestRecord;
 module.exports.getTestRecordName=getTestRecordName;
+module.exports.getAllTestRecord=getAllTestRecord;
+module.exports.deleteTestRecord=deleteTestRecord;
+module.exports.getPatientsTestRecords=getPatientsTestRecords;

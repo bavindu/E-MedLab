@@ -178,7 +178,7 @@ module.exports = ".mat-card-actions .flex-spacer {\r\n    width: 100%;\r\n  }\r\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"page\">\n  <div class=\"outer-containor\">\n    <div class=\"containor\" fxLayout=\"row\" fxLayout.xs=\"column\" fxLayoutWrap fxLayoutGap=\"5%\" fxLayoutAlign=\"center center\">\n      <div fxFlex=\"20%\">\n        <a [routerLink]=\"[ '../register']\" style=\"text-decoration:none\">\n          <div class=\"mycard mat-elevation-z5\">\n            <div class=\"my-img\">\n              <img src=\"assets/images/team.png\" alt=\"\">\n            </div>\n            <div class=\"content\">\n              <h4>Add User</h4>\n            </div>\n          </div>\n        </a>\n\n      </div>\n      <div fxFlex=\"20%\">\n        <a [routerLink]=\"[ '../create-test']\" style=\"text-decoration:none\">\n          <div class=\"mycard mat-elevation-z5\">\n            <div class=\"my-img\">\n              <img src=\"assets/images/test-tube.png\" alt=\"\">\n            </div>\n            <div class=\"content\">\n              <h4>Create Test</h4>\n            </div>\n          </div>\n        </a>\n      </div>\n      <div fxFlex=\"20%\">\n        <a [routerLink]=\"[ '../load-test']\" style=\"text-decoration:none\">\n          <div class=\"mycard mat-elevation-z5\">\n            <div class=\"my-img\">\n              <img src=\"assets/images/flask.png\" alt=\"\">\n            </div>\n            <div class=\"content\">\n              <h4>Add Test Results</h4>\n            </div>\n          </div>\n        </a>\n      </div>\n\n\n    </div>\n    <div class=\"containor\" fxLayout=\"row\" fxLayout.xs=\"column\" fxLayoutWrap fxLayoutGap=\"5%\" fxLayoutAlign=\"center center\">\n      <div fxFlex=\"20%\">\n        <a [routerLink]=\"[ '../create-observation']\" style=\"text-decoration:none\">\n          <div class=\"mycard mat-elevation-z5\" >\n            <div class=\"my-img\">\n              <img src=\"assets/images/petri-dish.png\" alt=\"\">\n            </div>\n            <div class=\"content\">\n              <h4>Add Observation</h4>\n            </div>\n          </div>\n        </a>\n      </div>\n      <div fxFlex=\"20%\">\n        <a [routerLink]=\"[ '../admin-edit-profile']\" style=\"text-decoration:none\">\n          <div class=\"mycard mat-elevation-z5\">\n            <div class=\"my-img\">\n              <img src=\"assets/images/curriculum.png\" alt=\"\">\n            </div>\n            <div class=\"content\">\n              <h4>Edit Profile</h4>\n            </div>\n          </div>\n        </a>\n\n      </div>\n      <div fxFlex=\"20%\">\n        <a [routerLink]=\"[ '../edit-test']\" style=\"text-decoration:none\">\n          <div class=\"mycard mat-elevation-z5\">\n            <div class=\"my-img\">\n              <img src=\"assets/images/flask-setting.png\" alt=\"\">\n            </div>\n            <div class=\"content\">\n              <h4>Edit Test</h4>\n            </div>\n          </div>\n        </a>\n\n      </div>\n\n    </div>\n    <div class=\"containor\" fxLayout=\"row\" fxLayout.xs=\"column\" fxLayoutWrap fxLayoutGap=\"5%\" fxLayoutAlign=\"center center\">\n\n      <div fxFlex=\"20%\">\n        <a [routerLink]=\"[ '../edit-observation']\" style=\"text-decoration:none\">\n          <div class=\"mycard mat-elevation-z5\">\n            <div class=\"my-img\">\n              <img src=\"assets/images/flask.png\" alt=\"\">\n            </div>\n            <div class=\"content\">\n              <h4>Edit Observation</h4>\n            </div>\n          </div>\n        </a>\n      </div>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div class=\"page\">\n  <div class=\"outer-containor\">\n    <div class=\"containor\" fxLayout=\"row\" fxLayout.xs=\"column\" fxLayoutWrap fxLayoutGap=\"5%\" fxLayoutAlign=\"center center\">\n      <div fxFlex=\"20%\">\n        <a [routerLink]=\"[ '../register']\" style=\"text-decoration:none\">\n          <div class=\"mycard mat-elevation-z5\">\n            <div class=\"my-img\">\n              <img src=\"assets/images/team.png\" alt=\"\">\n            </div>\n            <div class=\"content\">\n              <h4>Add User</h4>\n            </div>\n          </div>\n        </a>\n\n      </div>\n      <div fxFlex=\"20%\">\n        <a [routerLink]=\"[ '../create-test']\" style=\"text-decoration:none\">\n          <div class=\"mycard mat-elevation-z5\">\n            <div class=\"my-img\">\n              <img src=\"assets/images/test-tube.png\" alt=\"\">\n            </div>\n            <div class=\"content\">\n              <h4>Create Test</h4>\n            </div>\n          </div>\n        </a>\n      </div>\n      <div fxFlex=\"20%\">\n        <a [routerLink]=\"[ '../load-test']\" style=\"text-decoration:none\">\n          <div class=\"mycard mat-elevation-z5\">\n            <div class=\"my-img\">\n              <img src=\"assets/images/flask.png\" alt=\"\">\n            </div>\n            <div class=\"content\">\n              <h4>Add Test Results</h4>\n            </div>\n          </div>\n        </a>\n      </div>\n\n\n    </div>\n    <div class=\"containor\" fxLayout=\"row\" fxLayout.xs=\"column\" fxLayoutWrap fxLayoutGap=\"5%\" fxLayoutAlign=\"center center\">\n      <div fxFlex=\"20%\">\n        <a [routerLink]=\"[ '../create-observation']\" style=\"text-decoration:none\">\n          <div class=\"mycard mat-elevation-z5\" >\n            <div class=\"my-img\">\n              <img src=\"assets/images/petri-dish.png\" alt=\"\">\n            </div>\n            <div class=\"content\">\n              <h4>Add Observation</h4>\n            </div>\n          </div>\n        </a>\n      </div>\n      <div fxFlex=\"20%\">\n        <a [routerLink]=\"[ '../admin-edit-profile']\" style=\"text-decoration:none\">\n          <div class=\"mycard mat-elevation-z5\">\n            <div class=\"my-img\">\n              <img src=\"assets/images/curriculum.png\" alt=\"\">\n            </div>\n            <div class=\"content\">\n              <h4>Edit Profile</h4>\n            </div>\n          </div>\n        </a>\n\n      </div>\n      <div fxFlex=\"20%\">\n        <a [routerLink]=\"[ '../edit-test']\" style=\"text-decoration:none\">\n          <div class=\"mycard mat-elevation-z5\">\n            <div class=\"my-img\">\n              <img src=\"assets/images/flask-setting.png\" alt=\"\">\n            </div>\n            <div class=\"content\">\n              <h4>Edit Test</h4>\n            </div>\n          </div>\n        </a>\n\n      </div>\n\n    </div>\n    <div class=\"containor\" fxLayout=\"row\" fxLayout.xs=\"column\" fxLayoutWrap fxLayoutGap=\"5%\" fxLayoutAlign=\"center center\">\n\n      <div fxFlex=\"20%\">\n        <a [routerLink]=\"[ '../edit-observation']\" style=\"text-decoration:none\">\n          <div class=\"mycard mat-elevation-z5\">\n            <div class=\"my-img\">\n              <img src=\"assets/images/flask.png\" alt=\"\">\n            </div>\n            <div class=\"content\">\n              <h4>Edit Observation</h4>\n            </div>\n          </div>\n        </a>\n      </div>\n\n      <div fxFlex=\"20%\">\n        <a [routerLink]=\"[ '../testList']\" style=\"text-decoration:none\">\n          <div class=\"mycard mat-elevation-z5\">\n            <div class=\"my-img\">\n              <img src=\"assets/images/archive.png\" alt=\"\">\n            </div>\n            <div class=\"content\">\n              <h4>View Added Test Results</h4>\n            </div>\n          </div>\n        </a>\n      </div>\n\n      <div fxFlex=\"20%\">\n        <a [routerLink]=\"[ '../view-patients']\" style=\"text-decoration:none\">\n          <div class=\"mycard mat-elevation-z5\">\n            <div class=\"my-img\">\n              <img src=\"assets/images/find-my-friend.png\" alt=\"\">\n            </div>\n            <div class=\"content\">\n              <h4>View Patients</h4>\n            </div>\n          </div>\n        </a>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -1184,6 +1184,165 @@ var RegisterComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/admin/components/view-patientinfo/view-patientinfo.component.css":
+/*!**********************************************************************************!*\
+  !*** ./src/app/admin/components/view-patientinfo/view-patientinfo.component.css ***!
+  \**********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".field label{\r\n  width: 100px;\r\n  display: inline-block;\r\n  font-weight: 500;\r\n}\r\n\r\n.field span{\r\n  margin-left: 10px;\r\n}\r\n\r\n.field{\r\n  margin: 20px;\r\n}\r\n\r\n.testList{\r\n  width: 100%;\r\n}\r\n\r\n.split {\r\n  margin-top: 50px;\r\n  height: 100%;\r\n  width: 50%;\r\n  position: fixed;\r\n  z-index: 1;\r\n  top: 0;\r\n  overflow-x: hidden;\r\n  padding-top: 20px;\r\n}\r\n\r\n/* Control the left side */\r\n\r\n.left {\r\n  left: 0;\r\n\r\n}\r\n\r\n/* Control the right side */\r\n\r\n.right {\r\n  right: 0;\r\n\r\n}\r\n\r\n.containor{\r\n  height:100%;\r\n}\r\n\r\n.col{\r\n  width: 50%;\r\n  height: 100%;\r\n  float: left;\r\n}\r\n\r\n.tests{\r\n  max-height: 90vh;\r\n}\r\n\r\n.header{\r\n  background-color: #dedede;\r\n}\r\n\r\n.clearfix{\r\n  overflow: auto;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYWRtaW4vY29tcG9uZW50cy92aWV3LXBhdGllbnRpbmZvL3ZpZXctcGF0aWVudGluZm8uY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFlBQVk7RUFDWixxQkFBcUI7RUFDckIsZ0JBQWdCO0FBQ2xCOztBQUVBO0VBQ0UsaUJBQWlCO0FBQ25COztBQUdBO0VBQ0UsWUFBWTtBQUNkOztBQUVBO0VBQ0UsV0FBVztBQUNiOztBQUVBO0VBQ0UsZ0JBQWdCO0VBQ2hCLFlBQVk7RUFDWixVQUFVO0VBQ1YsZUFBZTtFQUNmLFVBQVU7RUFDVixNQUFNO0VBQ04sa0JBQWtCO0VBQ2xCLGlCQUFpQjtBQUNuQjs7QUFFQSwwQkFBMEI7O0FBQzFCO0VBQ0UsT0FBTzs7QUFFVDs7QUFFQSwyQkFBMkI7O0FBQzNCO0VBQ0UsUUFBUTs7QUFFVjs7QUFDQTtFQUNFLFdBQVc7QUFDYjs7QUFDQTtFQUNFLFVBQVU7RUFDVixZQUFZO0VBQ1osV0FBVztBQUNiOztBQUNBO0VBQ0UsZ0JBQWdCO0FBQ2xCOztBQUNBO0VBQ0UseUJBQXlCO0FBQzNCOztBQUNBO0VBQ0UsY0FBYztBQUNoQiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL2NvbXBvbmVudHMvdmlldy1wYXRpZW50aW5mby92aWV3LXBhdGllbnRpbmZvLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZmllbGQgbGFiZWx7XHJcbiAgd2lkdGg6IDEwMHB4O1xyXG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICBmb250LXdlaWdodDogNTAwO1xyXG59XHJcblxyXG4uZmllbGQgc3BhbntcclxuICBtYXJnaW4tbGVmdDogMTBweDtcclxufVxyXG5cclxuXHJcbi5maWVsZHtcclxuICBtYXJnaW46IDIwcHg7XHJcbn1cclxuXHJcbi50ZXN0TGlzdHtcclxuICB3aWR0aDogMTAwJTtcclxufVxyXG5cclxuLnNwbGl0IHtcclxuICBtYXJnaW4tdG9wOiA1MHB4O1xyXG4gIGhlaWdodDogMTAwJTtcclxuICB3aWR0aDogNTAlO1xyXG4gIHBvc2l0aW9uOiBmaXhlZDtcclxuICB6LWluZGV4OiAxO1xyXG4gIHRvcDogMDtcclxuICBvdmVyZmxvdy14OiBoaWRkZW47XHJcbiAgcGFkZGluZy10b3A6IDIwcHg7XHJcbn1cclxuXHJcbi8qIENvbnRyb2wgdGhlIGxlZnQgc2lkZSAqL1xyXG4ubGVmdCB7XHJcbiAgbGVmdDogMDtcclxuXHJcbn1cclxuXHJcbi8qIENvbnRyb2wgdGhlIHJpZ2h0IHNpZGUgKi9cclxuLnJpZ2h0IHtcclxuICByaWdodDogMDtcclxuXHJcbn1cclxuLmNvbnRhaW5vcntcclxuICBoZWlnaHQ6MTAwJTtcclxufVxyXG4uY29se1xyXG4gIHdpZHRoOiA1MCU7XHJcbiAgaGVpZ2h0OiAxMDAlO1xyXG4gIGZsb2F0OiBsZWZ0O1xyXG59XHJcbi50ZXN0c3tcclxuICBtYXgtaGVpZ2h0OiA5MHZoO1xyXG59XHJcbi5oZWFkZXJ7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogI2RlZGVkZTtcclxufVxyXG4uY2xlYXJmaXh7XHJcbiAgb3ZlcmZsb3c6IGF1dG87XHJcbn1cclxuIl19 */"
+
+/***/ }),
+
+/***/ "./src/app/admin/components/view-patientinfo/view-patientinfo.component.html":
+/*!***********************************************************************************!*\
+  !*** ./src/app/admin/components/view-patientinfo/view-patientinfo.component.html ***!
+  \***********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"containor\">\n  <div class=\"col clearfix\">\n    <div class=\"header \">\n      <h3>User details</h3>\n    </div>\n    <div class=\"info\">\n      <div class=\"field\">\n        <label >First Name</label>\n        <span>{{patient?.firstName}}</span>\n\n      </div>\n      <div class=\"field\">\n        <label >Last Name</label>\n        <span>{{patient?.lastName}}</span>\n\n      </div>\n      <div class=\"field\">\n        <label >User Name</label>\n        <span>{{patient?.userName}}</span>\n\n      </div>\n      <div class=\"field\">\n        <label >Sex</label>\n        <span>{{patient?.sex}}</span>\n      </div>\n      <div class=\"field\">\n        <label >email</label>\n        <span>{{patient?.email}}</span>\n\n      </div>\n    </div>\n  </div>\n  <div class=\"col clearfix\">\n    <div class=\"header\">\n      <h3>Test Results</h3>\n    </div>\n    <div class=\"tests\">\n      <mat-nav-list>\n        <mat-list-item *ngFor=\"let item of patientstestlis;let i=index\" (click)=\"navigate(i)\">\n          <h3 mat-line>{{item?.testName}}</h3>\n          <p mat-line>{{item?.date|date}}</p>\n        </mat-list-item>\n        <mat-divider></mat-divider>\n      </mat-nav-list>\n    </div>\n  </div>\n</div>\n\n<!--<mat-grid-list cols=\"2\" >-->\n<!--  <mat-grid-tile>-->\n<!--    <mat-grid-tile-header>User Details</mat-grid-tile-header>-->\n<!--    <div class=\"patients-info\">-->\n<!--      <div class=\"field\">-->\n<!--        <label >First Name</label>-->\n<!--        <span>{{patient?.firstName}}</span>-->\n\n<!--      </div>-->\n<!--      <div class=\"field\">-->\n<!--        <label >Last Name</label>-->\n<!--        <span>{{patient?.lastName}}</span>-->\n\n<!--      </div>-->\n<!--      <div class=\"field\">-->\n<!--        <label >User Name</label>-->\n<!--        <span>{{patient?.userName}}</span>-->\n\n<!--      </div>-->\n<!--      <div class=\"field\">-->\n<!--        <label >Sex</label>-->\n<!--        <span>{{patient?.sex}}</span>-->\n<!--      </div>-->\n<!--      <div class=\"field\">-->\n<!--        <label >email</label>-->\n<!--        <span>{{patient?.email}}</span>-->\n\n<!--      </div>-->\n<!--    </div>-->\n<!--  </mat-grid-tile>-->\n<!--  <mat-grid-tile colspan=\"1\" rowspan=\"1\">-->\n<!--    <mat-grid-tile-header>Tests</mat-grid-tile-header>-->\n<!--    <mat-nav-list>-->\n<!--      <mat-list-item *ngFor=\"let item of patientstestlis;let i=index\" (click)=\"navigate(i)\">-->\n<!--        <h3 mat-line>{{item?.testName}}</h3>-->\n<!--        <p mat-line>{{item?.date|date}}</p>-->\n<!--      </mat-list-item>-->\n<!--      <mat-divider></mat-divider>-->\n<!--    </mat-nav-list>-->\n<!--  </mat-grid-tile>-->\n<!--</mat-grid-list>-->\n"
+
+/***/ }),
+
+/***/ "./src/app/admin/components/view-patientinfo/view-patientinfo.component.ts":
+/*!*********************************************************************************!*\
+  !*** ./src/app/admin/components/view-patientinfo/view-patientinfo.component.ts ***!
+  \*********************************************************************************/
+/*! exports provided: ViewPatientinfoComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ViewPatientinfoComponent", function() { return ViewPatientinfoComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _services_user_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../services/user.service */ "./src/app/services/user.service.ts");
+/* harmony import */ var _services_test_form_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../services/test-form.service */ "./src/app/services/test-form.service.ts");
+
+
+
+
+
+var ViewPatientinfoComponent = /** @class */ (function () {
+    function ViewPatientinfoComponent(route, userService, testFormService, router) {
+        this.route = route;
+        this.userService = userService;
+        this.testFormService = testFormService;
+        this.router = router;
+    }
+    ViewPatientinfoComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.route.queryParams.subscribe(function (params) {
+            console.log("ID " + params._id);
+            _this.userService.getPatient(params._id).subscribe(function (res) {
+                console.log('patient ' + JSON.stringify(res));
+                _this.patient = res;
+            });
+            _this.testFormService.getPatientsTestRecords(params._id).subscribe(function (res) {
+                console.log("patient tests " + JSON.stringify(res));
+                _this.patientstestlis = res;
+            });
+        });
+    };
+    ViewPatientinfoComponent.prototype.navigate = function (i) {
+        this.router.navigate(['../view-patient-test'], { queryParams: { id: this.patientstestlis[i]._id, patientName: this.patient.userName }, relativeTo: this.route });
+    };
+    ViewPatientinfoComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-view-patientinfo',
+            template: __webpack_require__(/*! ./view-patientinfo.component.html */ "./src/app/admin/components/view-patientinfo/view-patientinfo.component.html"),
+            styles: [__webpack_require__(/*! ./view-patientinfo.component.css */ "./src/app/admin/components/view-patientinfo/view-patientinfo.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"],
+            _services_user_service__WEBPACK_IMPORTED_MODULE_3__["UserService"],
+            _services_test_form_service__WEBPACK_IMPORTED_MODULE_4__["TestFormService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
+    ], ViewPatientinfoComponent);
+    return ViewPatientinfoComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/admin/components/view-patients/view-patients.component.css":
+/*!****************************************************************************!*\
+  !*** ./src/app/admin/components/view-patients/view-patients.component.css ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL2NvbXBvbmVudHMvdmlldy1wYXRpZW50cy92aWV3LXBhdGllbnRzLmNvbXBvbmVudC5jc3MifQ== */"
+
+/***/ }),
+
+/***/ "./src/app/admin/components/view-patients/view-patients.component.html":
+/*!*****************************************************************************!*\
+  !*** ./src/app/admin/components/view-patients/view-patients.component.html ***!
+  \*****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"containor\">\n  <mat-nav-list >\n    <mat-list-item *ngFor=\"let item of patientsList;let i=index\" (click)=\"navigate(i)\">\n      {{item?.userName}}\n    </mat-list-item>\n    <mat-divider></mat-divider>\n  </mat-nav-list>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/admin/components/view-patients/view-patients.component.ts":
+/*!***************************************************************************!*\
+  !*** ./src/app/admin/components/view-patients/view-patients.component.ts ***!
+  \***************************************************************************/
+/*! exports provided: ViewPatientsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ViewPatientsComponent", function() { return ViewPatientsComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_user_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../services/user.service */ "./src/app/services/user.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+
+
+
+
+var ViewPatientsComponent = /** @class */ (function () {
+    function ViewPatientsComponent(userService, router, route) {
+        this.userService = userService;
+        this.router = router;
+        this.route = route;
+    }
+    ViewPatientsComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.userService.getAllPatients().subscribe(function (res) {
+            if (res) {
+                console.log("res " + JSON.stringify(res));
+                _this.patientsList = res;
+            }
+        });
+    };
+    ViewPatientsComponent.prototype.navigate = function (i) {
+        this.router.navigate(['../view-patientinfo'], { queryParams: { _id: this.patientsList[i]._id }, relativeTo: this.route });
+    };
+    ViewPatientsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-view-patients',
+            template: __webpack_require__(/*! ./view-patients.component.html */ "./src/app/admin/components/view-patients/view-patients.component.html"),
+            styles: [__webpack_require__(/*! ./view-patients.component.css */ "./src/app/admin/components/view-patients/view-patients.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]])
+    ], ViewPatientsComponent);
+    return ViewPatientsComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/app-routing.module.ts":
 /*!***************************************!*\
   !*** ./src/app/app-routing.module.ts ***!
@@ -1219,6 +1378,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _lab_employee_components_lab_employee_toolbar_lab_employee_toolbar_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./lab-employee/components/lab-employee-toolbar/lab-employee-toolbar.component */ "./src/app/lab-employee/components/lab-employee-toolbar/lab-employee-toolbar.component.ts");
 /* harmony import */ var _patient_components_patient_toolbar_patient_toolbar_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./patient/components/patient-toolbar/patient-toolbar.component */ "./src/app/patient/components/patient-toolbar/patient-toolbar.component.ts");
 /* harmony import */ var _patient_components_download_multiple_pdf_download_multiple_pdf_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./patient/components/download-multiple-pdf/download-multiple-pdf.component */ "./src/app/patient/components/download-multiple-pdf/download-multiple-pdf.component.ts");
+/* harmony import */ var _view_added_test_results_list_view_added_test_results_list_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./view-added-test-results-list/view-added-test-results-list.component */ "./src/app/view-added-test-results-list/view-added-test-results-list.component.ts");
+/* harmony import */ var _view_patient_test_view_patient_test_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./view-patient-test/view-patient-test.component */ "./src/app/view-patient-test/view-patient-test.component.ts");
+/* harmony import */ var _admin_components_view_patients_view_patients_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./admin/components/view-patients/view-patients.component */ "./src/app/admin/components/view-patients/view-patients.component.ts");
+/* harmony import */ var _admin_components_view_patientinfo_view_patientinfo_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./admin/components/view-patientinfo/view-patientinfo.component */ "./src/app/admin/components/view-patientinfo/view-patientinfo.component.ts");
+
+
+
+
 
 
 
@@ -1257,6 +1424,10 @@ var routes = [
             { path: "edit-observation", component: _admin_components_edit_observation_edit_observation_component__WEBPACK_IMPORTED_MODULE_20__["EditObservationComponent"], canActivate: [_auth_auth_admin_guard__WEBPACK_IMPORTED_MODULE_11__["AuthAdminGuard"]] },
             { path: "load-test", component: _load_test_load_test_component__WEBPACK_IMPORTED_MODULE_3__["LoadTestComponent"] },
             { path: "create-observation", component: _admin_components_create_observation_create_observation_component__WEBPACK_IMPORTED_MODULE_12__["CreateObservationComponent"], canActivate: [_auth_auth_admin_guard__WEBPACK_IMPORTED_MODULE_11__["AuthAdminGuard"]] },
+            { path: "testList", component: _view_added_test_results_list_view_added_test_results_list_component__WEBPACK_IMPORTED_MODULE_25__["ViewAddedTestResultsListComponent"] },
+            { path: "view-patient-test", component: _view_patient_test_view_patient_test_component__WEBPACK_IMPORTED_MODULE_26__["ViewPatientTestComponent"] },
+            { path: "view-patients", component: _admin_components_view_patients_view_patients_component__WEBPACK_IMPORTED_MODULE_27__["ViewPatientsComponent"] },
+            { path: "view-patientinfo", component: _admin_components_view_patientinfo_view_patientinfo_component__WEBPACK_IMPORTED_MODULE_28__["ViewPatientinfoComponent"] },
         ] },
     { path: "labemployee-home", component: _lab_employee_components_lab_employee_toolbar_lab_employee_toolbar_component__WEBPACK_IMPORTED_MODULE_22__["LabEmployeeToolbarComponent"], canActivate: [_auth_auth_guard__WEBPACK_IMPORTED_MODULE_10__["AuthGuard"]], children: [
             { path: '', redirectTo: 'lab-empolyee-profile', pathMatch: 'full' },
@@ -1433,6 +1604,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patient_components_patient_toolbar_patient_toolbar_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./patient/components/patient-toolbar/patient-toolbar.component */ "./src/app/patient/components/patient-toolbar/patient-toolbar.component.ts");
 /* harmony import */ var _patient_components_download_multiple_pdf_download_multiple_pdf_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./patient/components/download-multiple-pdf/download-multiple-pdf.component */ "./src/app/patient/components/download-multiple-pdf/download-multiple-pdf.component.ts");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _view_added_test_results_list_view_added_test_results_list_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./view-added-test-results-list/view-added-test-results-list.component */ "./src/app/view-added-test-results-list/view-added-test-results-list.component.ts");
+/* harmony import */ var _view_patient_test_view_patient_test_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./view-patient-test/view-patient-test.component */ "./src/app/view-patient-test/view-patient-test.component.ts");
+/* harmony import */ var _admin_components_view_patients_view_patients_component__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./admin/components/view-patients/view-patients.component */ "./src/app/admin/components/view-patients/view-patients.component.ts");
+/* harmony import */ var _admin_components_view_patientinfo_view_patientinfo_component__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./admin/components/view-patientinfo/view-patientinfo.component */ "./src/app/admin/components/view-patientinfo/view-patientinfo.component.ts");
+
+
+
+
 
 
 
@@ -1511,7 +1690,11 @@ var AppModule = /** @class */ (function () {
                 _patient_components_patient_toolbar_patient_toolbar_component__WEBPACK_IMPORTED_MODULE_39__["PatientToolbarComponent"],
                 _admin_components_create_observation_create_observation_component__WEBPACK_IMPORTED_MODULE_26__["ErrorDialog"],
                 _admin_components_create_test_create_test_component__WEBPACK_IMPORTED_MODULE_23__["AddObservationDialog"],
-                _patient_components_download_multiple_pdf_download_multiple_pdf_component__WEBPACK_IMPORTED_MODULE_40__["DownloadMultiplePdfComponent"]
+                _patient_components_download_multiple_pdf_download_multiple_pdf_component__WEBPACK_IMPORTED_MODULE_40__["DownloadMultiplePdfComponent"],
+                _view_added_test_results_list_view_added_test_results_list_component__WEBPACK_IMPORTED_MODULE_42__["ViewAddedTestResultsListComponent"],
+                _view_patient_test_view_patient_test_component__WEBPACK_IMPORTED_MODULE_43__["ViewPatientTestComponent"],
+                _admin_components_view_patients_view_patients_component__WEBPACK_IMPORTED_MODULE_44__["ViewPatientsComponent"],
+                _admin_components_view_patientinfo_view_patientinfo_component__WEBPACK_IMPORTED_MODULE_45__["ViewPatientinfoComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -2286,7 +2469,8 @@ var MaterialModule = /** @class */ (function () {
                 _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatTooltipModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatMenuModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSidenavModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatAutocompleteModule"]
+                _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatAutocompleteModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatGridListModule"]
             ],
             exports: [
                 _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatToolbarModule"],
@@ -2316,7 +2500,8 @@ var MaterialModule = /** @class */ (function () {
                 _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatTooltipModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatMenuModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSidenavModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatAutocompleteModule"]
+                _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatAutocompleteModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatGridListModule"]
             ]
         })
     ], MaterialModule);
@@ -2840,7 +3025,7 @@ module.exports = "table {\r\n    width: 100%;\r\n  }\r\n  \r\n  .mat-form-field 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"containor\" id=\"pdf\">\n    <div class=\"header\">\n        <div class=\"field\">\n          <label >Test Name</label>\n          <span>{{testName}}</span>\n          \n        </div>\n        <div class=\"field\">\n            <label >Name</label>\n            <span>{{user.firstName}}</span>\n        </div>\n        <div class=\"field\">\n          <label >Age</label>\n          <span>{{userAge}}</span>\n        </div>\n        <div class=\"field\">\n            <label >Date</label>\n            <span>{{date|date}}</span>\n        </div>\n        \n        \n      </div>\n      \n      <table mat-table [dataSource]=\"datasource\" class=\"mat-elevation-z8\">\n      \n          \n          <ng-container matColumnDef=\"tests\">\n            <th mat-header-cell *matHeaderCellDef> Test </th>\n            <td mat-cell *matCellDef=\"let element\"> {{element.test}} </td>\n          </ng-container> \n        \n          \n          <ng-container matColumnDef=\"value\">\n            <th mat-header-cell *matHeaderCellDef> Observation </th>\n            <td mat-cell *matCellDef=\"let element\"> {{element.observation}} </td>\n          </ng-container>\n        \n         \n          <ng-container matColumnDef=\"unit\">\n            <th mat-header-cell *matHeaderCellDef> Unit </th>\n            <td mat-cell *matCellDef=\"let element\"> {{element.unit}} </td>\n          </ng-container>\n        \n         \n          <ng-container matColumnDef=\"referenceRange\">\n            <th mat-header-cell *matHeaderCellDef> Refference Range </th>\n            <td mat-cell *matCellDef=\"let element\"> {{element.referenceRange}} </td>\n          </ng-container>\n        \n          <tr mat-header-row *matHeaderRowDef=\"displayedColums\" class=\"header-row\"></tr>\n          <tr mat-row *matRowDef=\"let row; columns: displayedColums;\"></tr>\n      </table>\n        \n</div>\n<div class=\"footer\">\n  <button mat-raised-button color=\"primary\"\n      matBadge=\"value\" matBadgePosition=\"postion\"\n      matBadeColor=\"red\" (click)=\"download()\">Download\n  </button>\n</div>\n"
+module.exports = "<div class=\"containor\" id=\"pdf\">\n    <div class=\"header\">\n        <div class=\"field\">\n          <label >Test Name</label>\n          <span>{{testName}}</span>\n          \n        </div>\n        <div class=\"field\">\n            <label >Name</label>\n            <span>{{user?.firstName}}</span>\n        </div>\n        <div class=\"field\">\n          <label >Age</label>\n          <span>{{userAge}}</span>\n        </div>\n        <div class=\"field\">\n            <label >Date</label>\n            <span>{{date|date}}</span>\n        </div>\n        \n        \n      </div>\n      \n      <table mat-table [dataSource]=\"datasource\" class=\"mat-elevation-z8\">\n      \n          \n          <ng-container matColumnDef=\"tests\">\n            <th mat-header-cell *matHeaderCellDef> Test </th>\n            <td mat-cell *matCellDef=\"let element\"> {{element.test}} </td>\n          </ng-container> \n        \n          \n          <ng-container matColumnDef=\"value\">\n            <th mat-header-cell *matHeaderCellDef> Observation </th>\n            <td mat-cell *matCellDef=\"let element\"> {{element.observation}} </td>\n          </ng-container>\n        \n         \n          <ng-container matColumnDef=\"unit\">\n            <th mat-header-cell *matHeaderCellDef> Unit </th>\n            <td mat-cell *matCellDef=\"let element\"> {{element.unit}} </td>\n          </ng-container>\n        \n         \n          <ng-container matColumnDef=\"referenceRange\">\n            <th mat-header-cell *matHeaderCellDef> Refference Range </th>\n            <td mat-cell *matCellDef=\"let element\"> {{element.referenceRange}} </td>\n          </ng-container>\n        \n          <tr mat-header-row *matHeaderRowDef=\"displayedColums\" class=\"header-row\"></tr>\n          <tr mat-row *matRowDef=\"let row; columns: displayedColums;\"></tr>\n      </table>\n        \n</div>\n<div class=\"footer\">\n  <button mat-raised-button color=\"primary\"\n      matBadge=\"value\" matBadgePosition=\"postion\"\n      matBadeColor=\"red\" (click)=\"download()\">Download\n  </button>\n</div>\n"
 
 /***/ }),
 
@@ -2884,11 +3069,11 @@ var ViewTestComponent = /** @class */ (function () {
     }
     ViewTestComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.userService.getUserProfile().subscribe(function (user) {
-            _this.user = user.user;
-            console.log('user ' + JSON.stringify(user));
-        });
         this.datasource = new _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatTableDataSource"]();
+        this.userService.getUserProfile().subscribe(function (resuser) {
+            _this.user = resuser.user;
+            console.log(JSON.stringify(resuser));
+        });
         this.oninitfunction();
     };
     ViewTestComponent.prototype.oninitfunction = function () {
@@ -3443,6 +3628,15 @@ var TestFormService = /** @class */ (function () {
     TestFormService.prototype.getManyTest = function (testidlist) {
         return this.http.get('api/getManyTestRecord', { params: { IdList: testidlist } });
     };
+    TestFormService.prototype.getAllTestList = function () {
+        return this.http.get('api/getAllTestRecord');
+    };
+    TestFormService.prototype.deleterTestRecord = function (id) {
+        return this.http.post('api/deleteTestRecord', { '_id': id });
+    };
+    TestFormService.prototype.getPatientsTestRecords = function (id) {
+        return this.http.post('api/getPatientsTestRecords', { '_id': id });
+    };
     TestFormService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
             providedIn: 'root'
@@ -3511,6 +3705,12 @@ var UserService = /** @class */ (function () {
     UserService.prototype.getUserType = function () {
         return this.http.get('api/getUserType');
     };
+    UserService.prototype.getAllPatients = function () {
+        return this.http.get('api/getAllPatients');
+    };
+    UserService.prototype.getPatient = function (id) {
+        return this.http.post('api/getPatient', { _id: id });
+    };
     UserService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
             providedIn: 'root'
@@ -3542,7 +3742,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- {{this.testTemplate|json}} -->\n<div >\n    <mat-card>\n        <mat-card-header>\n            <mat-card-title>{{testTemplate.testName}}</mat-card-title>\n        </mat-card-header>\n        \n        <mat-card-content>\n            \n            <form [formGroup]='testForm'>\n\n                <mat-form-field>\n                    <input type=\"text\" matInput placeholder=\"Patient Name\" formControlName='patientId' (keyup)=\"search($event)\" [matAutocomplete]=\"auto\">\n                </mat-form-field>\n                <mat-autocomplete #auto=\"matAutocomplete\" >\n                    <mat-option *ngFor=\"let item of searchResults\" [value]=\"item[1]\">{{item[0]}}</mat-option>\n                </mat-autocomplete>\n              <div *ngIf=\"patientId.invalid && (patientId.dirty || patientId.touched)\"\n                   class=\"alert alert-danger\">\n                <div *ngIf=\"patientId.errors.required\">\n                  Patient's Name is required.\n                </div>\n              </div>\n\n                <br>\n\n                <mat-form-field>\n                        <input matInput [matDatepicker]=\"picker\" placeholder=\"Choose a date\" formControlName=\"date\">\n                        <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\n                        <mat-datepicker #picker></mat-datepicker>\n                </mat-form-field>\n              <div *ngIf=\"date.invalid && (date.dirty || date.touched)\"\n                   class=\"alert alert-danger\">\n                <div *ngIf=\"date.errors.required\">\n                  Date is required.\n                </div>\n              </div>\n  \n                <br>\n\n                <div formArrayName=\"inputobservations\" *ngFor=\"let observation of observations;let i=index\">\n                    <div [formGroupName]=\"i\" *ngIf=\"observation.hasOwnProperty('unit') && observation.codedValues.length===0\">\n                        <mat-form-field>\n                            <input type=\"number\" matInput placeholder=\"{{observation.observationName}}\" formControlName='observationValue'>\n                        </mat-form-field>\n                      <div *ngIf=\"getObservationName(i).invalid && (getObservationName(i).dirty || getObservationName(i).touched)\"\n                           class=\"alert alert-danger\">\n                        <div *ngIf=\"getObservationName(i).errors.required\">\n                          Value is required.\n                        </div>\n                      </div>\n                    </div>\n                    <div [formGroupName]=\"i\" *ngIf=\"observation.hasOwnProperty('codedValues') && observation.codedValues.length!==0\">\n                        <mat-form-field>\n                            <mat-label>{{observation.observationName}}</mat-label>\n                            <mat-select formControlName='observationValue'>\n                              <mat-option *ngFor=\"let codedValue of observation.codedValues\" [value]=\"codedValue\" >\n                                {{codedValue}}\n                              </mat-option>\n                            </mat-select>\n                          </mat-form-field>\n                      <div *ngIf=\"getObservationName(i).invalid && (getObservationName(i).dirty || getObservationName(i).touched)\"\n                           class=\"alert alert-danger\">\n                        <div *ngIf=\"getObservationName(i).errors.required\">\n                          Value is required.\n                        </div>\n                      </div>\n\n                    </div>\n                </div >\n                <mat-form-field >\n                  <textarea matInput placeholder=\"Comments\" name=\"\" id=\"\" cols=\"30\" rows=\"10\"  formControlName=\"comments\"></textarea>\n                </mat-form-field>\n                <br>\n                <button mat-raised-button (click)=\"addTestResults()\" color=\"primary\">Submit</button>\n            </form>\n            \n        </mat-card-content>\n    </mat-card>\n</div>\n\n\n\n\n"
+module.exports = "<!-- {{this.testTemplate|json}} -->\n<div >\n    <mat-card>\n        <mat-card-header>\n            <mat-card-title>{{testTemplate?.testName}}</mat-card-title>\n        </mat-card-header>\n        \n        <mat-card-content>\n            \n            <form [formGroup]='testForm'>\n\n                <mat-form-field>\n                    <input type=\"text\" matInput placeholder=\"Patient Name\" formControlName='patientId' (keyup)=\"search($event)\" [matAutocomplete]=\"auto\">\n                </mat-form-field>\n                <mat-autocomplete #auto=\"matAutocomplete\" >\n                    <mat-option *ngFor=\"let item of searchResults\" [value]=\"item[1]\">{{item[0]}}</mat-option>\n                </mat-autocomplete>\n              <div *ngIf=\"patientId.invalid && (patientId.dirty || patientId.touched)\"\n                   class=\"alert alert-danger\">\n                <div *ngIf=\"patientId.errors.required\">\n                  Patient's Name is required.\n                </div>\n              </div>\n\n                <br>\n\n                <mat-form-field>\n                        <input matInput [matDatepicker]=\"picker\" placeholder=\"Choose a date\" formControlName=\"date\">\n                        <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\n                        <mat-datepicker #picker></mat-datepicker>\n                </mat-form-field>\n              <div *ngIf=\"date.invalid && (date.dirty || date.touched)\"\n                   class=\"alert alert-danger\">\n                <div *ngIf=\"date.errors.required\">\n                  Date is required.\n                </div>\n              </div>\n  \n                <br>\n\n                <div formArrayName=\"inputobservations\" *ngFor=\"let observation of observations;let i=index\">\n                    <div [formGroupName]=\"i\" *ngIf=\"observation.hasOwnProperty('unit') && observation.codedValues.length===0\">\n                        <mat-form-field>\n                            <input type=\"number\" matInput placeholder=\"{{observation.observationName}}\" formControlName='observationValue'>\n                        </mat-form-field>\n                      <div *ngIf=\"getObservationName(i).invalid && (getObservationName(i).dirty || getObservationName(i).touched)\"\n                           class=\"alert alert-danger\">\n                        <div *ngIf=\"getObservationName(i).errors.required\">\n                          Value is required.\n                        </div>\n                      </div>\n                    </div>\n                    <div [formGroupName]=\"i\" *ngIf=\"observation.hasOwnProperty('codedValues') && observation.codedValues.length!==0\">\n                        <mat-form-field>\n                            <mat-label>{{observation.observationName}}</mat-label>\n                            <mat-select formControlName='observationValue'>\n                              <mat-option *ngFor=\"let codedValue of observation.codedValues\" [value]=\"codedValue\" >\n                                {{codedValue}}\n                              </mat-option>\n                            </mat-select>\n                          </mat-form-field>\n                      <div *ngIf=\"getObservationName(i).invalid && (getObservationName(i).dirty || getObservationName(i).touched)\"\n                           class=\"alert alert-danger\">\n                        <div *ngIf=\"getObservationName(i).errors.required\">\n                          Value is required.\n                        </div>\n                      </div>\n\n                    </div>\n                </div >\n                <mat-form-field >\n                  <textarea matInput placeholder=\"Comments\" name=\"\" id=\"\" cols=\"30\" rows=\"10\"  formControlName=\"comments\"></textarea>\n                </mat-form-field>\n                <br>\n                <button mat-raised-button (click)=\"addTestResults()\" color=\"primary\">Submit</button>\n            </form>\n            \n        </mat-card-content>\n    </mat-card>\n</div>\n\n\n\n\n"
 
 /***/ }),
 
@@ -3696,6 +3896,190 @@ var TestFormComponent = /** @class */ (function () {
             _services_login_service__WEBPACK_IMPORTED_MODULE_6__["LoginService"]])
     ], TestFormComponent);
     return TestFormComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/view-added-test-results-list/view-added-test-results-list.component.css":
+/*!*****************************************************************************************!*\
+  !*** ./src/app/view-added-test-results-list/view-added-test-results-list.component.css ***!
+  \*****************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "p{\r\n  font-size: medium;\r\n}\r\nh3{\r\n  font-size: medium;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdmlldy1hZGRlZC10ZXN0LXJlc3VsdHMtbGlzdC92aWV3LWFkZGVkLXRlc3QtcmVzdWx0cy1saXN0LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxpQkFBaUI7QUFDbkI7QUFDQTtFQUNFLGlCQUFpQjtBQUNuQiIsImZpbGUiOiJzcmMvYXBwL3ZpZXctYWRkZWQtdGVzdC1yZXN1bHRzLWxpc3Qvdmlldy1hZGRlZC10ZXN0LXJlc3VsdHMtbGlzdC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsicHtcclxuICBmb250LXNpemU6IG1lZGl1bTtcclxufVxyXG5oM3tcclxuICBmb250LXNpemU6IG1lZGl1bTtcclxufVxyXG4iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/view-added-test-results-list/view-added-test-results-list.component.html":
+/*!******************************************************************************************!*\
+  !*** ./src/app/view-added-test-results-list/view-added-test-results-list.component.html ***!
+  \******************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"containor\">\n  <div class=\"list\" *ngIf=\"testList.length>0\">\n    <mat-nav-list dense>\n      <mat-list-item *ngFor=\"let item of testList;let i=index\" (click)=\"navigateTest(i)\">\n        <h3 matLine> {{item?.testName}} </h3>\n        <p matLine> {{item?.patientId.userName}} </p>\n        <p matLine class=\"demo-2\"> {{item?.date|date}} </p>\n      </mat-list-item>\n      <mat-divider></mat-divider>\n    </mat-nav-list>\n  </div>\n  <div class=\"empty\" *ngIf=\"testList.length===0\">\n    <h3>No Tests</h3>\n  </div>\n</div>\n\n"
+
+/***/ }),
+
+/***/ "./src/app/view-added-test-results-list/view-added-test-results-list.component.ts":
+/*!****************************************************************************************!*\
+  !*** ./src/app/view-added-test-results-list/view-added-test-results-list.component.ts ***!
+  \****************************************************************************************/
+/*! exports provided: ViewAddedTestResultsListComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ViewAddedTestResultsListComponent", function() { return ViewAddedTestResultsListComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_test_form_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/test-form.service */ "./src/app/services/test-form.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+
+
+
+
+var ViewAddedTestResultsListComponent = /** @class */ (function () {
+    function ViewAddedTestResultsListComponent(testFormService, router, route) {
+        this.testFormService = testFormService;
+        this.router = router;
+        this.route = route;
+        this.testList = [];
+    }
+    ViewAddedTestResultsListComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.testFormService.getAllTestList().subscribe(function (res) {
+            console.log(JSON.stringify(res));
+            res.forEach(function (element) {
+                _this.testList.push(element);
+            });
+        });
+    };
+    ViewAddedTestResultsListComponent.prototype.navigateTest = function (i) {
+        console.log(this.testList[i]._id);
+        this.router.navigate(['../view-patient-test'], { queryParams: { id: this.testList[i]._id, patientName: this.testList[i].patientId.userName }, relativeTo: this.route });
+    };
+    ViewAddedTestResultsListComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-view-added-test-results-list',
+            template: __webpack_require__(/*! ./view-added-test-results-list.component.html */ "./src/app/view-added-test-results-list/view-added-test-results-list.component.html"),
+            styles: [__webpack_require__(/*! ./view-added-test-results-list.component.css */ "./src/app/view-added-test-results-list/view-added-test-results-list.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_test_form_service__WEBPACK_IMPORTED_MODULE_2__["TestFormService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]])
+    ], ViewAddedTestResultsListComponent);
+    return ViewAddedTestResultsListComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/view-patient-test/view-patient-test.component.css":
+/*!*******************************************************************!*\
+  !*** ./src/app/view-patient-test/view-patient-test.component.css ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "table {\r\n  width: 100%;\r\n}\r\n\r\n.table-containor{\r\n  padding: 20px;\r\n}\r\n\r\n.info{\r\n  padding: 20px;\r\n}\r\n\r\n.field label{\r\n  width: 100px;\r\n  display: inline-block;\r\n  font-weight: 500;\r\n}\r\n\r\n.footer{\r\n  padding: 20px;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdmlldy1wYXRpZW50LXRlc3Qvdmlldy1wYXRpZW50LXRlc3QuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFdBQVc7QUFDYjs7QUFFQTtFQUNFLGFBQWE7QUFDZjs7QUFDQTtFQUNFLGFBQWE7QUFDZjs7QUFFQTtFQUNFLFlBQVk7RUFDWixxQkFBcUI7RUFDckIsZ0JBQWdCO0FBQ2xCOztBQUVBO0VBQ0UsYUFBYTtBQUNmIiwiZmlsZSI6InNyYy9hcHAvdmlldy1wYXRpZW50LXRlc3Qvdmlldy1wYXRpZW50LXRlc3QuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbInRhYmxlIHtcclxuICB3aWR0aDogMTAwJTtcclxufVxyXG5cclxuLnRhYmxlLWNvbnRhaW5vcntcclxuICBwYWRkaW5nOiAyMHB4O1xyXG59XHJcbi5pbmZve1xyXG4gIHBhZGRpbmc6IDIwcHg7XHJcbn1cclxuXHJcbi5maWVsZCBsYWJlbHtcclxuICB3aWR0aDogMTAwcHg7XHJcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gIGZvbnQtd2VpZ2h0OiA1MDA7XHJcbn1cclxuXHJcbi5mb290ZXJ7XHJcbiAgcGFkZGluZzogMjBweDtcclxufVxyXG4iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/view-patient-test/view-patient-test.component.html":
+/*!********************************************************************!*\
+  !*** ./src/app/view-patient-test/view-patient-test.component.html ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"containor\">\n\n  <div class=\"info\">\n    <div class=\"field\">\n      <label >Test Name</label>\n      <span>{{testName}}</span>\n    </div>\n    <div class=\"field\">\n      <label >Patient</label>\n      <span>{{userName}}</span>\n    </div>\n  </div>\n  <div class=\"table-containor\">\n    <table mat-table [dataSource]=\"datasource\" class=\"mat-elevation-z8\">\n\n\n      <ng-container matColumnDef=\"tests\">\n        <th mat-header-cell *matHeaderCellDef> Test </th>\n        <td mat-cell *matCellDef=\"let element\"> {{element.test}} </td>\n      </ng-container>\n\n\n      <ng-container matColumnDef=\"value\">\n        <th mat-header-cell *matHeaderCellDef> Observation </th>\n        <td mat-cell *matCellDef=\"let element\"> {{element.observation}} </td>\n      </ng-container>\n\n\n      <ng-container matColumnDef=\"unit\">\n        <th mat-header-cell *matHeaderCellDef> Unit </th>\n        <td mat-cell *matCellDef=\"let element\"> {{element.unit}} </td>\n      </ng-container>\n\n\n      <ng-container matColumnDef=\"referenceRange\">\n        <th mat-header-cell *matHeaderCellDef> Refference Range </th>\n        <td mat-cell *matCellDef=\"let element\"> {{element.referenceRange}} </td>\n      </ng-container>\n\n      <tr mat-header-row *matHeaderRowDef=\"displayedColums\" class=\"header-row\"></tr>\n      <tr mat-row *matRowDef=\"let row; columns: displayedColums;\"></tr>\n    </table>\n  </div>\n  <div class=\"footer\">\n    <button mat-raised-button color=\"primary\" (click)=\"delete()\">Delete</button>\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/view-patient-test/view-patient-test.component.ts":
+/*!******************************************************************!*\
+  !*** ./src/app/view-patient-test/view-patient-test.component.ts ***!
+  \******************************************************************/
+/*! exports provided: ViewPatientTestComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ViewPatientTestComponent", function() { return ViewPatientTestComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_test_form_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/test-form.service */ "./src/app/services/test-form.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+
+
+
+
+
+
+var ViewPatientTestComponent = /** @class */ (function () {
+    function ViewPatientTestComponent(testFormServise, route) {
+        this.testFormServise = testFormServise;
+        this.route = route;
+        this.observations = [];
+        this.displayedColums = ['tests', 'value', 'unit', 'referenceRange'];
+        this.testValueData = [];
+    }
+    ViewPatientTestComponent.prototype.ngOnInit = function () {
+        this.datasource = new _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatTableDataSource"]();
+        this.createTestForm();
+    };
+    ViewPatientTestComponent.prototype.createTestForm = function () {
+        var _this = this;
+        this.route.queryParams.subscribe(function (params) {
+            _this.id = params.id;
+            _this.userName = params.patientName;
+            _this.testFormServise.getTestResults(_this.id).subscribe(function (data) {
+                _this.testResults = data;
+                console.log(_this.testResults);
+                _this.testName = data.testName;
+                console.log('this is data  ' + data.testName);
+                data.observations.forEach(function (element) {
+                    var tunit;
+                    var trrange;
+                    if (element.observationId.unit === undefined) {
+                        tunit = 'NA';
+                        trrange = 'NA';
+                    }
+                    else {
+                        tunit = element.observationId.unit;
+                        trrange = element.observationId.referenceRange;
+                    }
+                    var jobj = { test: element.observationId.observationName, observation: element.observationValue, unit: tunit, referenceRange: trrange };
+                    _this.testValueData.push(jobj);
+                });
+                console.log(_this.testValueData);
+                _this.datasource.data = _this.testValueData;
+            });
+        });
+    };
+    ViewPatientTestComponent.prototype.delete = function () {
+        this.testFormServise.deleterTestRecord(this.id).subscribe(function (res) {
+            console.log('res ' + res);
+        });
+    };
+    ViewPatientTestComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-view-patient-test',
+            template: __webpack_require__(/*! ./view-patient-test.component.html */ "./src/app/view-patient-test/view-patient-test.component.html"),
+            providers: [_angular_common__WEBPACK_IMPORTED_MODULE_4__["DatePipe"]],
+            styles: [__webpack_require__(/*! ./view-patient-test.component.css */ "./src/app/view-patient-test/view-patient-test.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_test_form_service__WEBPACK_IMPORTED_MODULE_2__["TestFormService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]])
+    ], ViewPatientTestComponent);
+    return ViewPatientTestComponent;
 }());
 
 

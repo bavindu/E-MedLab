@@ -44,11 +44,11 @@ export class ViewTestComponent implements OnInit {
     ) { }
 
   ngOnInit() {
-    this.userService.getUserProfile().subscribe((user:any) => {
-      this.user = user.user;
-      console.log('user '+JSON.stringify(user))
-    });
     this.datasource = new MatTableDataSource();
+    this.userService.getUserProfile().subscribe((resuser:any)=>{
+      this.user=resuser.user;
+      console.log(JSON.stringify(resuser));
+    });
     this.oninitfunction();
 
 

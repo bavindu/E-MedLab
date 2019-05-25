@@ -23,5 +23,16 @@ export class TestFormService {
     return this.http.get('api/getManyTestRecord',{params:{IdList:testidlist}})
   }
 
+  getAllTestList(){
+    return this.http.get('api/getAllTestRecord')
+  }
+
+  deleterTestRecord(id){
+    return this.http.post('api/deleteTestRecord',{'_id':id})
+  }
+  getPatientsTestRecords(id){
+    return this.http.post('api/getPatientsTestRecords',{'_id':id})
+  }
+
 }
 

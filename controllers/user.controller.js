@@ -126,6 +126,18 @@ let searchPatient=function(req,res){
     
 }
 
+let getAllPatients=function(req,res){
+    User.find({userType:'patient'},(err,doc)=>{
+        if(!err){
+            res.send(doc);
+        }
+        else{
+            console.log(err);
+            res.send('err');
+        }
+    })
+}
+
 let getUserType=function(req,res){
     console.log('inside get user type')
     User.findById(req._id,"userType",(err,data)=>{
@@ -137,6 +149,16 @@ let getUserType=function(req,res){
         }
     })
 }
+let getPatient=function(req,res){
+    User.findById(req.body._id,(err,doc)=>{
+        if(!err){
+            res.send(doc);
+        }
+        else{
+            res.send(err);
+        }
+    })
+}
 
 
 module.exports.searchPatient=searchPatient;
@@ -145,3 +167,5 @@ module.exports.addUser=addUser;
 module.exports.authenticate=authenticate;
 module.exports.userProfile=userProfile;
 module.exports.getUserType=getUserType;
+module.exports.getAllPatients=getAllPatients;
+module.exports.getPatient=getPatient;
