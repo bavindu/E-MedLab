@@ -1,0 +1,9 @@
+.outer-containor{
+  margin-top:70px;
+}
+
+.containor{
+  text-align: center;
+  width:50%;
+  margin: 0 auto;
+}

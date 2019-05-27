@@ -2,7 +2,44 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f42d4413-c241-430d-be2f-c547b72d4ce1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/models/metaModels/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/metaModels/db.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/frontend/8766_edit_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/frontend/assets/images/404-error.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/frontend/assets/images/8766_edit_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/frontend/assets/images/archive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/frontend/assets/images/curriculum.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/frontend/assets/images/eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/frontend/assets/images/file.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/frontend/assets/images/find-my-friend.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/frontend/assets/images/flask-setting.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/frontend/assets/images/flask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/frontend/assets/images/logo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/frontend/assets/images/petri-dish-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/frontend/assets/images/petri-dish.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/frontend/assets/images/settings.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/frontend/assets/images/team.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/frontend/assets/images/template/pdf-template.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/frontend/assets/images/test-tube.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/frontend/assets/images/view-flask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/frontend/es2015-polyfills.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/frontend/es2015-polyfills.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/frontend/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/frontend/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/frontend/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/frontend/main.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/frontend/polyfills.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/frontend/polyfills.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/frontend/runtime.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/frontend/runtime.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/frontend/styles.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/frontend/styles.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/frontend/vendor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/frontend/vendor.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin/components/admin-profile/admin-profile.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin/components/admin-profile/admin-profile.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin/components/create-test/create-test.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin/components/create-test/create-test.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/test-form/test-form.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/test-form/test-form.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/test-form/test-form.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/test-form/test-form.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,62 +53,51 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/user.controller.test.js">
+        <entry file="file://$PROJECT_DIR$/frontend/src/app/admin/components/register/register.component.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/app/admin/components/register/register.component.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="122" column="15" selection-start-line="114" selection-start-column="8" selection-end-line="122" selection-end-column="15" />
+            <state relative-caret-position="115">
+              <caret line="5" column="19" selection-start-line="4" selection-start-column="4" selection-end-line="5" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server.js">
+        <entry file="file://$PROJECT_DIR$/frontend/src/app/test-form/test-form.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="34" column="3" selection-start-line="34" selection-start-column="3" selection-end-line="34" selection-end-column="3" />
+            <state relative-caret-position="115">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/metaObservation.test.js">
+        <entry file="file://$PROJECT_DIR$/frontend/src/app/test-form/test-form.component.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="828">
-              <caret line="63" column="16" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="16" />
+            <state relative-caret-position="115">
+              <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/app/admin/components/admin-edit-profile/admin-edit-profile.component.html">
+        <entry file="file://$PROJECT_DIR$/frontend/src/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1085" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/app/admin/components/admin-profile/admin-profile.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2208">
-              <caret line="96" column="12" selection-start-line="96" selection-start-column="12" selection-end-line="96" selection-end-column="12" />
+            <state relative-caret-position="115">
+              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/models/metaModels/db.js">
+        <entry file="file://$PROJECT_DIR$/frontend/src/app/admin/components/admin-profile/admin-profile.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="24" column="84" selection-start-line="24" selection-start-column="84" selection-end-line="24" selection-end-column="84" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/config.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="10" column="105" lean-forward="true" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="105" />
+            <state relative-caret-position="111">
+              <caret line="90" column="55" selection-start-line="90" selection-start-column="55" selection-end-line="90" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -97,10 +123,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/frontend/src/app/view-patient-test/view-patient-test.component.spec.ts" />
-        <option value="$PROJECT_DIR$/frontend/src/app/admin/components/admin-edit-profile/admin-edit-profile.component.spec.ts" />
-        <option value="$PROJECT_DIR$/frontend/src/app/admin/components/admin-profile/admin-profile.component.spec.ts" />
-        <option value="$PROJECT_DIR$/frontend/src/app/admin/components/admin-toolbar/admin-toolbar.component.spec.ts" />
         <option value="$PROJECT_DIR$/frontend/src/app/admin/components/create-observation/create-observation.component.spec.ts" />
         <option value="$PROJECT_DIR$/frontend/src/app/admin/components/create-test/create-test.component.spec.ts" />
         <option value="$PROJECT_DIR$/frontend/src/app/admin/components/edit-observation/edit-observation.component.spec.ts" />
@@ -146,13 +168,18 @@
         <option value="$PROJECT_DIR$/test/user.controller.test.js" />
         <option value="$PROJECT_DIR$/test/metaObservation.test.js" />
         <option value="$PROJECT_DIR$/config/config.json" />
-        <option value="$PROJECT_DIR$/frontend/src/app/admin/components/admin-profile/admin-profile.component.html" />
         <option value="$PROJECT_DIR$/models/metaModels/db.js" />
+        <option value="$PROJECT_DIR$/frontend/src/app/admin/components/create-test/create-test.component.css" />
+        <option value="$PROJECT_DIR$/frontend/src/app/test-form/test-form.component.css" />
+        <option value="$PROJECT_DIR$/frontend/src/app/test-form/test-form.component.html" />
+        <option value="$PROJECT_DIR$/frontend/src/index.html" />
+        <option value="$PROJECT_DIR$/frontend/src/app/admin/components/admin-profile/admin-profile.component.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-74" />
+    <option name="x" value="328" />
+    <option name="y" value="36" />
     <option name="width" value="1208" />
     <option name="height" value="1040" />
   </component>
@@ -178,6 +205,51 @@
               <item name="seproject" type="b2602c69:ProjectViewProjectNode" />
               <item name="seproject" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="seproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="seproject" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="seproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="seproject" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="seproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="seproject" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="seproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="seproject" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="seproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="seproject" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="seproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="seproject" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="admin-profile" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="seproject" type="b2602c69:ProjectViewProjectNode" />
@@ -300,12 +372,12 @@
       <workItem from="1558665770524" duration="12337000" />
       <workItem from="1558714446965" duration="53490000" />
       <workItem from="1558850629675" duration="38626000" />
-      <workItem from="1558927654710" duration="14653000" />
+      <workItem from="1558927654710" duration="17375000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="430044000" />
+    <option name="totallyTimeSpent" value="432766000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -318,9 +390,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23198943" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23198943" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -332,7 +403,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32719547" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.39235127" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.2735294" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.2735294" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -406,76 +477,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/admin/components/register/register.component.spec.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="110" column="9" selection-start-line="110" selection-start-column="9" selection-end-line="110" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#73#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/admin/components/view-patients/view-patients.component.spec.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-54">
-          <caret line="110" column="9" selection-start-line="110" selection-start-column="9" selection-end-line="110" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#73#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/auth/auth.guard.spec.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="110" selection-start-line="110" selection-end-line="111" />
-          <folding>
-            <element signature="e#0#63#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/admin/components/view-patientinfo/view-patientinfo.component.spec.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="110" column="9" lean-forward="true" selection-start-line="56" selection-start-column="6" selection-end-line="110" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#73#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/auth/auth-admin.guard.spec.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="111" column="9" selection-start-line="111" selection-start-column="9" selection-end-line="111" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#63#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/lab-employee/components/lab-employee-edit-profile/lab-employee-edit-profile.component.spec.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="113" column="9" selection-start-line="113" selection-start-column="9" selection-end-line="113" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#73#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/lab-employee/components/lab-employee-profile/lab-employee-profile.component.spec.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="113" column="9" selection-start-line="113" selection-start-column="9" selection-end-line="113" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#73#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/app/lab-employee/components/lab-employee-toolbar/lab-employee-toolbar.component.spec.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
@@ -821,13 +822,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/user.controller.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="122" column="15" selection-start-line="114" selection-start-column="8" selection-end-line="122" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/metaObservation.test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="828">
@@ -838,13 +832,6 @@
     <entry file="file://$PROJECT_DIR$/frontend/src/app/admin/components/admin-edit-profile/admin-edit-profile.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1085" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/admin/components/admin-profile/admin-profile.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2208">
-          <caret line="96" column="12" selection-start-line="96" selection-start-column="12" selection-end-line="96" selection-end-column="12" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/config.json">
@@ -858,6 +845,61 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="24" column="84" selection-start-line="24" selection-start-column="84" selection-end-line="24" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/user.controller.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="122" column="15" selection-start-line="114" selection-start-column="8" selection-end-line="122" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/admin/components/create-test/create-test.component.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/admin/components/create-test/create-test.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/admin/components/register/register.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="19" selection-start-line="4" selection-start-column="4" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/admin/components/register/register.component.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/test-form/test-form.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/test-form/test-form.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/admin/components/admin-profile/admin-profile.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="90" column="55" selection-start-line="90" selection-start-column="55" selection-end-line="90" selection-end-column="55" />
         </state>
       </provider>
     </entry>

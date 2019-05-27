@@ -1,84 +1,80 @@
-<!-- {{this.testTemplate|json}} -->
-<div >
+<div class="outer-containor">
+  <!-- {{this.testTemplate|json}} -->
+  <div class="containor">
+    <h3>{{testTemplate?.testName}}</h3>
     <mat-card>
-        <mat-card-header>
-            <mat-card-title>{{testTemplate?.testName}}</mat-card-title>
-        </mat-card-header>
-        
-        <mat-card-content>
-            
-            <form [formGroup]='testForm'>
 
-                <mat-form-field>
-                    <input type="text" matInput placeholder="Patient Name" formControlName='patientId' (keyup)="search($event)" [matAutocomplete]="auto">
-                </mat-form-field>
-                <mat-autocomplete #auto="matAutocomplete" >
-                    <mat-option *ngFor="let item of searchResults" [value]="item[1]">{{item[0]}}</mat-option>
-                </mat-autocomplete>
-              <div *ngIf="patientId.invalid && (patientId.dirty || patientId.touched)"
+      <mat-card-content>
+
+        <form [formGroup]='testForm'>
+
+          <mat-form-field>
+            <input type="text" matInput placeholder="Patient Name" formControlName='patientId' (keyup)="search($event)" [matAutocomplete]="auto">
+          </mat-form-field>
+          <mat-autocomplete #auto="matAutocomplete" >
+            <mat-option *ngFor="let item of searchResults" [value]="item[1]">{{item[0]}}</mat-option>
+          </mat-autocomplete>
+          <div *ngIf="patientId.invalid && (patientId.dirty || patientId.touched)"
+               class="alert alert-danger">
+            <div *ngIf="patientId.errors.required">
+              Patient's Name is required.
+            </div>
+          </div>
+
+          <br>
+
+          <mat-form-field>
+            <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="date">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+          <div *ngIf="date.invalid && (date.dirty || date.touched)"
+               class="alert alert-danger">
+            <div *ngIf="date.errors.required">
+              Date is required.
+            </div>
+          </div>
+
+          <br>
+
+          <div formArrayName="inputobservations" *ngFor="let observation of observations;let i=index">
+            <div [formGroupName]="i" *ngIf="observation.hasOwnProperty('unit') && observation.codedValues.length===0">
+              <mat-form-field>
+                <input type="number" matInput placeholder="{{observation.observationName}}" formControlName='observationValue'>
+              </mat-form-field>
+              <div *ngIf="getObservationName(i).invalid && (getObservationName(i).dirty || getObservationName(i).touched)"
                    class="alert alert-danger">
-                <div *ngIf="patientId.errors.required">
-                  Patient's Name is required.
+                <div *ngIf="getObservationName(i).errors.required">
+                  Value is required.
+                </div>
+              </div>
+            </div>
+            <div [formGroupName]="i" *ngIf="observation.hasOwnProperty('codedValues') && observation.codedValues.length!==0">
+              <mat-form-field>
+                <mat-label>{{observation.observationName}}</mat-label>
+                <mat-select formControlName='observationValue'>
+                  <mat-option *ngFor="let codedValue of observation.codedValues" [value]="codedValue" >
+                    {{codedValue}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+              <div *ngIf="getObservationName(i).invalid && (getObservationName(i).dirty || getObservationName(i).touched)"
+                   class="alert alert-danger">
+                <div *ngIf="getObservationName(i).errors.required">
+                  Value is required.
                 </div>
               </div>
 
-                <br>
+            </div>
+          </div >
+          <mat-form-field >
+            <textarea matInput placeholder="Comments" name="" id="" cols="30" rows="10"  formControlName="comments"></textarea>
+          </mat-form-field>
+          <br>
+          <button mat-raised-button (click)="addTestResults()" color="primary">Submit</button>
+        </form>
 
-                <mat-form-field>
-                        <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="date">
-                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                        <mat-datepicker #picker></mat-datepicker>
-                </mat-form-field>
-              <div *ngIf="date.invalid && (date.dirty || date.touched)"
-                   class="alert alert-danger">
-                <div *ngIf="date.errors.required">
-                  Date is required.
-                </div>
-              </div>
-  
-                <br>
-
-                <div formArrayName="inputobservations" *ngFor="let observation of observations;let i=index">
-                    <div [formGroupName]="i" *ngIf="observation.hasOwnProperty('unit') && observation.codedValues.length===0">
-                        <mat-form-field>
-                            <input type="number" matInput placeholder="{{observation.observationName}}" formControlName='observationValue'>
-                        </mat-form-field>
-                      <div *ngIf="getObservationName(i).invalid && (getObservationName(i).dirty || getObservationName(i).touched)"
-                           class="alert alert-danger">
-                        <div *ngIf="getObservationName(i).errors.required">
-                          Value is required.
-                        </div>
-                      </div>
-                    </div>
-                    <div [formGroupName]="i" *ngIf="observation.hasOwnProperty('codedValues') && observation.codedValues.length!==0">
-                        <mat-form-field>
-                            <mat-label>{{observation.observationName}}</mat-label>
-                            <mat-select formControlName='observationValue'>
-                              <mat-option *ngFor="let codedValue of observation.codedValues" [value]="codedValue" >
-                                {{codedValue}}
-                              </mat-option>
-                            </mat-select>
-                          </mat-form-field>
-                      <div *ngIf="getObservationName(i).invalid && (getObservationName(i).dirty || getObservationName(i).touched)"
-                           class="alert alert-danger">
-                        <div *ngIf="getObservationName(i).errors.required">
-                          Value is required.
-                        </div>
-                      </div>
-
-                    </div>
-                </div >
-                <mat-form-field >
-                  <textarea matInput placeholder="Comments" name="" id="" cols="30" rows="10"  formControlName="comments"></textarea>
-                </mat-form-field>
-                <br>
-                <button mat-raised-button (click)="addTestResults()" color="primary">Submit</button>
-            </form>
-            
-        </mat-card-content>
+      </mat-card-content>
     </mat-card>
+  </div>
 </div>
-
-
-
-
