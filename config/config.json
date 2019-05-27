@@ -1,0 +1,13 @@
+{
+  "development": {
+    "PORT": 8080,
+    "MONGODB_URI": "mongodb://localhost:27017/MedicalLab"
+  },
+  "test": {
+    "PORT": 8080,
+    "MONGODB_URI": "mongodb://localhost:27017/MedicalLab_test"
+  },
+  "production": {
+    "MONGODB_URI": "mongodb+srv://bavindu:metalica@1996@cluster0-lbiru.mongodb.net/test?retryWrites=true"
+  }
+}

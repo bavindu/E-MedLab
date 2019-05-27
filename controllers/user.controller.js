@@ -1,5 +1,5 @@
 const User=require('../models/user.model').User;
-const passport=require('passport');
+const passport=require('passport/lib');
 const lodash=require('lodash');
 
 
@@ -18,16 +18,15 @@ let addUser=function(req,res){
     user.save((err,doc)=>{
         if(err){
             console.log(err);
-            res.send(err);
+            res.status(500).send(err)
         }
-        else{
-            console.log('User added successfully')
-        }
+        res.status(200).json(doc);
     });
 }
 
 let authenticate=function(req,res,next){
     console.log('inside authentication');
+    console.log("req body  "+JSON.stringify(req.body));
     passport.authenticate('local',(err,user,info)=>{
          if(err){
              return res.status(400).json(err);

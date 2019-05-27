@@ -24,10 +24,10 @@ let addObservation=function(req,res){
     observation.save((err,doc)=>{
         if(err){
             console.log(err)
-            res.json(err)
+            res.status(500).json(err)
         }else{
             console.log(doc)
-            res.send(doc);
+            res.status(200).send(doc);
         }
     })
 };

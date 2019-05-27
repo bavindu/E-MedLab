@@ -1,5 +1,7 @@
+require('./config/config');
 require('./models/metaModels/db');
 require('./config/passport.config');
+
 
 const express=require('express');
 const rtIndex=require('./routes/index.routes');
@@ -34,4 +36,6 @@ var server=app.listen(port,(err)=>{
 
 app.get('/*',function(req,res){
     res.sendFile(path.join(__dirname+'/frontend/dist/frontend/index.html'));
-})
+});
+
+module.exports=server;
