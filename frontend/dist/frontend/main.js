@@ -3836,6 +3836,9 @@ var TestFormComponent = /** @class */ (function () {
             alert("Please enter correct values");
             return;
         }
+        else if (this.searchResults.length === 0) {
+            alert("Incorrect user");
+        }
         else {
             console.log('inside addTstResults');
             this.testFromService.addTestResults(this.testForm.value).subscribe();
