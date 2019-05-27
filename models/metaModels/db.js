@@ -13,7 +13,7 @@ mongoose.set('useFindAndModify', false);
 //         }
 //     });
 // }
-mongoose.connect("mongodb+srv://bavindu:metalica@1996@cluster0-lbiru.mongodb.net/test?retryWrites=true",{useNewUrlParser:true},(err)=>{
+mongoose.connect("mongodb+srv://bavindu:abcd@1234@cluster0-lbiru.mongodb.net/test?retryWrites=true",{useNewUrlParser:true},(err)=>{
     if(!err){
         console.log('connected to '+process.env.MONGODB_URI)
     }
@@ -21,5 +21,7 @@ mongoose.connect("mongodb+srv://bavindu:metalica@1996@cluster0-lbiru.mongodb.net
         console.log("error connecting to mongodb "+err);
     }
 });
+
+//"mongodb+srv://bavindu:abcd@1234@cluster0-lbiru.mongodb.net/test?retryWrites=true"
 
 
