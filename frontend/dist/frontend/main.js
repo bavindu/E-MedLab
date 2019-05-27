@@ -3832,25 +3832,33 @@ var TestFormComponent = /** @class */ (function () {
         }
     };
     TestFormComponent.prototype.addTestResults = function () {
+        var _this = this;
         if (this.testForm.invalid) {
             alert("Please enter correct values");
             return;
         }
-        else if (this.searchResults.length === 0) {
-            alert("Incorrect user");
-        }
+        // else if(this.searchResults.length===0){
+        //   alert("Incorrect user");
+        // }
         else {
             console.log('inside addTstResults');
-            this.testFromService.addTestResults(this.testForm.value).subscribe();
-            if (this.userType === 'admin') {
-                this.router.navigate(['../admin-profile'], { relativeTo: this.ar });
-            }
-            else if (this.userType === "labEmployee") {
-                this.router.navigate(['../lab-empolyee-profile'], { relativeTo: this.ar });
-            }
-            else {
-                console.log("user type " + this.userType);
-            }
+            this.testFromService.addTestResults(this.testForm.value).subscribe(function (res) {
+                console.log("response " + JSON.stringify(res));
+                if (res.code === 11005) {
+                    alert("incorect user id");
+                }
+                else if (res.code === 11000) {
+                    if (_this.userType === 'admin') {
+                        _this.router.navigate(['../admin-profile'], { relativeTo: _this.ar });
+                    }
+                    else if (_this.userType === "labEmployee") {
+                        _this.router.navigate(['../lab-empolyee-profile'], { relativeTo: _this.ar });
+                    }
+                    else {
+                        console.log("user type " + _this.userType);
+                    }
+                }
+            });
         }
     };
     TestFormComponent.prototype.search = function (event) {

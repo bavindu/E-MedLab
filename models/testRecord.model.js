@@ -1,4 +1,5 @@
 const mongoose=require('mongoose');
+const User=require('../models/user.model').User;
 const observationSchema=require('./observation.model').observationSchema
 
 const testRecordSchema=new mongoose.Schema(
@@ -30,6 +31,21 @@ const testRecordSchema=new mongoose.Schema(
         }
     }
 );
+
+// testRecordSchema.pre('save',function (next) {
+//     console.log('*********pre save hook');
+//     User.find({_id:this.patientId,userType:'patient'},(err,doc)=>{
+//         if(!err){
+//             console.log('%%%%doc '+doc);
+//             if(doc.length===0){
+//                 abort();
+//             }
+//             else{
+//                 next();
+//             }
+//         }
+//     })
+// })
 
 
 const TestRecord=mongoose.model('TestRecord',testRecordSchema);

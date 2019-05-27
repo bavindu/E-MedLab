@@ -1,36 +1,55 @@
 const TestRecord=require('../models/testRecord.model').TestRecord;
 const Observation=require('../models/observation.model').Observation;
+const User=require('../models/user.model').User;
 
 
 
 
-let addTestRecord=function(req,res){
+let addTestRecord=async function(req,res){
     const testRecord=new TestRecord();
     testRecord.testId=req.body.testId;
     testRecord.testName=req.body.testName;
     testRecord.patientId=req.body.patientId;
     testRecord.comments=req.body.comments;
     testRecord.date=req.body.date;
-    console.log("request patient id   "+req.body.patientId);
-    console.log("this is patient id "+testRecord.patientID);
-    const inputobservations=req.body.inputobservations;
-    console.log(req.body.inputobservations.length)
-    for (let index = 0; index < req.body.inputobservations.length; index++) {
-        testRecord.observations.push({
-            observationValue:inputobservations[index].observationValue,
-            observationId:inputobservations[index].observationId
-        })     
-    }
-    testRecord.save((err,doc)=>{
-        if(!err){
-            res.send(err)
-            console.log(err+"ssasas")
-        }else{
-            console.log('This is doc');
-            console.log(doc);
-            res.json('Hello')
+    try {
+        if(testRecord.patientId){
+            let doc=await User.find({_id:testRecord.patientId,userType:'patient'})
+            if(doc.length===0){
+                res.json({"code":11005})
+            }
+            else{
+                console.log("request patient id   "+req.body.patientId);
+                console.log("this is patient id "+testRecord.patientID);
+                const inputobservations=req.body.inputobservations;
+                console.log(req.body.inputobservations.length)
+                for (let index = 0; index < req.body.inputobservations.length; index++) {
+                    testRecord.observations.push({
+                        observationValue:inputobservations[index].observationValue,
+                        observationId:inputobservations[index].observationId
+                    })
+                }
+                testRecord.save((err,doc)=>{
+                    if(!err){
+                        res.json({"code":11000});
+                        console.log(err+"ssasas")
+                    }else{
+                        console.log('This is doc');
+                        console.log(doc);
+                        res.json({"code":11006});
+                    }
+                })
+            }
         }
-    })
+        else{
+            res.json({"code":11005})
+        }
+    }
+    catch (e) {
+        console.log("&&&&&&&patient id error "+e);
+        res.json({"code":11006})
+    }
+
 
 };
 
