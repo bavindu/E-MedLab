@@ -38,9 +38,6 @@
       <change beforePath="$PROJECT_DIR$/frontend/dist/frontend/styles.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/dist/frontend/vendor.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/dist/frontend/vendor.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/lab-employee/components/lab-employee-profile/lab-employee-profile.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/lab-employee/components/lab-employee-profile/lab-employee-profile.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/view-patient-test/view-patient-test.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/view-patient-test/view-patient-test.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/view-patient-test/view-patient-test.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/view-patient-test/view-patient-test.component.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -66,7 +63,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/src/app/view-patient-test/view-patient-test.component.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="229">
@@ -78,17 +75,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/testRecord.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-112">
-              <caret line="113" column="9" selection-start-line="113" selection-start-column="9" selection-end-line="113" selection-end-column="9" />
+            <state relative-caret-position="233">
+              <caret line="116" column="30" selection-start-line="116" selection-start-column="30" selection-end-line="116" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/frontend/src/app/view-patient-test/view-patient-test.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="436">
-              <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
+            <state relative-caret-position="275">
+              <caret line="76" column="73" selection-start-line="76" selection-start-column="73" selection-end-line="76" selection-end-column="73" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
@@ -205,11 +202,11 @@
         <option value="$PROJECT_DIR$/models/testRecord.model.js" />
         <option value="$PROJECT_DIR$/controllers/user.controller.js" />
         <option value="$PROJECT_DIR$/frontend/src/app/test-form/test-form.component.ts" />
-        <option value="$PROJECT_DIR$/controllers/testRecord.controller.js" />
         <option value="$PROJECT_DIR$/frontend/src/app/lab-employee/components/lab-employee-profile/lab-employee-profile.component.html" />
         <option value="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" />
-        <option value="$PROJECT_DIR$/frontend/src/app/view-patient-test/view-patient-test.component.ts" />
         <option value="$PROJECT_DIR$/frontend/src/app/view-patient-test/view-patient-test.component.html" />
+        <option value="$PROJECT_DIR$/controllers/testRecord.controller.js" />
+        <option value="$PROJECT_DIR$/frontend/src/app/view-patient-test/view-patient-test.component.ts" />
       </list>
     </option>
   </component>
@@ -239,6 +236,12 @@
               <item name="seproject" type="b2602c69:ProjectViewProjectNode" />
               <item name="seproject" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="seproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="seproject" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="coverage" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="seproject" type="b2602c69:ProjectViewProjectNode" />
@@ -421,12 +424,12 @@
       <workItem from="1558714446965" duration="53490000" />
       <workItem from="1558850629675" duration="38626000" />
       <workItem from="1558927654710" duration="23326000" />
-      <workItem from="1559015622168" duration="5080000" />
+      <workItem from="1559015622168" duration="6803000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="443797000" />
+    <option name="totallyTimeSpent" value="445520000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -453,7 +456,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32719547" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.39235127" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.16764706" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.22941177" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="TypeScript" order="11" weight="0.32941177" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -859,13 +862,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/testRecord.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-112">
-          <caret line="113" column="9" selection-start-line="113" selection-start-column="9" selection-end-line="113" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/app/test-form/test-form.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="428">
@@ -910,20 +906,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/view-patient-test/view-patient-test.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/app/view-patient-test/view-patient-test.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="229">
           <caret line="43" column="22" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/testRecord.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="116" column="30" selection-start-line="116" selection-start-column="30" selection-end-line="116" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/view-patient-test/view-patient-test.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="76" column="73" selection-start-line="76" selection-start-column="73" selection-end-line="76" selection-end-column="73" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -110,11 +110,11 @@ let deleteTestRecord=function(req,res){
     TestRecord.deleteOne({_id:req.body._id},(err,doc)=>{
         if(!err){
             console.log("doc "+JSON.stringify(doc));
-            res.status(200).send('ok');
+            res.json({'code':200})
         }
         else{
             console.log('error '+err);
-            res.send('error');
+            res.json({'code':500})
         }
     })
 };

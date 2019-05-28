@@ -4087,8 +4087,8 @@ var ViewPatientTestComponent = /** @class */ (function () {
         var _this = this;
         console.log('#########delete');
         this.testFormServise.deleterTestRecord(this.id).subscribe(function (res) {
-            _this.router.navigate(['../admin-profile'], { relativeTo: _this.route });
             console.log('res ' + JSON.stringify(res));
+            _this.router.navigate(['../admin-profile'], { relativeTo: _this.route });
         });
     };
     ViewPatientTestComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([

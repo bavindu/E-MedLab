@@ -71,9 +71,10 @@ export class ViewPatientTestComponent implements OnInit {
   }
   delete(){
     console.log('#########delete');
+
     this.testFormServise.deleterTestRecord(this.id).subscribe((res:any)=>{
-      this.router.navigate(['../admin-profile'],{relativeTo:this.route});
       console.log('res '+JSON.stringify(res));
+      this.router.navigate(['../admin-profile'],{relativeTo:this.route});
 
     });
   }
