@@ -1435,6 +1435,9 @@ var routes = [
             { path: "lab-empolyee-edit-profile", component: _lab_employee_components_lab_employee_edit_profile_lab_employee_edit_profile_component__WEBPACK_IMPORTED_MODULE_17__["LabEmployeeEditProfileComponent"], canActivate: [_auth_auth_guard__WEBPACK_IMPORTED_MODULE_10__["AuthGuard"]] },
             { path: "load-test", component: _load_test_load_test_component__WEBPACK_IMPORTED_MODULE_3__["LoadTestComponent"] },
             { path: "test-form", component: _test_form_test_form_component__WEBPACK_IMPORTED_MODULE_5__["TestFormComponent"] },
+            { path: "testList", component: _view_added_test_results_list_view_added_test_results_list_component__WEBPACK_IMPORTED_MODULE_25__["ViewAddedTestResultsListComponent"] },
+            { path: "view-patient-test", component: _view_patient_test_view_patient_test_component__WEBPACK_IMPORTED_MODULE_26__["ViewPatientTestComponent"] },
+            { path: "view-patients", component: _admin_components_view_patients_view_patients_component__WEBPACK_IMPORTED_MODULE_27__["ViewPatientsComponent"] },
         ] },
     { path: "patient-home", component: _patient_components_patient_toolbar_patient_toolbar_component__WEBPACK_IMPORTED_MODULE_23__["PatientToolbarComponent"], canActivate: [_auth_auth_guard__WEBPACK_IMPORTED_MODULE_10__["AuthGuard"]], children: [
             { path: '', redirectTo: 'patient-profile', pathMatch: 'full' },
@@ -2060,7 +2063,7 @@ module.exports = ".mat-card-actions .flex-spacer {\r\n    width: 100%;\r\n  }\r\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"containor\">\n  <div class=\"containor\" fxLayout=\"row\" fxLayout.xs=\"column\" fxLayoutWrap fxLayoutGap=\"5%\" fxLayoutAlign=\"center center\">\n    <div fxFlex=\"20%\">\n      <a [routerLink]=\"[ '../lab-empolyee-edit-profile']\" style=\"text-decoration:none\">\n        <div class=\"mycard mat-elevation-z5\">\n            <div class=\"my-img\">\n              <img src=\"assets/images/curriculum.png\" alt=\"\">\n            </div>\n            <div class=\"content\">\n              <h4>Edit Profile</h4>\n              </div>\n        </div>\n      </a>\n      \n    </div>\n    <div fxFlex=\"20%\">\n      <a [routerLink]=\"[ '../load-test']\" style=\"text-decoration:none\">\n        <div class=\"mycard mat-elevation-z5\">\n            <div class=\"my-img\">\n              <img src=\"assets/images/flask.png\" alt=\"\">\n            </div>\n            <div class=\"content\">\n              <h4>Add Test Results</h4>\n              </div>\n        </div>\n      </a>\n    </div>\n    \n    \n  </div>\n  \n  \n</div>\n"
+module.exports = "<div class=\"containor\">\n  <div class=\"containor\" fxLayout=\"row\" fxLayout.xs=\"column\" fxLayoutWrap fxLayoutGap=\"5%\" fxLayoutAlign=\"center center\">\n    <div fxFlex=\"20%\">\n      <a [routerLink]=\"[ '../lab-empolyee-edit-profile']\" style=\"text-decoration:none\">\n        <div class=\"mycard mat-elevation-z5\">\n            <div class=\"my-img\">\n              <img src=\"assets/images/curriculum.png\" alt=\"\">\n            </div>\n            <div class=\"content\">\n              <h4>Edit Profile</h4>\n              </div>\n        </div>\n      </a>\n      \n    </div>\n    <div fxFlex=\"20%\">\n      <a [routerLink]=\"[ '../load-test']\" style=\"text-decoration:none\">\n        <div class=\"mycard mat-elevation-z5\">\n            <div class=\"my-img\">\n              <img src=\"assets/images/flask.png\" alt=\"\">\n            </div>\n            <div class=\"content\">\n              <h4>Add Test Results</h4>\n              </div>\n        </div>\n      </a>\n    </div>\n\n    <div fxFlex=\"20%\">\n      <a [routerLink]=\"[ '../testList']\" style=\"text-decoration:none\">\n        <div class=\"mycard mat-elevation-z5\">\n          <div class=\"my-img\">\n            <img src=\"assets/images/archive.png\" alt=\"\">\n          </div>\n          <div class=\"content\">\n            <h4>View Added Test Results</h4>\n          </div>\n        </div>\n      </a>\n    </div>\n    \n    \n  </div>\n  \n  \n</div>\n"
 
 /***/ }),
 
@@ -3858,6 +3861,9 @@ var TestFormComponent = /** @class */ (function () {
                         console.log("user type " + _this.userType);
                     }
                 }
+                else {
+                    alert("Error!");
+                }
             });
         }
     };
@@ -4008,7 +4014,7 @@ module.exports = "table {\r\n  width: 100%;\r\n}\r\n\r\n.table-containor{\r\n  p
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"containor\">\n\n  <div class=\"info\">\n    <div class=\"field\">\n      <label >Test Name</label>\n      <span>{{testName}}</span>\n    </div>\n    <div class=\"field\">\n      <label >Patient</label>\n      <span>{{userName}}</span>\n    </div>\n  </div>\n  <div class=\"table-containor\">\n    <table mat-table [dataSource]=\"datasource\" class=\"mat-elevation-z8\">\n\n\n      <ng-container matColumnDef=\"tests\">\n        <th mat-header-cell *matHeaderCellDef> Test </th>\n        <td mat-cell *matCellDef=\"let element\"> {{element.test}} </td>\n      </ng-container>\n\n\n      <ng-container matColumnDef=\"value\">\n        <th mat-header-cell *matHeaderCellDef> Observation </th>\n        <td mat-cell *matCellDef=\"let element\"> {{element.observation}} </td>\n      </ng-container>\n\n\n      <ng-container matColumnDef=\"unit\">\n        <th mat-header-cell *matHeaderCellDef> Unit </th>\n        <td mat-cell *matCellDef=\"let element\"> {{element.unit}} </td>\n      </ng-container>\n\n\n      <ng-container matColumnDef=\"referenceRange\">\n        <th mat-header-cell *matHeaderCellDef> Refference Range </th>\n        <td mat-cell *matCellDef=\"let element\"> {{element.referenceRange}} </td>\n      </ng-container>\n\n      <tr mat-header-row *matHeaderRowDef=\"displayedColums\" class=\"header-row\"></tr>\n      <tr mat-row *matRowDef=\"let row; columns: displayedColums;\"></tr>\n    </table>\n  </div>\n  <div class=\"footer\">\n    <button mat-raised-button color=\"primary\" (click)=\"delete()\">Delete</button>\n  </div>\n</div>\n"
+module.exports = "<div class=\"containor\">\n\n  <div class=\"info\">\n    <div class=\"field\">\n      <label >Test Name</label>\n      <span>{{testName}}</span>\n    </div>\n    <div class=\"field\">\n      <label >Patient</label>\n      <span>{{userName}}</span>\n    </div>\n  </div>\n  <div class=\"table-containor\">\n    <table mat-table [dataSource]=\"datasource\" class=\"mat-elevation-z8\">\n\n\n      <ng-container matColumnDef=\"tests\">\n        <th mat-header-cell *matHeaderCellDef> Test </th>\n        <td mat-cell *matCellDef=\"let element\"> {{element.test}} </td>\n      </ng-container>\n\n\n      <ng-container matColumnDef=\"value\">\n        <th mat-header-cell *matHeaderCellDef> Observation </th>\n        <td mat-cell *matCellDef=\"let element\"> {{element.observation}} </td>\n      </ng-container>\n\n\n      <ng-container matColumnDef=\"unit\">\n        <th mat-header-cell *matHeaderCellDef> Unit </th>\n        <td mat-cell *matCellDef=\"let element\"> {{element.unit}} </td>\n      </ng-container>\n\n\n      <ng-container matColumnDef=\"referenceRange\">\n        <th mat-header-cell *matHeaderCellDef> Refference Range </th>\n        <td mat-cell *matCellDef=\"let element\"> {{element.referenceRange}} </td>\n      </ng-container>\n\n      <tr mat-header-row *matHeaderRowDef=\"displayedColums\" class=\"header-row\"></tr>\n      <tr mat-row *matRowDef=\"let row; columns: displayedColums;\"></tr>\n    </table>\n  </div>\n  <div class=\"footer\" >\n    <button mat-raised-button color=\"primary\" (click)=\"delete()\">Delete</button>\n  </div>\n</div>\n\n<!--*ngIf=\"userType==='admin'\"-->\n"
 
 /***/ }),
 
@@ -4035,9 +4041,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var ViewPatientTestComponent = /** @class */ (function () {
-    function ViewPatientTestComponent(testFormServise, route) {
+    function ViewPatientTestComponent(testFormServise, route, router) {
         this.testFormServise = testFormServise;
         this.route = route;
+        this.router = router;
         this.observations = [];
         this.displayedColums = ['tests', 'value', 'unit', 'referenceRange'];
         this.testValueData = [];
@@ -4052,6 +4059,7 @@ var ViewPatientTestComponent = /** @class */ (function () {
             _this.id = params.id;
             _this.userName = params.patientName;
             _this.testFormServise.getTestResults(_this.id).subscribe(function (data) {
+                console.log('%%%% test data ' + JSON.stringify(data));
                 _this.testResults = data;
                 console.log(_this.testResults);
                 _this.testName = data.testName;
@@ -4076,8 +4084,11 @@ var ViewPatientTestComponent = /** @class */ (function () {
         });
     };
     ViewPatientTestComponent.prototype.delete = function () {
+        var _this = this;
+        console.log('#########delete');
         this.testFormServise.deleterTestRecord(this.id).subscribe(function (res) {
-            console.log('res ' + res);
+            _this.router.navigate(['../admin-profile'], { relativeTo: _this.route });
+            console.log('res ' + JSON.stringify(res));
         });
     };
     ViewPatientTestComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -4088,7 +4099,8 @@ var ViewPatientTestComponent = /** @class */ (function () {
             styles: [__webpack_require__(/*! ./view-patient-test.component.css */ "./src/app/view-patient-test/view-patient-test.component.css")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_test_form_service__WEBPACK_IMPORTED_MODULE_2__["TestFormService"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]])
+            _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
     ], ViewPatientTestComponent);
     return ViewPatientTestComponent;
 }());

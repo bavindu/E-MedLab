@@ -109,8 +109,8 @@ let getManyTestRecords=function(req,res){
 let deleteTestRecord=function(req,res){
     TestRecord.deleteOne({_id:req.body._id},(err,doc)=>{
         if(!err){
-            console.log("doc "+doc);
-            res.send('ok');
+            console.log("doc "+JSON.stringify(doc));
+            res.status(200).send('ok');
         }
         else{
             console.log('error '+err);

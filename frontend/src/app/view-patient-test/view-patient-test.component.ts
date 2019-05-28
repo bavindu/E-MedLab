@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {TestFormService} from "../services/test-form.service";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {DatePipe} from "@angular/common";
 import {MatTableDataSource} from "@angular/material";
+import {UserService} from "../services/user.service";
 
 
 
@@ -23,10 +24,12 @@ export class ViewPatientTestComponent implements OnInit {
   private testName;
   private datasource;
   private userName;
+  private userType;
 
   constructor(
     private testFormServise: TestFormService,
     private route: ActivatedRoute,
+    private router:Router,
     ) { }
 
   ngOnInit() {
@@ -40,6 +43,7 @@ export class ViewPatientTestComponent implements OnInit {
       this.id=params.id;
       this.userName=params.patientName;
       this.testFormServise.getTestResults(this.id).subscribe((data:any)=>{
+        console.log('%%%% test data '+JSON.stringify(data));
         this.testResults = data;
         console.log(this.testResults);
         this.testName = data.testName;
@@ -60,13 +64,16 @@ export class ViewPatientTestComponent implements OnInit {
         });
         console.log(this.testValueData);
         this.datasource.data = this.testValueData;
+
       })
     });
 
   }
   delete(){
+    console.log('#########delete');
     this.testFormServise.deleterTestRecord(this.id).subscribe((res:any)=>{
-      console.log('res '+res);
+      this.router.navigate(['../admin-profile'],{relativeTo:this.route});
+      console.log('res '+JSON.stringify(res));
 
     });
   }
