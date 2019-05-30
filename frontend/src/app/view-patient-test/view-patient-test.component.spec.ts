@@ -32,7 +32,7 @@ import {DownloadMultiplePdfComponent} from "../patient/components/download-multi
 import {ViewAddedTestResultsListComponent} from "../view-added-test-results-list/view-added-test-results-list.component";
 import {ViewPatientsComponent} from "../admin/components/view-patients/view-patients.component";
 import {ViewPatientinfoComponent} from "../admin/components/view-patientinfo/view-patientinfo.component";
-import {BrowserModule} from "@angular/platform-browser";
+import {BrowserModule, By} from "@angular/platform-browser";
 import {AppRoutingModule} from "../app-routing.module";
 import {MaterialModule} from "../material/material.module";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
@@ -124,5 +124,13 @@ describe('ViewPatientTestComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+  it ('should not show delete button',()=>{
+    component.userType="employee";
+    expect(fixture.debugElement.query(By.css('.footer'))).toEqual(null)
+  });
+  it ('should  show delete button',()=>{
+    component.userType="admin";
+    expect(fixture.debugElement.query(By.css('.footer'))).toBeDefined()
   });
 });

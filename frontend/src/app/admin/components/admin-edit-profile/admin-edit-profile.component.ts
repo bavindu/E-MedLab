@@ -16,7 +16,7 @@ export class AdminEditProfileComponent implements OnInit {
   private userDetails:FormGroup;
   private readOnly=true;
   private userDetailsFrom;
-  private passwordDisplay=false;
+  passwordDisplay=false;
 
   constructor(private fb:FormBuilder,private userService:UserService,private router:Router,private ar:ActivatedRoute) {
     this.userDetailsFrom=this.fb.group({

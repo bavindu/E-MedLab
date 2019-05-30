@@ -15,7 +15,7 @@ export class LabEmployeeEditProfileComponent implements OnInit {
   private userDetails:FormGroup;
   private readOnly=true;
   private userDetailsFrom;
-  private passwordDisplay=false;
+   passwordDisplay=false;
 
   constructor(private userService:UserService,private fb:FormBuilder) {
     this.userDetailsFrom=this.fb.group({

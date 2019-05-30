@@ -4014,7 +4014,7 @@ module.exports = "table {\r\n  width: 100%;\r\n}\r\n\r\n.table-containor{\r\n  p
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"containor\">\n\n  <div class=\"info\">\n    <div class=\"field\">\n      <label >Test Name</label>\n      <span>{{testName}}</span>\n    </div>\n    <div class=\"field\">\n      <label >Patient</label>\n      <span>{{userName}}</span>\n    </div>\n  </div>\n  <div class=\"table-containor\">\n    <table mat-table [dataSource]=\"datasource\" class=\"mat-elevation-z8\">\n\n\n      <ng-container matColumnDef=\"tests\">\n        <th mat-header-cell *matHeaderCellDef> Test </th>\n        <td mat-cell *matCellDef=\"let element\"> {{element.test}} </td>\n      </ng-container>\n\n\n      <ng-container matColumnDef=\"value\">\n        <th mat-header-cell *matHeaderCellDef> Observation </th>\n        <td mat-cell *matCellDef=\"let element\"> {{element.observation}} </td>\n      </ng-container>\n\n\n      <ng-container matColumnDef=\"unit\">\n        <th mat-header-cell *matHeaderCellDef> Unit </th>\n        <td mat-cell *matCellDef=\"let element\"> {{element.unit}} </td>\n      </ng-container>\n\n\n      <ng-container matColumnDef=\"referenceRange\">\n        <th mat-header-cell *matHeaderCellDef> Refference Range </th>\n        <td mat-cell *matCellDef=\"let element\"> {{element.referenceRange}} </td>\n      </ng-container>\n\n      <tr mat-header-row *matHeaderRowDef=\"displayedColums\" class=\"header-row\"></tr>\n      <tr mat-row *matRowDef=\"let row; columns: displayedColums;\"></tr>\n    </table>\n  </div>\n  <div class=\"footer\" >\n    <button mat-raised-button color=\"primary\" (click)=\"delete()\">Delete</button>\n  </div>\n</div>\n\n<!--*ngIf=\"userType==='admin'\"-->\n"
+module.exports = "<div class=\"containor\">\n\n  <div class=\"info\">\n    <div class=\"field\">\n      <label >Test Name</label>\n      <span>{{testName}}</span>\n    </div>\n    <div class=\"field\">\n      <label >Patient</label>\n      <span>{{userName}}</span>\n    </div>\n  </div>\n  <div class=\"table-containor\">\n    <table mat-table [dataSource]=\"datasource\" class=\"mat-elevation-z8\">\n\n\n      <ng-container matColumnDef=\"tests\">\n        <th mat-header-cell *matHeaderCellDef> Test </th>\n        <td mat-cell *matCellDef=\"let element\"> {{element.test}} </td>\n      </ng-container>\n\n\n      <ng-container matColumnDef=\"value\">\n        <th mat-header-cell *matHeaderCellDef> Observation </th>\n        <td mat-cell *matCellDef=\"let element\"> {{element.observation}} </td>\n      </ng-container>\n\n\n      <ng-container matColumnDef=\"unit\">\n        <th mat-header-cell *matHeaderCellDef> Unit </th>\n        <td mat-cell *matCellDef=\"let element\"> {{element.unit}} </td>\n      </ng-container>\n\n\n      <ng-container matColumnDef=\"referenceRange\">\n        <th mat-header-cell *matHeaderCellDef> Refference Range </th>\n        <td mat-cell *matCellDef=\"let element\"> {{element.referenceRange}} </td>\n      </ng-container>\n\n      <tr mat-header-row *matHeaderRowDef=\"displayedColums\" class=\"header-row\"></tr>\n      <tr mat-row *matRowDef=\"let row; columns: displayedColums;\"></tr>\n    </table>\n  </div>\n  <div class=\"footer\" *ngIf=\"userType==='admin'\">\n    <button mat-raised-button color=\"primary\" (click)=\"delete()\">Delete</button>\n  </div>\n</div>\n\n<!--*ngIf=\"userType==='admin'\"-->\n"
 
 /***/ }),
 
@@ -4034,6 +4034,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _services_user_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../services/user.service */ "./src/app/services/user.service.ts");
+
 
 
 
@@ -4041,15 +4043,20 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var ViewPatientTestComponent = /** @class */ (function () {
-    function ViewPatientTestComponent(testFormServise, route, router) {
+    function ViewPatientTestComponent(testFormServise, route, router, userService) {
         this.testFormServise = testFormServise;
         this.route = route;
         this.router = router;
+        this.userService = userService;
         this.observations = [];
         this.displayedColums = ['tests', 'value', 'unit', 'referenceRange'];
         this.testValueData = [];
     }
     ViewPatientTestComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.userService.getUserType().subscribe(function (res) {
+            _this.userType = res.userType;
+        });
         this.datasource = new _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatTableDataSource"]();
         this.createTestForm();
     };
@@ -4100,7 +4107,8 @@ var ViewPatientTestComponent = /** @class */ (function () {
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_test_form_service__WEBPACK_IMPORTED_MODULE_2__["TestFormService"],
             _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
+            _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
+            _services_user_service__WEBPACK_IMPORTED_MODULE_6__["UserService"]])
     ], ViewPatientTestComponent);
     return ViewPatientTestComponent;
 }());

@@ -41,7 +41,7 @@
       <tr mat-row *matRowDef="let row; columns: displayedColums;"></tr>
     </table>
   </div>
-  <div class="footer" >
+  <div class="footer" *ngIf="userType==='admin'">
     <button mat-raised-button color="primary" (click)="delete()">Delete</button>
   </div>
 </div>

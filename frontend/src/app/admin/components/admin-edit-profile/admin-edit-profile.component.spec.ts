@@ -5,7 +5,7 @@ import {FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, V
 import {UserService} from "../../../services/user.service";
 import {MustMatch} from "../../../helpers/must-match.validator";
 import {ActivatedRoute, Router} from "@angular/router";
-import {BrowserModule} from "@angular/platform-browser";
+import {BrowserModule, By} from "@angular/platform-browser";
 import {AppRoutingModule} from "../../../app-routing.module";
 import {MaterialModule} from "../../../material/material.module";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
@@ -51,7 +51,7 @@ import {ViewPatientTestComponent} from "../../../view-patient-test/view-patient-
 import {ViewPatientsComponent} from "../view-patients/view-patients.component";
 import {ViewPatientinfoComponent} from "../view-patientinfo/view-patientinfo.component";
 
-describe('AdminEditProfileComponent', () => {
+fdescribe('AdminEditProfileComponent', () => {
   let component: AdminEditProfileComponent;
   let fixture: ComponentFixture<AdminEditProfileComponent>;
 
@@ -125,4 +125,13 @@ describe('AdminEditProfileComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it('should show change password', () => {
+    component.passwordDisplay=true;
+    expect(fixture.debugElement.query(By.css('.password-containor'))).toBeDefined()
+  });
+  it('should not show change password', () => {
+    component.passwordDisplay=false;
+    expect(fixture.debugElement.query(By.css('.password-containor'))).toEqual(null)
+  });
+
 });

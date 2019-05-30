@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EditProfileComponent } from './edit-profile.component';
-import {BrowserModule} from "@angular/platform-browser";
+import {BrowserModule, By} from "@angular/platform-browser";
 import {AppRoutingModule} from "../../../app-routing.module";
 import {MaterialModule} from "../../../material/material.module";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
@@ -51,7 +51,7 @@ import {ViewPatientTestComponent} from "../../../view-patient-test/view-patient-
 import {ViewPatientsComponent} from "../../../admin/components/view-patients/view-patients.component";
 import {ViewPatientinfoComponent} from "../../../admin/components/view-patientinfo/view-patientinfo.component";
 
-describe('EditProfileComponent', () => {
+fdescribe('EditProfileComponent', () => {
   let component: EditProfileComponent;
   let fixture: ComponentFixture<EditProfileComponent>;
 
@@ -124,5 +124,13 @@ describe('EditProfileComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+  it('should show change password', () => {
+    component.passwordDisplay=true;
+    expect(fixture.debugElement.query(By.css('.password-containor'))).toBeDefined()
+  });
+  it('should not show change password', () => {
+    component.passwordDisplay=false;
+    expect(fixture.debugElement.query(By.css('.password-containor'))).toEqual(null)
   });
 });

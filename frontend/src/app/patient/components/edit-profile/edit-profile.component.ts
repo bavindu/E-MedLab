@@ -14,7 +14,7 @@ export class EditProfileComponent implements OnInit {
   private userDetails:FormGroup;
   private readOnly=true;
   private userDetailsFrom;
-  private passwordDisplay=false;
+   passwordDisplay=false;
   constructor(private fb:FormBuilder,private userService:UserService,private data:UserDataService) {
 
    }

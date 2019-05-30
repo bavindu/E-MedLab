@@ -24,15 +24,19 @@ export class ViewPatientTestComponent implements OnInit {
   private testName;
   private datasource;
   private userName;
-  private userType;
+  userType;
 
   constructor(
     private testFormServise: TestFormService,
     private route: ActivatedRoute,
     private router:Router,
+    private userService:UserService
     ) { }
 
   ngOnInit() {
+    this.userService.getUserType().subscribe((res:any)=>{
+      this.userType=res.userType;
+    });
     this.datasource = new MatTableDataSource();
     this.createTestForm();
 
@@ -77,7 +81,10 @@ export class ViewPatientTestComponent implements OnInit {
       this.router.navigate(['../admin-profile'],{relativeTo:this.route});
 
     });
+
+
   }
+
 
 
 
